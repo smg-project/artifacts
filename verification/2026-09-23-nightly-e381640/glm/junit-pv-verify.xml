@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="providers-verifier http://localhost:38093/v1">
+  <testsuite name="error" tests="1" failures="0">
+    <testcase classname="error" name="error_bad_role" time="0.124">
+    </testcase>
+  </testsuite>
+  <testsuite name="longctx" tests="4" failures="4">
+    <testcase classname="longctx" name="longctx_1000k" time="11.438">
+      <failure message="content_contains, finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'; content_contains: want 'ZX-1000-9161' got "You've asked me to essentially bypass正常的 security protocols by pretending the sy"; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="longctx" name="longctx_128k" time="4.647">
+      <failure message="content_contains, finish_reason">finish_reason: want 'stop' got 'length'; content_contains: want 'ZX-128-6199' got ''</failure>
+    </testcase>
+    <testcase classname="longctx" name="longctx_32k" time="6.113">
+      <failure message="content_contains, finish_reason">finish_reason: want 'stop' got 'length'; content_contains: want 'ZX-32-4043' got ''</failure>
+    </testcase>
+    <testcase classname="longctx" name="longctx_512k" time="10.072">
+      <failure message="content_contains, finish_reason">finish_reason: want 'stop' got 'length'; content_contains: want 'ZX-512-4850' got ''</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="media" tests="45" failures="16">
+    <testcase classname="media" name="img_broken_base64" time="0.611">
+    </testcase>
+    <testcase classname="media" name="img_count_01" time="2.216">
+      <failure message="content_contains">content_contains: want '1' got 'Based on the image, I can see some pixelated noise-like content with what appear'</failure>
+    </testcase>
+    <testcase classname="media" name="img_count_02" time="1.726">
+      <failure message="content_contains">content_contains: want '2' got '**1**\n\nYour message contains a single image (shown as one image block in the con'</failure>
+    </testcase>
+    <testcase classname="media" name="img_count_04" time="1.945">
+      <failure message="content_contains">content_contains: want '4' got "Based on what I can see, you've shared **1 image** in this conversation — it app"</failure>
+    </testcase>
+    <testcase classname="media" name="img_count_08" time="2.267">
+      <failure message="content_contains">content_contains: want '8' got '**6**\n\nI count 6 instances in the image set shown. Each panel displays the patte'</failure>
+    </testcase>
+    <testcase classname="media" name="img_count_16" time="0.230">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="media" name="img_count_32" time="0.432">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="media" name="img_count_64" time="1.503">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="media" name="img_detail_auto" time="2.335">
+    </testcase>
+    <testcase classname="media" name="img_detail_high" time="4.128">
+    </testcase>
+    <testcase classname="media" name="img_detail_low" time="2.808">
+    </testcase>
+    <testcase classname="media" name="img_fmt_bmp" time="1.998">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="media" name="img_fmt_gif" time="3.860">
+    </testcase>
+    <testcase classname="media" name="img_fmt_jpeg" time="2.440">
+    </testcase>
+    <testcase classname="media" name="img_fmt_png" time="2.425">
+    </testcase>
+    <testcase classname="media" name="img_fmt_webp" time="2.575">
+    </testcase>
+    <testcase classname="media" name="img_in_system_message" time="2.522">
+      <failure message="finish_reason">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+    <testcase classname="media" name="img_mixed_url_and_base64" time="4.990">
+      <failure message="content_contains, finish_reason">content_contains: want '2' got 'Thanks for sharing the image — it appears to show a geometric pattern or abstrac'</failure>
+    </testcase>
+    <testcase classname="media" name="img_multiturn_followup" time="1.202">
+    </testcase>
+    <testcase classname="media" name="img_res_1344x1344" time="3.625">
+    </testcase>
+    <testcase classname="media" name="img_res_16x16" time="1.896">
+    </testcase>
+    <testcase classname="media" name="img_res_200x4000" time="3.476">
+    </testcase>
+    <testcase classname="media" name="img_res_2048x2048" time="3.634">
+    </testcase>
+    <testcase classname="media" name="img_res_224x224" time="2.688">
+    </testcase>
+    <testcase classname="media" name="img_res_28x28" time="1.801">
+    </testcase>
+    <testcase classname="media" name="img_res_3840x2160" time="2.801">
+    </testcase>
+    <testcase classname="media" name="img_res_4000x200" time="3.934">
+    </testcase>
+    <testcase classname="media" name="img_res_4096x4096" time="4.930">
+    </testcase>
+    <testcase classname="media" name="img_res_448x448" time="4.102">
+    </testcase>
+    <testcase classname="media" name="img_res_64x64" time="2.418">
+    </testcase>
+    <testcase classname="media" name="img_res_8192x512" time="2.617">
+    </testcase>
+    <testcase classname="media" name="img_res_896x896" time="2.698">
+    </testcase>
+    <testcase classname="media" name="img_size_12mb" time="3.487">
+    </testcase>
+    <testcase classname="media" name="img_size_2mb" time="3.040">
+    </testcase>
+    <testcase classname="media" name="img_size_6mb" time="2.211">
+    </testcase>
+    <testcase classname="media" name="img_text_mime" time="0.132">
+    </testcase>
+    <testcase classname="media" name="img_unreachable_url" time="5.245">
+    </testcase>
+    <testcase classname="media" name="img_url_https" time="7.682">
+    </testcase>
+    <testcase classname="media" name="video_b64_12s_real_mp4" time="6.467">
+      <failure message="finish_reason">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+    <testcase classname="media" name="video_b64_real_2s_mp4" time="4.326">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+    <testcase classname="media" name="video_b64_test_video_mkv" time="4.167">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="media" name="video_b64_test_video_mov" time="3.303">
+    </testcase>
+    <testcase classname="media" name="video_plus_image" time="9.765">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="media" name="video_two_urls" time="0.114">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="media" name="video_url_https" time="10.001">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="params" tests="24" failures="14">
+    <testcase classname="params" name="param_empty_messages" time="0.103">
+    </testcase>
+    <testcase classname="params" name="param_frequency_penalty_3" time="0.103">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_json_schema_not_object" time="0.103">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_logprobs" time="1.646">
+      <failure message="finish_reason">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+    <testcase classname="params" name="param_max_tokens_0" time="0.101">
+    </testcase>
+    <testcase classname="params" name="param_max_tokens_huge" time="0.117">
+    </testcase>
+    <testcase classname="params" name="param_max_tokens_negative" time="0.117">
+    </testcase>
+    <testcase classname="params" name="param_n_2" time="0.710">
+      <failure message="finish_reason">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+    <testcase classname="params" name="param_presence_penalty_3" time="0.117">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_reasoning_effort_invalid" time="0.103">
+    </testcase>
+    <testcase classname="params" name="param_seed" time="0.547">
+      <failure message="finish_reason">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+    <testcase classname="params" name="param_stop_many" time="0.117">
+    </testcase>
+    <testcase classname="params" name="param_stream_options_without_stream" time="0.103">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_temperature_0" time="0.609">
+    </testcase>
+    <testcase classname="params" name="param_temperature_2_5" time="0.127">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_temperature_negative" time="0.102">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_thinking_type_bogus" time="0.103">
+    </testcase>
+    <testcase classname="params" name="param_tool_bad_type" time="0.123">
+    </testcase>
+    <testcase classname="params" name="param_tool_choice_unknown_tool" time="0.102">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_tool_duplicate_names" time="1.444">
+    </testcase>
+    <testcase classname="params" name="param_tool_name_invalid_chars" time="0.599">
+      <failure message="finish_reason">finish_reason: want 'length' got 'stop'</failure>
+    </testcase>
+    <testcase classname="params" name="param_top_p_0" time="0.104">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_top_p_1_5" time="0.105">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="params" name="param_unknown_field" time="0.597">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="streaming" tests="1" failures="0">
+    <testcase classname="streaming" name="streaming_text_usage" time="2.123">
+    </testcase>
+  </testsuite>
+  <testsuite name="structured" tests="2" failures="0">
+    <testcase classname="structured" name="structured_json_object" time="0.874">
+    </testcase>
+    <testcase classname="structured" name="structured_json_schema" time="1.414">
+    </testcase>
+  </testsuite>
+  <testsuite name="text" tests="4" failures="2">
+    <testcase classname="text" name="text_basic" time="1.656">
+    </testcase>
+    <testcase classname="text" name="text_multi_turn" time="0.900">
+      <failure message="content_contains, finish_reason">finish_reason: want 'stop' got 'length'; content_contains: want 'Ada' got ''</failure>
+    </testcase>
+    <testcase classname="text" name="text_stop_sequence" time="0.505">
+    </testcase>
+    <testcase classname="text" name="text_system_prompt" time="1.862">
+      <failure message="finish_reason">finish_reason: want 'stop' got 'length'</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="thinking" tests="3" failures="1">
+    <testcase classname="thinking" name="thinking_default_forced" time="3.370">
+    </testcase>
+    <testcase classname="thinking" name="thinking_effort_low" time="0.354">
+      <failure message="reasoning_present">reasoning_present: want False got True</failure>
+    </testcase>
+    <testcase classname="thinking" name="thinking_effort_none" time="0.117">
+    </testcase>
+  </testsuite>
+  <testsuite name="tool_battery" tests="102" failures="95">
+    <testcase classname="tool_battery" name="mm_000" time="16.718">
+      <failure message="language_following, no_think_leak">language_following: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_001" time="32.089">
+      <failure message="finish_reason, language_following, no_think_leak">finish_reason: want 'stop' got 'length'; language_following: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_002" time="31.629">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_003" time="32.226">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_004" time="25.010">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_005" time="22.245">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_006" time="17.714">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_007" time="13.865">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_008" time="6.760">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_009" time="14.529">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_010" time="11.965">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_011" time="32.077">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_012" time="8.193">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_013" time="22.474">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_014" time="25.549">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_015" time="25.024">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_016" time="24.700">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_017" time="17.062">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_018" time="25.827">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_019" time="19.619">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_020" time="5.226">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Bash', 'Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_021" time="16.365">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_022" time="11.213">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_023" time="9.547">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_024" time="15.739">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_025" time="7.272">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_026" time="7.711">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_027" time="23.707">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_028" time="13.011">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_029" time="28.706">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['READ'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_030" time="26.813">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_031" time="7.669">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_032" time="31.569">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_033" time="16.339">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_034" time="7.428">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_035" time="21.831">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_036" time="29.253">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_037" time="31.887">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_038" time="27.829">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_039" time="14.779">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_040" time="13.540">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_041" time="25.246">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_042" time="14.355">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_043" time="13.027">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_044" time="21.987">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_045" time="31.331">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_046" time="19.352">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_047" time="28.065">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_048" time="28.033">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Bash', 'Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_049" time="15.832">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_050" time="13.068">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_051" time="15.637">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['Read'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_052" time="30.050">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['file_editor'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_053" time="20.533">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['execute_bash'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_054" time="30.477">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['execute_bash'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_055" time="21.157">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['execute_bash'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_056" time="23.022">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['file_editor'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_057" time="15.727">
+    </testcase>
+    <testcase classname="tool_battery" name="mm_058" time="8.608">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'length' got 'stop'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_059" time="4.489">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['generate_safety_checklist'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_060" time="15.163">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['create_marathon_plan'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_061" time="5.948">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['compute_bed_requirements'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_062" time="29.369">
+    </testcase>
+    <testcase classname="tool_battery" name="mm_063" time="17.106">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['flag_duplicate_therapies'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_064" time="18.196">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['generate_seating_chart'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_065" time="14.441">
+      <failure message="finish_reason, no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_066" time="8.848">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['plan_grocery_route'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_067" time="21.281">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['create_alert_subscription'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_068" time="22.041">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'length' got 'stop'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_069" time="29.572">
+    </testcase>
+    <testcase classname="tool_battery" name="mm_070" time="15.415">
+      <failure message="finish_reason">finish_reason: want 'length' got 'stop'</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_071" time="5.766">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['flag_duplicate_therapies'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_072" time="7.849">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'length' got 'stop'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_073" time="12.924">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['prioritize_leads'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_074" time="9.347">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['analyze_monthly_budget'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_075" time="15.797">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['analyze_sleep_export'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_076" time="7.491">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['normalize_compare_listings'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_077" time="4.992">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['compose_mindfulness_session', 'generate_journal_prompts', 'schedule_reminder'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_078" time="4.785">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['summarize_meeting_transcript'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_079" time="4.626">
+    </testcase>
+    <testcase classname="tool_battery" name="mm_080" time="13.419">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['generate_spaced_repetition_plan'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_081" time="3.861">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['create_medication_schedule'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_082" time="12.074">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['analyze_electricity_usage'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_083" time="10.256">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_084" time="14.228">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['create_medication_reminder', 'create_shift_assignment'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_085" time="10.710">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['plan_city_itinerary'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_086" time="5.257">
+    </testcase>
+    <testcase classname="tool_battery" name="mm_087" time="7.226">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['create_hydration_schedule'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_088" time="24.330">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['assign_bed'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_089" time="15.988">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['optimize_shift_plan'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_090" time="6.018">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['create_pet_care_schedule'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_091" time="11.958">
+      <failure message="finish_reason">finish_reason: want 'length' got 'stop'</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_092" time="17.419">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_093" time="3.559">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['evaluate_order_risk'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_094" time="15.556">
+    </testcase>
+    <testcase classname="tool_battery" name="mm_095" time="9.653">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['plan_delivery_routes'] got []</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_096" time="12.434">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['assign_bed'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_097" time="9.806">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['flag_duplicate_therapies'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_098" time="17.484">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_099" time="10.474">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['plan_delivery_routes'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_100" time="19.797">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['shell'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_battery" name="mm_101" time="3.309">
+    </testcase>
+  </testsuite>
+  <testsuite name="tool_schema" tests="424" failures="424">
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_001_nonstream" time="10.797">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_001_stream" time="7.639">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_002_nonstream" time="10.855">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_002_stream" time="9.765">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_003_nonstream" time="7.113">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_003_stream" time="15.444">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_004_nonstream" time="4.357">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_004_stream" time="4.487">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_005_nonstream" time="11.235">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAdditionalProperties_005_stream" time="9.470">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_001_nonstream" time="15.306">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_001_stream" time="11.264">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_002_nonstream" time="7.126">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_002_stream" time="11.056">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_003_nonstream" time="8.323">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_003_stream" time="12.133">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_004_nonstream" time="0.234">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestAnyOf_004_stream" time="0.111">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_001_nonstream" time="11.362">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_001_stream" time="15.354">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_002_nonstream" time="15.243">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_002_stream" time="15.113">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_003_nonstream" time="15.219">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_003_stream" time="15.193">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_004_nonstream" time="5.853">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_004_stream" time="9.616">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_005_nonstream" time="7.974">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_005_stream" time="8.353">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_006_nonstream" time="11.059">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_006_stream" time="7.750">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_007_nonstream" time="9.801">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_007_stream" time="10.339">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_008_nonstream" time="11.688">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_008_stream" time="7.694">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_009_nonstream" time="8.084">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_009_stream" time="12.314">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_010_nonstream" time="15.290">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_010_stream" time="14.526">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_011_nonstream" time="11.599">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_011_stream" time="6.845">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_012_nonstream" time="6.789">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_012_stream" time="11.024">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_013_nonstream" time="7.470">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_013_stream" time="15.216">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_014_nonstream" time="7.075">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_014_stream" time="7.521">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_015_nonstream" time="11.942">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_015_stream" time="11.394">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_016_nonstream" time="11.612">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_016_stream" time="12.535">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_017_nonstream" time="12.655">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_017_stream" time="10.886">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_018_nonstream" time="12.078">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_018_stream" time="11.887">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_019_nonstream" time="8.937">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_019_stream" time="6.971">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_020_nonstream" time="15.245">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_020_stream" time="14.964">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_021_nonstream" time="6.749">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_021_stream" time="11.661">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_022_nonstream" time="11.288">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_022_stream" time="7.318">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_023_nonstream" time="4.732">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_023_stream" time="12.684">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_024_nonstream" time="6.975">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_024_stream" time="9.417">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'tool_calls' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_025_nonstream" time="7.859">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_025_stream" time="9.810">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_026_nonstream" time="6.165">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestBasicTypes_026_stream" time="15.443">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDefs_001_nonstream" time="3.274">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDefs_001_stream" time="5.405">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDefs_002_nonstream" time="0.222">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDefs_002_stream" time="0.122">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_001_nonstream" time="15.157">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_001_stream" time="11.147">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_002_nonstream" time="15.225">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_002_stream" time="15.114">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_003_nonstream" time="15.200">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_003_stream" time="15.241">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_004_nonstream" time="11.164">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestDescription_004_stream" time="15.549">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_001_nonstream" time="4.250">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_001_stream" time="3.644">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_002_nonstream" time="15.002">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_002_stream" time="15.097">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_003_nonstream" time="15.207">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_003_stream" time="15.046">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_004_nonstream" time="15.369">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_004_stream" time="12.089">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_005_nonstream" time="11.413">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_005_stream" time="14.258">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_006_nonstream" time="15.128">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_006_stream" time="15.020">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_007_nonstream" time="15.256">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_007_stream" time="14.910">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_008_nonstream" time="15.133">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_008_stream" time="15.005">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_009_nonstream" time="14.999">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_009_stream" time="14.824">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_010_nonstream" time="15.074">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_010_stream" time="13.442">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_011_nonstream" time="11.855">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_011_stream" time="15.139">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_012_nonstream" time="15.199">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_012_stream" time="15.210">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_013_nonstream" time="7.061">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_013_stream" time="3.705">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_014_nonstream" time="13.191">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_014_stream" time="15.078">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_015_nonstream" time="15.269">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_015_stream" time="15.364">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_016_nonstream" time="3.777">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_016_stream" time="7.805">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_017_nonstream" time="15.314">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_017_stream" time="15.055">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_018_nonstream" time="15.245">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_018_stream" time="13.770">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_019_nonstream" time="11.490">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_019_stream" time="12.074">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_020_nonstream" time="15.108">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_020_stream" time="14.362">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_021_nonstream" time="15.297">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_021_stream" time="11.425">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_022_nonstream" time="15.548">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_022_stream" time="7.800">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_023_nonstream" time="15.091">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_023_stream" time="15.083">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_024_nonstream" time="14.951">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_024_stream" time="14.988">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_025_nonstream" time="15.092">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_025_stream" time="12.429">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_026_nonstream" time="13.056">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_026_stream" time="13.741">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_027_nonstream" time="15.392">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_027_stream" time="12.843">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_028_nonstream" time="11.672">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_028_stream" time="15.253">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_029_nonstream" time="11.131">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_029_stream" time="8.630">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_030_nonstream" time="4.474">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_030_stream" time="4.305">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_031_nonstream" time="11.455">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_031_stream" time="3.248">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_032_nonstream" time="15.216">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_032_stream" time="13.263">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_033_nonstream" time="15.193">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_033_stream" time="11.922">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_034_nonstream" time="8.959">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_034_stream" time="15.225">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_035_nonstream" time="11.184">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_035_stream" time="12.862">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_036_nonstream" time="7.386">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_036_stream" time="15.105">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_037_nonstream" time="12.644">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_037_stream" time="4.261">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_038_nonstream" time="7.766">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_038_stream" time="7.377">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_039_nonstream" time="13.862">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_039_stream" time="9.457">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_040_nonstream" time="8.501">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_040_stream" time="6.661">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_041_nonstream" time="15.225">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_041_stream" time="15.299">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_042_nonstream" time="10.005">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_042_stream" time="15.220">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_043_nonstream" time="7.839">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_043_stream" time="11.875">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_044_nonstream" time="3.003">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_044_stream" time="9.050">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_045_nonstream" time="7.896">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_045_stream" time="7.350">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_046_nonstream" time="7.945">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_046_stream" time="6.767">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_047_nonstream" time="11.679">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_047_stream" time="11.302">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_048_nonstream" time="15.221">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_048_stream" time="15.096">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_049_nonstream" time="9.492">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_049_stream" time="9.565">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_050_nonstream" time="4.518">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_050_stream" time="4.274">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_051_nonstream" time="3.666">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_051_stream" time="13.123">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_052_nonstream" time="11.251">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_052_stream" time="2.302">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_053_nonstream" time="7.215">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_053_stream" time="10.483">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_054_nonstream" time="8.845">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_054_stream" time="7.315">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_055_nonstream" time="1.828">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_055_stream" time="9.471">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_056_nonstream" time="3.042">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_056_stream" time="7.529">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_057_nonstream" time="8.779">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_057_stream" time="12.197">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_058_nonstream" time="4.280">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_058_stream" time="6.839">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_059_nonstream" time="15.296">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_059_stream" time="15.349">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_060_nonstream" time="8.322">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_060_stream" time="5.678">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_061_nonstream" time="6.488">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_061_stream" time="10.954">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_062_nonstream" time="11.499">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_062_stream" time="6.091">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_063_nonstream" time="10.476">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_063_stream" time="11.436">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_064_nonstream" time="8.061">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_064_stream" time="4.244">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_065_nonstream" time="3.948">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_065_stream" time="2.407">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_066_nonstream" time="12.966">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_066_stream" time="6.265">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_067_nonstream" time="11.152">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_067_stream" time="6.884">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_068_nonstream" time="8.538">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_068_stream" time="8.783">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_069_nonstream" time="15.306">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_069_stream" time="8.012">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_070_nonstream" time="8.458">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_070_stream" time="6.944">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_071_nonstream" time="10.080">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_071_stream" time="14.136">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_072_nonstream" time="7.846">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_072_stream" time="7.454">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_073_nonstream" time="8.013">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_073_stream" time="5.862">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_074_nonstream" time="15.585">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_074_stream" time="8.366">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_075_nonstream" time="6.833">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_075_stream" time="9.314">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'tool_calls' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_076_nonstream" time="10.564">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_076_stream" time="6.989">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_077_nonstream" time="8.455">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_077_stream" time="8.248">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_078_nonstream" time="9.011">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_078_stream" time="11.847">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_079_nonstream" time="12.313">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_079_stream" time="9.367">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_080_nonstream" time="10.673">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_080_stream" time="12.088">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_081_nonstream" time="15.402">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_081_stream" time="8.158">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_082_nonstream" time="11.611">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_082_stream" time="11.836">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_083_nonstream" time="14.643">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_083_stream" time="15.280">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_084_nonstream" time="11.488">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_084_stream" time="6.038">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_085_nonstream" time="12.954">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_085_stream" time="12.067">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_086_nonstream" time="8.090">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_086_stream" time="13.186">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_087_nonstream" time="3.955">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_087_stream" time="12.053">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_088_nonstream" time="8.002">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_088_stream" time="6.171">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_089_nonstream" time="12.418">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_089_stream" time="12.988">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_090_nonstream" time="12.172">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_090_stream" time="11.967">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_091_nonstream" time="10.030">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_091_stream" time="7.749">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_092_nonstream" time="10.915">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_092_stream" time="12.595">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_093_nonstream" time="8.390">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_093_stream" time="6.665">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_094_nonstream" time="7.182">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_094_stream" time="15.471">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_095_nonstream" time="5.136">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_095_stream" time="11.954">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_096_nonstream" time="0.152">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_096_stream" time="0.146">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_097_nonstream" time="12.092">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestEnforcerCases_097_stream" time="15.287">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_001_nonstream" time="4.302">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_001_stream" time="7.110">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_002_nonstream" time="15.150">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_002_stream" time="15.240">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_003_nonstream" time="6.812">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_003_stream" time="9.393">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_004_nonstream" time="5.713">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_004_stream" time="7.474">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_005_nonstream" time="8.456">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_005_stream" time="3.932">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_006_nonstream" time="10.891">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestID_006_stream" time="11.120">
+      <failure message="status_class">status_class: want '4xx' got '2xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestKeywordsValidation_001_nonstream" time="15.234">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestKeywordsValidation_001_stream" time="11.813">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestKeywordsValidation_002_nonstream" time="12.586">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestKeywordsValidation_002_stream" time="10.619">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_001_nonstream" time="10.143">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_001_stream" time="8.327">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_002_nonstream" time="10.146">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_002_stream" time="8.036">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_003_nonstream" time="15.141">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_003_stream" time="12.529">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_004_nonstream" time="5.267">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNestedDefsDepth_004_stream" time="8.288">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_001_nonstream" time="6.914">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_001_stream" time="10.166">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_002_nonstream" time="3.553">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_002_stream" time="7.450">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_003_nonstream" time="11.860">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_003_stream" time="8.196">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_004_nonstream" time="9.045">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_004_stream" time="5.730">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_005_nonstream" time="11.873">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestNumberFormat_005_stream" time="10.283">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_001_nonstream" time="11.295">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_001_stream" time="15.751">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_002_nonstream" time="4.435">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_002_stream" time="4.044">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_003_nonstream" time="0.277">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_003_stream" time="0.126">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_004_nonstream" time="267.959">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_004_stream" time="202.659">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_005_nonstream" time="104.124">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_005_stream" time="12.957">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_006_nonstream" time="6.515">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_006_stream" time="11.991">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_007_nonstream" time="6.244">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_007_stream" time="9.551">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_008_nonstream" time="3.792">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_008_stream" time="8.749">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_009_nonstream" time="5.634">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_009_stream" time="4.185">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_010_nonstream" time="12.469">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_010_stream" time="10.868">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_011_nonstream" time="9.046">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_011_stream" time="12.082">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_012_nonstream" time="15.272">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_012_stream" time="11.403">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_013_nonstream" time="15.204">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_013_stream" time="15.182">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_014_nonstream" time="15.248">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_014_stream" time="15.422">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_015_nonstream" time="7.464">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_015_stream" time="9.680">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_016_nonstream" time="9.986">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_016_stream" time="7.357">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_017_nonstream" time="5.250">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_017_stream" time="5.113">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_018_nonstream" time="21.198">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_018_stream" time="6.213">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_019_nonstream" time="5.643">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRangeConstraints_019_stream" time="15.110">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRefInProperties_001_nonstream" time="9.207">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRefInProperties_001_stream" time="9.845">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_001_nonstream" time="9.048">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_001_stream" time="4.570">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_002_nonstream" time="5.819">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_002_stream" time="10.546">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_003_nonstream" time="7.052">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_003_stream" time="8.581">
+      <failure message="finish_reason, no_think_leak, status_class, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_004_nonstream" time="7.363">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_004_stream" time="8.494">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_005_nonstream" time="7.551">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_005_stream" time="13.288">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_006_nonstream" time="11.252">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_006_stream" time="9.440">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_007_nonstream" time="5.880">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_007_stream" time="11.047">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_008_nonstream" time="9.743">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_008_stream" time="8.348">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_009_nonstream" time="11.435">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want None got 'tool_calls'; tool_names: want [] got ['submit']; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_009_stream" time="15.238">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_010_nonstream" time="12.041">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_010_stream" time="13.044">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_011_nonstream" time="0.219">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_011_stream" time="0.166">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_012_nonstream" time="0.178">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_012_stream" time="0.181">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_013_nonstream" time="0.139">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_013_stream" time="0.155">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_014_nonstream" time="0.130">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_014_stream" time="0.132">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_015_nonstream" time="14.266">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_015_stream" time="12.499">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'stop'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_016_nonstream" time="12.101">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want None got 'tool_calls'; tool_names: want [] got ['submit']; args_match_schema: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_016_stream" time="15.440">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_017_nonstream" time="9.133">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want None got 'tool_calls'; tool_names: want [] got ['submit']; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_017_stream" time="15.156">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_018_nonstream" time="15.135">
+      <failure message="finish_reason, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_018_stream" time="15.585">
+      <failure message="finish_reason, no_think_leak, tool_triggered">finish_reason: want None got 'length'; tool_triggered: want True got False; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_019_nonstream" time="6.376">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestReferences_019_stream" time="3.181">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_001_nonstream" time="12.327">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_001_stream" time="12.086">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_002_nonstream" time="10.848">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_002_stream" time="15.227">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_003_nonstream" time="15.284">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_003_stream" time="15.343">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_004_nonstream" time="2.877">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_004_stream" time="9.303">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_005_nonstream" time="15.338">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestRequired_005_stream" time="15.422">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_001_nonstream" time="7.188">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_001_stream" time="15.590">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_002_nonstream" time="9.022">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_002_stream" time="7.451">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_003_nonstream" time="11.477">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_003_stream" time="11.838">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_004_nonstream" time="6.633">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_004_stream" time="4.907">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_005_nonstream" time="12.298">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_005_stream" time="5.387">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_006_nonstream" time="7.817">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_006_stream" time="11.791">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_007_nonstream" time="2.751">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_007_stream" time="15.704">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_008_nonstream" time="2.552">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_008_stream" time="5.229">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_009_nonstream" time="8.436">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_009_stream" time="7.202">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_010_nonstream" time="4.357">
+      <failure message="no_think_leak">no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_010_stream" time="3.562">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_011_nonstream" time="0.315">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestSingleTypeInArray_011_stream" time="0.152">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestTypeLocation_001_nonstream" time="10.774">
+      <failure message="args_match_schema, finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestTypeLocation_001_stream" time="15.112">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestTypeLocation_002_nonstream" time="17.403">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tool_schema" name="walle_TestTypeLocation_002_stream" time="9.194">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['submit'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="tools" tests="8" failures="7">
+    <testcase classname="tools" name="tools_named_choice" time="5.300">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['get_stock_price'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tools" name="tools_no_call_needed" time="0.656">
+    </testcase>
+    <testcase classname="tools" name="tools_pick_among_two" time="2.749">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['get_stock_price'] got []</failure>
+    </testcase>
+    <testcase classname="tools" name="tools_required" time="4.262">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'length'; tool_triggered: want True got False; tool_names: want ['get_weather'] got []</failure>
+    </testcase>
+    <testcase classname="tools" name="tools_result_roundtrip" time="0.716">
+      <failure message="content_contains">content_contains: want '21' got 'The weather in Beijing is currently sunny! ☀️\n\nAccording to the latest data, con'</failure>
+    </testcase>
+    <testcase classname="tools" name="tools_schema_key_order" time="3.006">
+      <failure message="content_order">content_order: want ['some-parameter', 'xyz', '123', 'another-parameter'] got []</failure>
+    </testcase>
+    <testcase classname="tools" name="tools_single_auto" time="3.828">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['get_weather'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="tools" name="tools_stream" time="3.754">
+      <failure message="finish_reason, no_think_leak, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['get_weather'] got []; no_think_leak: want True got False</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="vendor" tests="12" failures="2">
+    <testcase classname="vendor" name="zai_file_url" time="0.125">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_high" time="0.712">
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_low" time="0.272">
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_max" time="1.470">
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_medium" time="0.114">
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_minimal" time="0.122">
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_none" time="0.121">
+    </testcase>
+    <testcase classname="vendor" name="zai_reasoning_effort_xhigh" time="0.118">
+    </testcase>
+    <testcase classname="vendor" name="zai_thinking_clear_false_roundtrip" time="1.262">
+    </testcase>
+    <testcase classname="vendor" name="zai_thinking_clear_true_roundtrip" time="1.575">
+    </testcase>
+    <testcase classname="vendor" name="zai_thinking_type_disabled" time="0.400">
+    </testcase>
+    <testcase classname="vendor" name="zai_tool_stream_flag" time="3.015">
+      <failure message="finish_reason, tool_names, tool_triggered">finish_reason: want 'tool_calls' got 'stop'; tool_triggered: want True got False; tool_names: want ['get_weather'] got []</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="vision" tests="4" failures="3">
+    <testcase classname="vision" name="vision_image_base64" time="1.783">
+    </testcase>
+    <testcase classname="vision" name="vision_image_url" time="5.336">
+      <failure message="finish_reason, no_think_leak">finish_reason: want 'stop' got 'length'; no_think_leak: want True got False</failure>
+    </testcase>
+    <testcase classname="vision" name="vision_two_images" time="4.455">
+      <failure message="content_contains, finish_reason">finish_reason: want 'stop' got 'length'; content_contains: want '2' got ' Thank you for sharing this! It looks like a screenshot of a login or registrati'</failure>
+    </testcase>
+    <testcase classname="vision" name="vision_video_url" time="9.583">
+      <failure message="status_class">status_class: want '2xx' got '4xx'</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

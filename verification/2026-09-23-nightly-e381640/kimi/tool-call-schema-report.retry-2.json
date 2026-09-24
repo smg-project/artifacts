@@ -1,0 +1,326 @@
+{
+  "generated_at": "2026-09-23T20:45:51.975272+00:00",
+  "model": "kimi-k3-nvfp4",
+  "base_url": "http://localhost:38090/v1",
+  "tool_name": "kvv_walle_case",
+  "dry_run": false,
+  "thinking": true,
+  "think_mode": "opensource",
+  "modes": [
+    "non-stream",
+    "stream"
+  ],
+  "selected_cases": [
+    {
+      "suite": "TestAnyOf",
+      "line": 2,
+      "selection_reason": "anyOf_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "anyOf": [
+              {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "age": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "suite": "TestEnforcerCases",
+      "line": 2,
+      "selection_reason": "empty_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {}
+        }
+      }
+    },
+    {
+      "suite": "TestReferences",
+      "line": 2,
+      "selection_reason": "object_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "properties": {
+              "node": {
+                "$ref": "#/$defs/Node"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "$defs": {
+          "Node": {
+            "properties": {
+              "next": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/Node"
+                  }
+                ]
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "suite": "TestReferences",
+      "line": 16,
+      "selection_reason": "object_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "$ref": "#/$defs/__case_schema"
+          }
+        },
+        "$defs": {
+          "__case_schema": {
+            "properties": {
+              "node": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "properties": {
+                      "next": {
+                        "$ref": "#/$defs/__case_schema"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "next"
+                    ],
+                    "type": "object"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "node"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "by_status": {
+      "passed": 4
+    },
+    "by_selection_reason": {
+      "anyOf_parameter_schema": 1,
+      "empty_parameter_schema": 1,
+      "object_parameter_schema": 2
+    },
+    "by_mode": {
+      "non-stream": {
+        "passed": 2
+      },
+      "stream": {
+        "passed": 2
+      }
+    }
+  },
+  "results": [
+    {
+      "suite": "TestAnyOf",
+      "line": 2,
+      "mode": "stream",
+      "selection_reason": "anyOf_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "anyOf": [
+              {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "age": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          }
+        }
+      },
+      "status": "passed",
+      "message": ""
+    },
+    {
+      "suite": "TestEnforcerCases",
+      "line": 2,
+      "mode": "non-stream",
+      "selection_reason": "empty_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {}
+        }
+      },
+      "status": "passed",
+      "message": ""
+    },
+    {
+      "suite": "TestReferences",
+      "line": 2,
+      "mode": "non-stream",
+      "selection_reason": "object_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "properties": {
+              "node": {
+                "$ref": "#/$defs/Node"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "$defs": {
+          "Node": {
+            "properties": {
+              "next": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/Node"
+                  }
+                ]
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "status": "passed",
+      "message": ""
+    },
+    {
+      "suite": "TestReferences",
+      "line": 16,
+      "mode": "stream",
+      "selection_reason": "object_parameter_schema",
+      "schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "$ref": "#/$defs/__case_schema"
+          }
+        },
+        "$defs": {
+          "__case_schema": {
+            "properties": {
+              "node": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "properties": {
+                      "next": {
+                        "$ref": "#/$defs/__case_schema"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "next"
+                    ],
+                    "type": "object"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "node"
+            ],
+            "type": "object"
+          }
+        }
+      },
+      "status": "passed",
+      "message": ""
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="88" time="1776.449" timestamp="2026-09-23T14:11:41.162583-07:00" hostname="verifier-host"><testcase classname="m3_video_tests.TestBase64Video" name="test_01_01_base64_video" time="1.257" /><testcase classname="m3_video_tests.TestBase64Video" name="test_01_02_base64_real_pony_cartoon" time="7.383" /><testcase classname="m3_video_tests.TestURLVideo" name="test_02_01_url_video" time="3.760" /><testcase classname="m3_video_tests.TestURLVideo" name="test_02_02_url_real_pony_cartoon" time="9.995" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_01_mkv_format_legacy" time="1.692" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_02_mov_format_video_quicktime" time="1.840" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_03_mov_format_video_mov" time="1.396" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_04_mkv_format_video_matroska" time="1.074" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_05_avi_format[video_avi]" time="1.259" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_05_avi_format[video_x_msvideo]" time="1.222" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_06_real_mov_smoke" time="1.306" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_07_real_avi_smoke" time="1.080" /><testcase classname="m3_video_tests.TestVideoFormat" name="test_03_08_real_mkv_smoke" time="1.396" /><testcase classname="m3_video_tests.TestMultiVideo" name="test_04_01_count_at_max" time="14.057" /><testcase classname="m3_video_tests.TestMultiVideo" name="test_04_02_count_over_max" time="0.373" /><testcase classname="m3_video_tests.TestMultiVideo" name="test_04_03_multi_video_3" time="3.677" /><testcase classname="m3_video_tests.TestMultiVideo" name="test_04_04_multi_video_5" time="3.312" /><testcase classname="m3_video_tests.TestMultiVideo" name="test_04_05_multi_video_b64_url_mix" time="3.613" /><testcase classname="m3_video_tests.TestImageVideoMixed" name="test_05_01_one_image_one_video" time="2.313" /><testcase classname="m3_video_tests.TestImageVideoMixed" name="test_05_02_image_video_stream_variant[non_stream]" time="1.993" /><testcase classname="m3_video_tests.TestImageVideoMixed" name="test_05_02_image_video_stream_variant[stream]" time="2.146" /><testcase classname="m3_video_tests.TestImageVideoMixed" name="test_05_03_mixed_3img_1vid" time="6.634" /><testcase classname="m3_video_tests.TestImageVideoMixed" name="test_05_04_mixed_1img_2vid" time="6.044" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_01_fps_real_video[fps=0.5]" time="3.138" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_01_fps_real_video[fps=1]" time="5.753" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_01_fps_real_video[fps=2]" time="5.631" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_02_valid_fps[fps=0.5]" time="4.966" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_02_valid_fps[fps=1.0]" time="4.086" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_02_valid_fps[fps=2.0]" time="5.838" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_02_valid_fps[fps=5.0]" time="7.834" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_03_invalid_fps[fps=0.1]" time="0.533" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_03_invalid_fps[fps=0]" time="0.490" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_03_invalid_fps[fps=-1]" time="0.541" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_03_invalid_fps[fps=10]" time="0.498" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_03_invalid_fps[fps=100]" time="0.521" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_04_fps_lower_boundary" time="6.239" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_05_fps_upper_boundary" time="4.913" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_06_fps_below_min_short_fixture[0.1]" time="0.772" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_06_fps_below_min_short_fixture[0.0]" time="0.663" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_06_fps_below_min_short_fixture[-1]" time="0.756" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_07_fps_above_max_short_fixture[5.1]" time="0.710" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_07_fps_above_max_short_fixture[10]" time="0.771" /><testcase classname="m3_video_tests.TestFpsParam" name="test_06_07_fps_above_max_short_fixture[1000]" time="0.753" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_01_detail_value[detail=low]" time="1.937" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_01_detail_value[detail=default]" time="1.798" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_01_detail_value[detail=high]" time="1.687" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_02_no_detail_no_fps" time="0.787" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_03_no_detail_explicit_fps" time="4.581" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_04_no_fps_explicit_detail" time="1.652" /><testcase classname="m3_video_tests.TestDetailParam" name="test_07_05_max_long_side_pixel_baseline" time="2.395" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_01_tier_low_no_scale" time="3.463" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_02_tier_low_scale_down" time="6.416" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_03_tier_default_no_scale" time="5.150" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_04_tier_default_scale_down" time="8.644" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_05_tier_high_no_scale" time="6.516" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_06_tier_high_scale_down" time="10.321" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_07_tier_at_boundary" time="6.280" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_08_tier_consistency" time="5.873" /><testcase classname="m3_video_tests.TestResolutionTier" name="test_08_09_max_total_pixels_exceeded" time="27.524" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_01_tier_value[low=504]" time="14.770" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_01_tier_value[default=1008]" time="17.423" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_01_tier_value[high=2016]" time="23.268" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_02_monotonic" time="54.149" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_03_out_of_range[below_min_28x5]" time="5.248" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_03_out_of_range[above_max_28x129]" time="5.177" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_03_out_of_range[zero]" time="5.128" /><testcase classname="m3_video_tests.TestMaxLongSidePixel" name="test_09_03_out_of_range[negative_28]" time="5.388" /><testcase classname="m3_video_tests.TestVideoSizeLimit" name="test_10_01_url_under_50mb" time="8.496" /><testcase classname="m3_video_tests.TestVideoSizeLimit" name="test_10_02_url_over_250mb" time="26.183" /><testcase classname="m3_video_tests.TestVideoSizeLimit" name="test_10_03_base64_under_50mb" time="7.774" /><testcase classname="m3_video_tests.TestVideoSizeLimit" name="test_10_04_base64_over_50mb" time="11.524" /><testcase classname="m3_video_tests.TestVideoSizeLimit" name="test_10_05_url_over_250mb_summary" time="17.767" /><testcase classname="m3_video_tests.TestLongVideo" name="test_11_01_long_video_5min" time="7.037" /><testcase classname="m3_video_tests.TestLongVideo" name="test_11_02_long_video_10min" time="7.090" /><testcase classname="m3_video_tests.TestLongVideo" name="test_11_03_long_video_20min" time="601.124"><failure message="httpx.ReadTimeout: timed out">../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:101: in map_httpcore_exceptions
+    yield
+../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:250: in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py:256: in handle_request
+    raise exc from None
+../.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py:236: in handle_request
+    response = connection.handle_request(
+../.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py:103: in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:136: in handle_request
+    raise exc
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:106: in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:177: in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:217: in _receive_event
+    data = self._network_stream.read(
+../.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py:126: in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+local-path in __exit__
+    self.gen.throw(value)
+../.venv/lib/python3.12/site-packages/httpcore/_exceptions.py:14: in map_exceptions
+    raise to_exc(exc) from exc
+E   httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+m3_video_tests.py:1126: in test_11_03_long_video_20min
+    r = oai_chat({
+helpers.py:763: in oai_chat
+    resp = httpx.post(OAI_URL, json=payload, headers=hdrs, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_api.py:304: in post
+    return request(
+../.venv/lib/python3.12/site-packages/httpx/_api.py:109: in request
+    return client.request(
+../.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+../.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+../.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:249: in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+local-path in __exit__
+    self.gen.throw(value)
+../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:118: in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+E   httpx.ReadTimeout: timed out</failure></testcase><testcase classname="m3_video_tests.TestLongVideo" name="test_11_04_long_video_30min" time="605.819"><failure message="httpx.ReadTimeout: timed out">../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:101: in map_httpcore_exceptions
+    yield
+../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:250: in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py:256: in handle_request
+    raise exc from None
+../.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py:236: in handle_request
+    response = connection.handle_request(
+../.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py:103: in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:136: in handle_request
+    raise exc
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:106: in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:177: in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py:217: in _receive_event
+    data = self._network_stream.read(
+../.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py:126: in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+local-path in __exit__
+    self.gen.throw(value)
+../.venv/lib/python3.12/site-packages/httpcore/_exceptions.py:14: in map_exceptions
+    raise to_exc(exc) from exc
+E   httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+m3_video_tests.py:1149: in test_11_04_long_video_30min
+    r = oai_chat({
+helpers.py:763: in oai_chat
+    resp = httpx.post(OAI_URL, json=payload, headers=hdrs, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_api.py:304: in post
+    return request(
+../.venv/lib/python3.12/site-packages/httpx/_api.py:109: in request
+    return client.request(
+../.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+../.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+../.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:249: in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+local-path in __exit__
+    self.gen.throw(value)
+../.venv/lib/python3.12/site-packages/httpx/_transports/default.py:118: in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+E   httpx.ReadTimeout: timed out</failure></testcase><testcase classname="m3_video_tests.TestMediaGradient" name="test_12_01_resolution_gradient[1080P]" time="6.724" /><testcase classname="m3_video_tests.TestMediaGradient" name="test_12_01_resolution_gradient[2K]" time="7.292" /><testcase classname="m3_video_tests.TestMediaGradient" name="test_12_02_multi_video_gradient[count=3]" time="8.915" /><testcase classname="m3_video_tests.TestMediaGradient" name="test_12_02_multi_video_gradient[count=5]" time="9.283" /><testcase classname="m3_video_tests.TestMediaGradient" name="test_12_03_video_temporal" time="14.570" /><testcase classname="m3_video_tests.TestMediaGradient" name="test_12_04_image_video_combined" time="13.676"><failure message="AssertionError: 12_04 expected descriptions for both image and video (&gt;20 chars), got len=0: ''&#10;assert 0 &gt; 20&#10; +  where 0 = len('')">m3_video_tests.py:1235: in test_12_04_image_video_combined
+    assert len(content) &gt; 20, (
+E   AssertionError: 12_04 expected descriptions for both image and video (&gt;20 chars), got len=0: ''
+E   assert 0 &gt; 20
+E    +  where 0 = len('')</failure></testcase><testcase classname="m3_video_tests.TestVideoExtension" name="test_13_01_reasoning_split[non_stream]" time="12.936" /><testcase classname="m3_video_tests.TestVideoExtension" name="test_13_01_reasoning_split[stream]" time="11.822" /><testcase classname="m3_video_tests.TestVideoInToolMessage" name="test_15_01_video_in_tool_message_non_stream" time="6.988" /><testcase classname="m3_video_tests.TestVideoInToolMessage" name="test_15_02_video_in_tool_message_stream" time="11.259" /><testcase classname="m3_video_tests.TestVideoErrorCodes" name="test_14_01_fps_out_of_range" time="10.154" /><testcase classname="m3_video_tests.TestVideoStreamUsage" name="test_15_01_stream_usage_only_in_last_chunk" time="9.879" /></testsuite></testsuites>

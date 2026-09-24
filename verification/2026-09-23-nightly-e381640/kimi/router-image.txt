@@ -1,0 +1,6 @@
+ghcr.io/smg-project/smg:nightly-20260923-e381640@sha256:a2efb8e5f671eca1e69935ff712a69e88e461089963c3d34eb44a315daf5cc8c
+docker.io/vllm/vllm-openai:nightly@sha256:dea7fa047caa114167efccdeb42321b12d2c11da1add8728aa2662cb8d6b8cd5
+Kimi-K3 runtime patch: deferred image placeholder expansion to vLLM
+Kimi-K3 runtime patch: removed the duplicate SiTU g1_alphas fold from TRTLLM NVFP4 g1_scale_c
+vllm 0.29.1rc1.dev347+gdee37d891
+Version: 0.12.0

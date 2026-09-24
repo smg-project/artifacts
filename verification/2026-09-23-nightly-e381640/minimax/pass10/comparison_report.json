@@ -1,0 +1,359 @@
+{
+  "provider": "smg-pd",
+  "baseline_dir": "./output-dir/MiniMax-M3",
+  "result_dir": "./output-dir/batch_20260923_133554",
+  "total_comparisons": 10,
+  "successful_comparisons": 10,
+  "generated_at": "2026-09-23T14:09:22.381102",
+  "average_metrics": {
+    "Query-Success-Rate": 1.0,
+    "ToolCalls-Match-Rate": 0.9810000000000001,
+    "ToolCalls-Trigger-Similarity": 0.9945670964058578,
+    "ToolCalls-Schema-Accuracy": 0.9819098305727751,
+    "Error-Only-Reasoning-Rate": 0.0,
+    "Language-Following-Success-Rate": 1.0,
+    "Scenario-Check-Pass-Rate": 0.8
+  },
+  "comparisons": [
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_01/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_01/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.98,
+        "ToolCalls-Schema-Accuracy": 0.9759036144578314,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 0.9940119760479043
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 1.0,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 0.9940119760479043,
+        "precision": 1.0,
+        "recall": 0.9880952380952381,
+        "tp": 83,
+        "fp": 0,
+        "fn": 1,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_02/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_02/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.96,
+        "ToolCalls-Schema-Accuracy": 0.9629629629629629,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 0.9878048780487805
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.98,
+        "ToolCalls-Schema-Accuracy": 1.0,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 0.9878048780487805,
+        "precision": 1.0,
+        "recall": 0.9759036144578314,
+        "tp": 81,
+        "fp": 0,
+        "fn": 2,
+        "tn": 19,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_03/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_03/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9761904761904762,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 0.0,
+        "ToolCalls-Trigger-Similarity": 1.0
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 84,
+        "fp": 0,
+        "fn": 0,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_04/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_04/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.98,
+        "ToolCalls-Schema-Accuracy": 0.9879518072289156,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 0.0,
+        "ToolCalls-Trigger-Similarity": 0.9940119760479043
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 0.9940119760479043,
+        "precision": 1.0,
+        "recall": 0.9880952380952381,
+        "tp": 83,
+        "fp": 0,
+        "fn": 1,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_05/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_05/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 1.0
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 84,
+        "fp": 0,
+        "fn": 0,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_06/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_06/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.98,
+        "ToolCalls-Schema-Accuracy": 1.0,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 0.9940119760479043
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 0.9940119760479043,
+        "precision": 1.0,
+        "recall": 0.9880952380952381,
+        "tp": 83,
+        "fp": 0,
+        "fn": 1,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_07/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_07/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.98,
+        "ToolCalls-Schema-Accuracy": 0.9759036144578314,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 0.9940119760479043
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 0.9940119760479043,
+        "precision": 1.0,
+        "recall": 0.9880952380952381,
+        "tp": 83,
+        "fp": 0,
+        "fn": 1,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_08/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_08/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 1.0
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9761904761904762,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 84,
+        "fp": 0,
+        "fn": 0,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_09/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_09/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.97,
+        "ToolCalls-Schema-Accuracy": 0.9878048780487805,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 0.9818181818181818
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.98,
+        "ToolCalls-Schema-Accuracy": 0.9879518072289156,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 0.9818181818181818,
+        "precision": 0.9878048780487805,
+        "recall": 0.9759036144578314,
+        "tp": 81,
+        "fp": 1,
+        "fn": 2,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    },
+    {
+      "result_file": "./output-dir/batch_20260923_133554/loop_10/smg-pd/smg-pd_summary.json",
+      "baseline_file": "./output-dir/MiniMax-M3/loop_10/minimax-m3-official/minimax-m3-official_summary.json",
+      "model": "MiniMax-M3",
+      "baseline_model": "minimax-m3",
+      "metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9761904761904762,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0,
+        "ToolCalls-Trigger-Similarity": 1.0
+      },
+      "baseline_metrics": {
+        "Query-Success-Rate": 1.0,
+        "ToolCalls-Match-Rate": 0.99,
+        "ToolCalls-Schema-Accuracy": 0.9880952380952381,
+        "Error-Only-Reasoning-Rate": 0.0,
+        "Language-Following-Success-Rate": 1.0,
+        "Scenario-Check-Pass-Rate": 1.0
+      },
+      "toolcalls_trigger_similarity": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 84,
+        "fp": 0,
+        "fn": 0,
+        "tn": 18,
+        "samples_used": 102
+      },
+      "status": "success"
+    }
+  ]
+}
