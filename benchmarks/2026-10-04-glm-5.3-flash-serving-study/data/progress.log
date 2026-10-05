@@ -1,0 +1,51 @@
+15:52:40 GLM snapshot complete: 306G
+15:52:40 smoke vllm-tp4: 9 runs pending; args []
+16:14:10 vllm-tp4: worker healthy after 1289s
+16:14:14 vllm-tp4: ready after 1292s
+16:14:35 vllm-tp4 P1 warm (6s): req/s 21.81 out_tok/s 697.9 ttft_p50 90.8 ttft_p99 174.8 tpot_p50 8.62 e2e_p99 406.9 wcpu 0.04 rcpu 0.07 errors 0
+16:14:42 vllm-tp4 P1 c1-i1024-o256 (6s): req/s 0.7 out_tok/s 178.1 ttft_p50 71.0 ttft_p99 71.0 tpot_p50 5.36 e2e_p99 1437.6 wcpu 0.04 rcpu 0.02 errors 0
+16:14:49 vllm-tp4 P1 c8-i1024-o256 (7s): req/s 3.36 out_tok/s 861.4 ttft_p50 234.4 ttft_p99 400.8 tpot_p50 8.3 e2e_p99 2384.7 wcpu 0.12 rcpu 0.17 errors 0
+16:15:00 vllm-tp4 P1 c32-i1024-o256 (11s): req/s 5.15 out_tok/s 1319.2 ttft_p50 2980.2 ttft_p99 3212.7 tpot_p50 12.53 e2e_p99 6184.6 wcpu 0.32 rcpu 0.48 errors 0
+16:15:13 vllm-tp4 P1 c128-i1024-o256 (13s): req/s 18.79 out_tok/s 4810.4 ttft_p50 1349.1 ttft_p99 2255.8 tpot_p50 20.91 e2e_p99 6768.4 wcpu 0.95 rcpu 2.36 errors 0
+16:15:46 vllm-tp4 P1 c32-i4096-o512 (33s): req/s 1.17 out_tok/s 597.7 ttft_p50 20355.7 ttft_p99 21302.8 tpot_p50 13.7 e2e_p99 27389.6 wcpu 0.69 rcpu 1.28 errors 0
+16:16:18 vllm-tp4 P1 c16-i16384-o1024 (32s): req/s 0.64 out_tok/s 654.0 ttft_p50 9357.8 ttft_p99 15472.9 tpot_p50 15.26 e2e_p99 25042.5 wcpu 0.77 rcpu 1.61 errors 0
+16:16:38 vllm-tp4 P1 c8-i32768-o1024 (20s): req/s 0.6 out_tok/s 610.3 ttft_p50 3280.8 ttft_p99 5953.7 tpot_p50 9.84 e2e_p99 13401.1 wcpu 0.53 rcpu 1.26 errors 0
+16:17:21 vllm-tp4 P1 c16-i512-o4096 (43s): req/s 0.42 out_tok/s 1726.4 ttft_p50 232.1 ttft_p99 236.0 tpot_p50 9.21 e2e_p99 37942.9 wcpu 2.6 rcpu 4.03 errors 0
+16:17:35 vllm-tp4: stopped
+16:17:35 smoke sglang-tp4: 9 runs pending; args []
+16:40:04 sglang-tp4: worker healthy after 1349s
+16:41:04 sglang-tp4: ready after 1409s
+16:43:02 sglang-tp4 P1 warm (36s): req/s 0.52 out_tok/s 16.7 ttft_p50 15068.4 ttft_p99 15176.2 tpot_p50 8.99 e2e_p99 15456.8 wcpu 0.11 rcpu 0.14 errors 0
+16:43:09 sglang-tp4 P1 c1-i1024-o256 (7s): req/s 0.49 out_tok/s 126.0 ttft_p50 294.1 ttft_p99 294.1 tpot_p50 6.82 e2e_p99 2032.2 wcpu 0.03 rcpu 0.05 errors 0
+16:43:33 sglang-tp4 P1 c8-i1024-o256 (24s): req/s 0.45 out_tok/s 114.2 ttft_p50 15559.1 ttft_p99 15600.2 tpot_p50 9.2 e2e_p99 17945.4 wcpu 0.11 rcpu 0.21 errors 0
+16:43:57 sglang-tp4 P1 c32-i1024-o256 (25s): req/s 1.64 out_tok/s 420.2 ttft_p50 15993.9 ttft_p99 16144.6 tpot_p50 13.64 e2e_p99 19497.9 wcpu 0.32 rcpu 0.64 errors 0
+16:44:11 sglang-tp4 P1 c128-i1024-o256 (14s): req/s 16.41 out_tok/s 4200.9 ttft_p50 1782.9 ttft_p99 2759.0 tpot_p50 23.02 e2e_p99 7761.2 wcpu 1.12 rcpu 2.78 errors 0
+16:44:28 sglang-tp4 P1 c32-i4096-o512 (17s): req/s 2.71 out_tok/s 1385.9 ttft_p50 4220.3 ttft_p99 5026.1 tpot_p50 14.83 e2e_p99 11825.2 wcpu 0.79 rcpu 1.18 errors 0
+16:44:53 sglang-tp4 P1 c16-i16384-o1024 (25s): req/s 0.94 out_tok/s 962.3 ttft_p50 3284.0 ttft_p99 5741.3 tpot_p50 13.41 e2e_p99 17036.0 wcpu 0.87 rcpu 1.43 errors 0
+16:45:15 sglang-tp4 P1 c8-i32768-o1024 (22s): req/s 0.53 out_tok/s 542.8 ttft_p50 3515.4 ttft_p99 5887.5 tpot_p50 11.29 e2e_p99 15109.9 wcpu 0.51 rcpu 1.1 errors 0
+16:46:05 sglang-tp4 P1 c16-i512-o4096 (49s): req/s 0.36 out_tok/s 1478.0 ttft_p50 423.1 ttft_p99 442.4 tpot_p50 10.72 e2e_p99 44353.8 wcpu 3.18 rcpu 3.6 errors 0
+16:46:17 sglang-tp4: stopped
+16:46:17 smoke tokenspeed-tp4: 9 runs pending; args []
+17:51:00 start vllm-tp4: 16 runs pending; args []
+18:09:55 vllm-tp4: worker healthy after 1134s
+18:09:58 vllm-tp4: ready after 1137s
+18:12:56 vllm-tp4: shape warm-up done in 162s
+18:13:23 vllm-tp4 P1 c1-i1024-o256 (27s): req/s 0.71 out_tok/s 181.4 ttft_p50 43.6 ttft_p99 89.1 tpot_p50 5.36 e2e_p99 1454.1 wcpu 0.64 rcpu 0.49 errors 0
+18:13:47 vllm-tp4 P1 c8-i1024-o256 (24s): req/s 3.45 out_tok/s 883.1 ttft_p50 201.7 ttft_p99 376.2 tpot_p50 8.29 e2e_p99 2339.4 wcpu 0.97 rcpu 1.2 errors 0
+18:14:25 vllm-tp4 P1 c32-i1024-o256 (38s): req/s 8.02 out_tok/s 2054.3 ttft_p50 613.7 ttft_p99 2671.0 tpot_p50 12.39 e2e_p99 5932.3 wcpu 2.76 rcpu 3.58 errors 0
+18:15:14 vllm-tp4 P1 c128-i1024-o256 (49s): req/s 18.99 out_tok/s 4861.9 ttft_p50 708.4 ttft_p99 2207.8 tpot_p50 23.52 e2e_p99 8253.9 wcpu 7.25 rcpu 12.97 errors 0
+18:15:54 vllm-tp4 P1 c32-i4096-o512 (40s): req/s 3.84 out_tok/s 1966.1 ttft_p50 905.2 ttft_p99 2354.3 tpot_p50 14.56 e2e_p99 9917.7 wcpu 2.57 rcpu 4.33 errors 0
+18:16:46 vllm-tp4 P1 c16-i16384-o1024 (52s): req/s 1.1 out_tok/s 1128.0 ttft_p50 1948.2 ttft_p99 4994.2 tpot_p50 12.25 e2e_p99 17862.7 wcpu 1.53 rcpu 3.82 errors 0
+18:17:34 vllm-tp4 P1 c8-i32768-o1024 (48s): req/s 0.6 out_tok/s 614.6 ttft_p50 3030.1 ttft_p99 5823.9 tpot_p50 10.06 e2e_p99 16091.6 wcpu 1.07 rcpu 2.6 errors 0
+18:19:30 vllm-tp4 P1 c16-i512-o4096 (116s): req/s 0.43 out_tok/s 1766.5 ttft_p50 362.2 ttft_p99 391.6 tpot_p50 8.96 e2e_p99 37522.9 wcpu 6.04 rcpu 10.18 errors 0
+18:19:58 vllm-tp4 P2 c1-i1024-o256 (27s): req/s 0.71 out_tok/s 181.3 ttft_p50 44.9 ttft_p99 87.6 tpot_p50 5.36 e2e_p99 1454.4 wcpu 0.54 rcpu 0.39 errors 0
+18:20:22 vllm-tp4 P2 c8-i1024-o256 (24s): req/s 3.26 out_tok/s 835.7 ttft_p50 475.1 ttft_p99 563.5 tpot_p50 7.69 e2e_p99 2528.4 wcpu 0.69 rcpu 1.28 errors 0
+18:20:59 vllm-tp4 P2 c32-i1024-o256 (36s): req/s 8.61 out_tok/s 2204.0 ttft_p50 571.4 ttft_p99 671.1 tpot_p50 12.35 e2e_p99 3793.3 wcpu 1.77 rcpu 4.53 errors 0
+18:21:47 vllm-tp4 P2 c128-i1024-o256 (48s): req/s 19.04 out_tok/s 4873.7 ttft_p50 709.2 ttft_p99 2338.8 tpot_p50 23.39 e2e_p99 8308.2 wcpu 4.05 rcpu 13.69 errors 0
+18:22:27 vllm-tp4 P2 c32-i4096-o512 (40s): req/s 3.82 out_tok/s 1955.8 ttft_p50 751.9 ttft_p99 2308.1 tpot_p50 14.75 e2e_p99 9888.8 wcpu 2.9 rcpu 4.27 errors 0
+18:23:19 vllm-tp4 P2 c16-i16384-o1024 (51s): req/s 1.11 out_tok/s 1134.7 ttft_p50 1709.3 ttft_p99 4994.7 tpot_p50 12.42 e2e_p99 17861.8 wcpu 2.24 rcpu 3.82 errors 0
+18:24:07 vllm-tp4 P2 c8-i32768-o1024 (48s): req/s 0.6 out_tok/s 617.6 ttft_p50 3031.8 ttft_p99 5819.8 tpot_p50 9.99 e2e_p99 16076.9 wcpu 0.99 rcpu 2.49 errors 0
+18:26:02 vllm-tp4 P2 c16-i512-o4096 (115s): req/s 0.44 out_tok/s 1784.2 ttft_p50 210.4 ttft_p99 259.9 tpot_p50 8.87 e2e_p99 37311.3 wcpu 4.62 rcpu 10.02 errors 0
+18:26:15 vllm-tp4: stopped
+18:26:15 start sglang-tp4: 16 runs pending; args []
+18:47:23 sglang-tp4: worker healthy after 1267s
