@@ -1,0 +1,2811 @@
+<?xml version='1.0' encoding='utf-8'?>
+<benchmark model="nvidia/Qwen3.8-27B-NVFP4" arguments="engine defaults">
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-sglang-native-http-direct-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.28" />
+    <metric name="out_tok_per_s" value="164.3" />
+    <metric name="in_tok_per_s" value="657.1" />
+    <metric name="ttft_p50_ms" value="66.6" />
+    <metric name="ttft_p99_ms" value="108.8" />
+    <metric name="tpot_p50_ms" value="5.62" />
+    <metric name="tpot_p99_ms" value="5.63" />
+    <metric name="e2e_p50_ms" value="779.7" />
+    <metric name="e2e_p99_ms" value="820.6" />
+    <metric name="worker_cpu_s" value="0.82" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-sglang-native-http-direct-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.65" />
+    <metric name="out_tok_per_s" value="4519.5" />
+    <metric name="in_tok_per_s" value="18077.5" />
+    <metric name="ttft_p50_ms" value="1493.0" />
+    <metric name="ttft_p99_ms" value="3394.7" />
+    <metric name="tpot_p50_ms" value="22.17" />
+    <metric name="tpot_p99_ms" value="27.65" />
+    <metric name="e2e_p50_ms" value="7253.5" />
+    <metric name="e2e_p99_ms" value="7817.9" />
+    <metric name="worker_cpu_s" value="17.06" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-sglang-native-http-direct-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.07" />
+    <metric name="out_tok_per_s" value="2187.6" />
+    <metric name="in_tok_per_s" value="546.9" />
+    <metric name="ttft_p50_ms" value="242.1" />
+    <metric name="ttft_p99_ms" value="248.8" />
+    <metric name="tpot_p50_ms" value="7.2" />
+    <metric name="tpot_p99_ms" value="7.26" />
+    <metric name="e2e_p50_ms" value="14976.3" />
+    <metric name="e2e_p99_ms" value="15009.2" />
+    <metric name="worker_cpu_s" value="6.45" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="11" file="t1-sglang-native-http-direct-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.78" />
+    <metric name="out_tok_per_s" value="4807.7" />
+    <metric name="in_tok_per_s" value="19230.6" />
+    <metric name="ttft_p50_ms" value="8304.4" />
+    <metric name="ttft_p99_ms" value="10291.2" />
+    <metric name="tpot_p50_ms" value="21.69" />
+    <metric name="tpot_p99_ms" value="26.16" />
+    <metric name="e2e_p50_ms" value="14248.7" />
+    <metric name="e2e_p99_ms" value="15221.5" />
+    <metric name="worker_cpu_s" value="34.67" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-sglang-native-http-direct-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.87" />
+    <metric name="out_tok_per_s" value="2783.3" />
+    <metric name="in_tok_per_s" value="11133.0" />
+    <metric name="ttft_p50_ms" value="750.7" />
+    <metric name="ttft_p99_ms" value="792.9" />
+    <metric name="tpot_p50_ms" value="8.55" />
+    <metric name="tpot_p99_ms" value="11.04" />
+    <metric name="e2e_p50_ms" value="2940.4" />
+    <metric name="e2e_p99_ms" value="2971.8" />
+    <metric name="worker_cpu_s" value="5.37" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-sglang-native-http-direct-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.59" />
+    <metric name="out_tok_per_s" value="1431.2" />
+    <metric name="in_tok_per_s" value="22898.4" />
+    <metric name="ttft_p50_ms" value="1751.7" />
+    <metric name="ttft_p99_ms" value="3136.9" />
+    <metric name="tpot_p50_ms" value="15.55" />
+    <metric name="tpot_p99_ms" value="20.85" />
+    <metric name="e2e_p50_ms" value="5718.5" />
+    <metric name="e2e_p99_ms" value="5737.8" />
+    <metric name="worker_cpu_s" value="6.12" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-sglang-native-http-direct-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.1" />
+    <metric name="out_tok_per_s" value="4202.4" />
+    <metric name="in_tok_per_s" value="8404.8" />
+    <metric name="ttft_p50_ms" value="1729.5" />
+    <metric name="ttft_p99_ms" value="2978.4" />
+    <metric name="tpot_p50_ms" value="13.53" />
+    <metric name="tpot_p99_ms" value="14.97" />
+    <metric name="e2e_p50_ms" value="15578.8" />
+    <metric name="e2e_p99_ms" value="15652.9" />
+    <metric name="worker_cpu_s" value="9.64" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-native-http-direct-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.3" />
+    <metric name="out_tok_per_s" value="845.0" />
+    <metric name="in_tok_per_s" value="27041.4" />
+    <metric name="ttft_p50_ms" value="7435.6" />
+    <metric name="ttft_p99_ms" value="14266.8" />
+    <metric name="tpot_p50_ms" value="46.8" />
+    <metric name="tpot_p99_ms" value="69.81" />
+    <metric name="e2e_p50_ms" value="19371.5" />
+    <metric name="e2e_p99_ms" value="19452.9" />
+    <metric name="worker_cpu_s" value="4.55" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-native-http-direct-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.75" />
+    <metric name="out_tok_per_s" value="1120.6" />
+    <metric name="in_tok_per_s" value="2240.6" />
+    <metric name="ttft_p50_ms" value="126.8" />
+    <metric name="ttft_p99_ms" value="155.1" />
+    <metric name="tpot_p50_ms" value="6.18" />
+    <metric name="tpot_p99_ms" value="6.23" />
+    <metric name="e2e_p50_ms" value="911.2" />
+    <metric name="e2e_p99_ms" value="940.5" />
+    <metric name="worker_cpu_s" value="1.24" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-sglang-native-http-direct-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.28" />
+    <metric name="out_tok_per_s" value="164.2" />
+    <metric name="in_tok_per_s" value="657.0" />
+    <metric name="ttft_p50_ms" value="65.3" />
+    <metric name="ttft_p99_ms" value="100.9" />
+    <metric name="tpot_p50_ms" value="5.63" />
+    <metric name="tpot_p99_ms" value="5.63" />
+    <metric name="e2e_p50_ms" value="779.9" />
+    <metric name="e2e_p99_ms" value="807.9" />
+    <metric name="worker_cpu_s" value="0.87" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-sglang-native-http-direct-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.52" />
+    <metric name="out_tok_per_s" value="4484.9" />
+    <metric name="in_tok_per_s" value="17939.2" />
+    <metric name="ttft_p50_ms" value="1542.4" />
+    <metric name="ttft_p99_ms" value="3479.7" />
+    <metric name="tpot_p50_ms" value="22.42" />
+    <metric name="tpot_p99_ms" value="27.67" />
+    <metric name="e2e_p50_ms" value="7315.5" />
+    <metric name="e2e_p99_ms" value="7910.0" />
+    <metric name="worker_cpu_s" value="16.93" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-sglang-native-http-direct-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.07" />
+    <metric name="out_tok_per_s" value="2182.7" />
+    <metric name="in_tok_per_s" value="545.6" />
+    <metric name="ttft_p50_ms" value="241.5" />
+    <metric name="ttft_p99_ms" value="249.0" />
+    <metric name="tpot_p50_ms" value="7.22" />
+    <metric name="tpot_p99_ms" value="7.28" />
+    <metric name="e2e_p50_ms" value="15021.4" />
+    <metric name="e2e_p99_ms" value="15048.1" />
+    <metric name="worker_cpu_s" value="5.78" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="7" file="t1-sglang-native-http-direct-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.78" />
+    <metric name="out_tok_per_s" value="4808.7" />
+    <metric name="in_tok_per_s" value="19234.4" />
+    <metric name="ttft_p50_ms" value="8340.5" />
+    <metric name="ttft_p99_ms" value="10352.2" />
+    <metric name="tpot_p50_ms" value="21.77" />
+    <metric name="tpot_p99_ms" value="26.07" />
+    <metric name="e2e_p50_ms" value="14246.4" />
+    <metric name="e2e_p99_ms" value="15254.5" />
+    <metric name="worker_cpu_s" value="35.08" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-sglang-native-http-direct-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.84" />
+    <metric name="out_tok_per_s" value="2775.3" />
+    <metric name="in_tok_per_s" value="11100.8" />
+    <metric name="ttft_p50_ms" value="743.9" />
+    <metric name="ttft_p99_ms" value="800.0" />
+    <metric name="tpot_p50_ms" value="8.57" />
+    <metric name="tpot_p99_ms" value="11.09" />
+    <metric name="e2e_p50_ms" value="2954.4" />
+    <metric name="e2e_p99_ms" value="2980.7" />
+    <metric name="worker_cpu_s" value="5.51" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-sglang-native-http-direct-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.59" />
+    <metric name="out_tok_per_s" value="1432.2" />
+    <metric name="in_tok_per_s" value="22914.5" />
+    <metric name="ttft_p50_ms" value="1735.5" />
+    <metric name="ttft_p99_ms" value="3142.7" />
+    <metric name="tpot_p50_ms" value="15.58" />
+    <metric name="tpot_p99_ms" value="20.85" />
+    <metric name="e2e_p50_ms" value="5715.7" />
+    <metric name="e2e_p99_ms" value="5747.7" />
+    <metric name="worker_cpu_s" value="6.22" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-sglang-native-http-direct-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.11" />
+    <metric name="out_tok_per_s" value="4212.7" />
+    <metric name="in_tok_per_s" value="8425.2" />
+    <metric name="ttft_p50_ms" value="1708.1" />
+    <metric name="ttft_p99_ms" value="2981.7" />
+    <metric name="tpot_p50_ms" value="13.43" />
+    <metric name="tpot_p99_ms" value="14.97" />
+    <metric name="e2e_p50_ms" value="15576.7" />
+    <metric name="e2e_p99_ms" value="15629.8" />
+    <metric name="worker_cpu_s" value="8.85" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-native-http-direct-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.29" />
+    <metric name="out_tok_per_s" value="842.6" />
+    <metric name="in_tok_per_s" value="26962.4" />
+    <metric name="ttft_p50_ms" value="7483.8" />
+    <metric name="ttft_p99_ms" value="14297.0" />
+    <metric name="tpot_p50_ms" value="46.92" />
+    <metric name="tpot_p99_ms" value="70.1" />
+    <metric name="e2e_p50_ms" value="19431.9" />
+    <metric name="e2e_p99_ms" value="19519.2" />
+    <metric name="worker_cpu_s" value="4.68" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="direct" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-native-http-direct-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.73" />
+    <metric name="out_tok_per_s" value="1117.8" />
+    <metric name="in_tok_per_s" value="2235.4" />
+    <metric name="ttft_p50_ms" value="129.7" />
+    <metric name="ttft_p99_ms" value="143.7" />
+    <metric name="tpot_p50_ms" value="6.18" />
+    <metric name="tpot_p99_ms" value="6.24" />
+    <metric name="e2e_p50_ms" value="914.6" />
+    <metric name="e2e_p99_ms" value="926.8" />
+    <metric name="worker_cpu_s" value="1.15" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.28" />
+    <metric name="out_tok_per_s" value="163.7" />
+    <metric name="in_tok_per_s" value="654.6" />
+    <metric name="ttft_p50_ms" value="70.2" />
+    <metric name="ttft_p99_ms" value="110.1" />
+    <metric name="tpot_p50_ms" value="5.61" />
+    <metric name="tpot_p99_ms" value="5.63" />
+    <metric name="e2e_p50_ms" value="783.3" />
+    <metric name="e2e_p99_ms" value="822.5" />
+    <metric name="worker_cpu_s" value="0.92" />
+    <metric name="router_cpu_s" value="0.41" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.4" />
+    <metric name="out_tok_per_s" value="4455.1" />
+    <metric name="in_tok_per_s" value="17820.0" />
+    <metric name="ttft_p50_ms" value="1543.6" />
+    <metric name="ttft_p99_ms" value="3434.9" />
+    <metric name="tpot_p50_ms" value="22.45" />
+    <metric name="tpot_p99_ms" value="27.93" />
+    <metric name="e2e_p50_ms" value="7356.7" />
+    <metric name="e2e_p99_ms" value="7953.1" />
+    <metric name="worker_cpu_s" value="17.53" />
+    <metric name="router_cpu_s" value="10.0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.07" />
+    <metric name="out_tok_per_s" value="2185.0" />
+    <metric name="in_tok_per_s" value="546.2" />
+    <metric name="ttft_p50_ms" value="243.6" />
+    <metric name="ttft_p99_ms" value="282.5" />
+    <metric name="tpot_p50_ms" value="7.21" />
+    <metric name="tpot_p99_ms" value="7.26" />
+    <metric name="e2e_p50_ms" value="14992.3" />
+    <metric name="e2e_p99_ms" value="15002.5" />
+    <metric name="worker_cpu_s" value="6.26" />
+    <metric name="router_cpu_s" value="6.17" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.82" />
+    <metric name="out_tok_per_s" value="4818.1" />
+    <metric name="in_tok_per_s" value="19272.0" />
+    <metric name="ttft_p50_ms" value="8319.3" />
+    <metric name="ttft_p99_ms" value="10151.5" />
+    <metric name="tpot_p50_ms" value="21.58" />
+    <metric name="tpot_p99_ms" value="26.32" />
+    <metric name="e2e_p50_ms" value="14207.3" />
+    <metric name="e2e_p99_ms" value="15109.8" />
+    <metric name="worker_cpu_s" value="35.76" />
+    <metric name="router_cpu_s" value="23.12" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.85" />
+    <metric name="out_tok_per_s" value="2778.8" />
+    <metric name="in_tok_per_s" value="11114.9" />
+    <metric name="ttft_p50_ms" value="743.9" />
+    <metric name="ttft_p99_ms" value="798.0" />
+    <metric name="tpot_p50_ms" value="8.57" />
+    <metric name="tpot_p99_ms" value="11.04" />
+    <metric name="e2e_p50_ms" value="2943.6" />
+    <metric name="e2e_p99_ms" value="2975.1" />
+    <metric name="worker_cpu_s" value="5.95" />
+    <metric name="router_cpu_s" value="3.68" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.59" />
+    <metric name="out_tok_per_s" value="1432.0" />
+    <metric name="in_tok_per_s" value="22911.3" />
+    <metric name="ttft_p50_ms" value="1746.9" />
+    <metric name="ttft_p99_ms" value="3133.6" />
+    <metric name="tpot_p50_ms" value="15.55" />
+    <metric name="tpot_p99_ms" value="20.87" />
+    <metric name="e2e_p50_ms" value="5715.4" />
+    <metric name="e2e_p99_ms" value="5734.2" />
+    <metric name="worker_cpu_s" value="6.14" />
+    <metric name="router_cpu_s" value="2.8" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.1" />
+    <metric name="out_tok_per_s" value="4202.3" />
+    <metric name="in_tok_per_s" value="8404.6" />
+    <metric name="ttft_p50_ms" value="1784.5" />
+    <metric name="ttft_p99_ms" value="2975.8" />
+    <metric name="tpot_p50_ms" value="13.52" />
+    <metric name="tpot_p99_ms" value="15.06" />
+    <metric name="e2e_p50_ms" value="15565.3" />
+    <metric name="e2e_p99_ms" value="15671.3" />
+    <metric name="worker_cpu_s" value="9.7" />
+    <metric name="router_cpu_s" value="6.85" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.3" />
+    <metric name="out_tok_per_s" value="843.5" />
+    <metric name="in_tok_per_s" value="26993.1" />
+    <metric name="ttft_p50_ms" value="7496.4" />
+    <metric name="ttft_p99_ms" value="14314.6" />
+    <metric name="tpot_p50_ms" value="46.82" />
+    <metric name="tpot_p99_ms" value="73.74" />
+    <metric name="e2e_p50_ms" value="19407.0" />
+    <metric name="e2e_p99_ms" value="19485.9" />
+    <metric name="worker_cpu_s" value="4.93" />
+    <metric name="router_cpu_s" value="1.34" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-native-http-smg-http-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.75" />
+    <metric name="out_tok_per_s" value="1120.2" />
+    <metric name="in_tok_per_s" value="2240.5" />
+    <metric name="ttft_p50_ms" value="128.6" />
+    <metric name="ttft_p99_ms" value="151.3" />
+    <metric name="tpot_p50_ms" value="6.18" />
+    <metric name="tpot_p99_ms" value="6.23" />
+    <metric name="e2e_p50_ms" value="913.2" />
+    <metric name="e2e_p99_ms" value="926.8" />
+    <metric name="worker_cpu_s" value="1.24" />
+    <metric name="router_cpu_s" value="0.95" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.28" />
+    <metric name="out_tok_per_s" value="164.2" />
+    <metric name="in_tok_per_s" value="656.8" />
+    <metric name="ttft_p50_ms" value="68.4" />
+    <metric name="ttft_p99_ms" value="103.7" />
+    <metric name="tpot_p50_ms" value="5.62" />
+    <metric name="tpot_p99_ms" value="5.63" />
+    <metric name="e2e_p50_ms" value="781.3" />
+    <metric name="e2e_p99_ms" value="812.4" />
+    <metric name="worker_cpu_s" value="1.03" />
+    <metric name="router_cpu_s" value="0.43" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.45" />
+    <metric name="out_tok_per_s" value="4466.9" />
+    <metric name="in_tok_per_s" value="17866.9" />
+    <metric name="ttft_p50_ms" value="1547.0" />
+    <metric name="ttft_p99_ms" value="3324.5" />
+    <metric name="tpot_p50_ms" value="22.48" />
+    <metric name="tpot_p99_ms" value="27.98" />
+    <metric name="e2e_p50_ms" value="7391.4" />
+    <metric name="e2e_p99_ms" value="7750.6" />
+    <metric name="worker_cpu_s" value="16.53" />
+    <metric name="router_cpu_s" value="11.64" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.06" />
+    <metric name="out_tok_per_s" value="2180.4" />
+    <metric name="in_tok_per_s" value="545.0" />
+    <metric name="ttft_p50_ms" value="245.5" />
+    <metric name="ttft_p99_ms" value="257.5" />
+    <metric name="tpot_p50_ms" value="7.22" />
+    <metric name="tpot_p99_ms" value="7.28" />
+    <metric name="e2e_p50_ms" value="15021.4" />
+    <metric name="e2e_p99_ms" value="15061.8" />
+    <metric name="worker_cpu_s" value="6.84" />
+    <metric name="router_cpu_s" value="6.11" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.82" />
+    <metric name="out_tok_per_s" value="4819.2" />
+    <metric name="in_tok_per_s" value="19276.3" />
+    <metric name="ttft_p50_ms" value="8344.0" />
+    <metric name="ttft_p99_ms" value="10169.1" />
+    <metric name="tpot_p50_ms" value="21.64" />
+    <metric name="tpot_p99_ms" value="26.15" />
+    <metric name="e2e_p50_ms" value="14264.3" />
+    <metric name="e2e_p99_ms" value="15029.7" />
+    <metric name="worker_cpu_s" value="34.93" />
+    <metric name="router_cpu_s" value="26.0" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.83" />
+    <metric name="out_tok_per_s" value="2771.2" />
+    <metric name="in_tok_per_s" value="11084.7" />
+    <metric name="ttft_p50_ms" value="748.6" />
+    <metric name="ttft_p99_ms" value="805.7" />
+    <metric name="tpot_p50_ms" value="8.57" />
+    <metric name="tpot_p99_ms" value="11.12" />
+    <metric name="e2e_p50_ms" value="2954.2" />
+    <metric name="e2e_p99_ms" value="2986.3" />
+    <metric name="worker_cpu_s" value="5.59" />
+    <metric name="router_cpu_s" value="5.17" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.59" />
+    <metric name="out_tok_per_s" value="1430.2" />
+    <metric name="in_tok_per_s" value="22883.6" />
+    <metric name="ttft_p50_ms" value="1734.4" />
+    <metric name="ttft_p99_ms" value="3147.7" />
+    <metric name="tpot_p50_ms" value="15.63" />
+    <metric name="tpot_p99_ms" value="20.9" />
+    <metric name="e2e_p50_ms" value="5721.8" />
+    <metric name="e2e_p99_ms" value="5742.7" />
+    <metric name="worker_cpu_s" value="6.12" />
+    <metric name="router_cpu_s" value="3.59" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.11" />
+    <metric name="out_tok_per_s" value="4203.9" />
+    <metric name="in_tok_per_s" value="8407.8" />
+    <metric name="ttft_p50_ms" value="1736.7" />
+    <metric name="ttft_p99_ms" value="2968.6" />
+    <metric name="tpot_p50_ms" value="13.49" />
+    <metric name="tpot_p99_ms" value="15.04" />
+    <metric name="e2e_p50_ms" value="15567.8" />
+    <metric name="e2e_p99_ms" value="15644.8" />
+    <metric name="worker_cpu_s" value="9.9" />
+    <metric name="router_cpu_s" value="8.27" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.29" />
+    <metric name="out_tok_per_s" value="842.5" />
+    <metric name="in_tok_per_s" value="26959.9" />
+    <metric name="ttft_p50_ms" value="7482.4" />
+    <metric name="ttft_p99_ms" value="14310.3" />
+    <metric name="tpot_p50_ms" value="46.96" />
+    <metric name="tpot_p99_ms" value="73.77" />
+    <metric name="e2e_p50_ms" value="19433.4" />
+    <metric name="e2e_p99_ms" value="19508.7" />
+    <metric name="worker_cpu_s" value="5.23" />
+    <metric name="router_cpu_s" value="1.51" />
+  </run>
+  <run topo="1" engine="sglang" kind="native-http" endpoint="smg-http" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-native-http-smg-http-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.75" />
+    <metric name="out_tok_per_s" value="1120.0" />
+    <metric name="in_tok_per_s" value="2240.1" />
+    <metric name="ttft_p50_ms" value="129.5" />
+    <metric name="ttft_p99_ms" value="148.8" />
+    <metric name="tpot_p50_ms" value="6.18" />
+    <metric name="tpot_p99_ms" value="6.23" />
+    <metric name="e2e_p50_ms" value="914.0" />
+    <metric name="e2e_p99_ms" value="937.4" />
+    <metric name="worker_cpu_s" value="1.24" />
+    <metric name="router_cpu_s" value="1.14" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.25" />
+    <metric name="out_tok_per_s" value="160.0" />
+    <metric name="in_tok_per_s" value="640.0" />
+    <metric name="ttft_p50_ms" value="65.9" />
+    <metric name="ttft_p99_ms" value="108.2" />
+    <metric name="tpot_p50_ms" value="5.77" />
+    <metric name="tpot_p99_ms" value="5.78" />
+    <metric name="e2e_p50_ms" value="799.3" />
+    <metric name="e2e_p99_ms" value="841.2" />
+    <metric name="worker_cpu_s" value="0.97" />
+    <metric name="router_cpu_s" value="0.47" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.73" />
+    <metric name="out_tok_per_s" value="4539.4" />
+    <metric name="in_tok_per_s" value="18157.3" />
+    <metric name="ttft_p50_ms" value="1350.7" />
+    <metric name="ttft_p99_ms" value="3519.7" />
+    <metric name="tpot_p50_ms" value="22.35" />
+    <metric name="tpot_p99_ms" value="26.54" />
+    <metric name="e2e_p50_ms" value="7063.5" />
+    <metric name="e2e_p99_ms" value="8696.1" />
+    <metric name="worker_cpu_s" value="12.5" />
+    <metric name="router_cpu_s" value="17.19" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.06" />
+    <metric name="out_tok_per_s" value="2175.1" />
+    <metric name="in_tok_per_s" value="543.8" />
+    <metric name="ttft_p50_ms" value="241.0" />
+    <metric name="ttft_p99_ms" value="254.1" />
+    <metric name="tpot_p50_ms" value="7.24" />
+    <metric name="tpot_p99_ms" value="7.3" />
+    <metric name="e2e_p50_ms" value="15058.5" />
+    <metric name="e2e_p99_ms" value="15090.2" />
+    <metric name="worker_cpu_s" value="7.43" />
+    <metric name="router_cpu_s" value="7.22" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.9" />
+    <metric name="out_tok_per_s" value="4839.5" />
+    <metric name="in_tok_per_s" value="19357.7" />
+    <metric name="ttft_p50_ms" value="8154.2" />
+    <metric name="ttft_p99_ms" value="10215.7" />
+    <metric name="tpot_p50_ms" value="21.93" />
+    <metric name="tpot_p99_ms" value="26.92" />
+    <metric name="e2e_p50_ms" value="14110.0" />
+    <metric name="e2e_p99_ms" value="15097.8" />
+    <metric name="worker_cpu_s" value="29.33" />
+    <metric name="router_cpu_s" value="36.85" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.88" />
+    <metric name="out_tok_per_s" value="2786.3" />
+    <metric name="in_tok_per_s" value="11145.0" />
+    <metric name="ttft_p50_ms" value="531.0" />
+    <metric name="ttft_p99_ms" value="776.4" />
+    <metric name="tpot_p50_ms" value="9.45" />
+    <metric name="tpot_p99_ms" value="10.94" />
+    <metric name="e2e_p50_ms" value="2934.5" />
+    <metric name="e2e_p99_ms" value="2952.3" />
+    <metric name="worker_cpu_s" value="5.86" />
+    <metric name="router_cpu_s" value="5.94" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.56" />
+    <metric name="out_tok_per_s" value="1424.1" />
+    <metric name="in_tok_per_s" value="22785.2" />
+    <metric name="ttft_p50_ms" value="1752.3" />
+    <metric name="ttft_p99_ms" value="3154.4" />
+    <metric name="tpot_p50_ms" value="15.65" />
+    <metric name="tpot_p99_ms" value="21.72" />
+    <metric name="e2e_p50_ms" value="5744.4" />
+    <metric name="e2e_p99_ms" value="5763.5" />
+    <metric name="worker_cpu_s" value="3.95" />
+    <metric name="router_cpu_s" value="9.09" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.09" />
+    <metric name="out_tok_per_s" value="4192.5" />
+    <metric name="in_tok_per_s" value="8385.0" />
+    <metric name="ttft_p50_ms" value="1668.1" />
+    <metric name="ttft_p99_ms" value="2992.9" />
+    <metric name="tpot_p50_ms" value="13.63" />
+    <metric name="tpot_p99_ms" value="15.06" />
+    <metric name="e2e_p50_ms" value="15610.6" />
+    <metric name="e2e_p99_ms" value="15689.8" />
+    <metric name="worker_cpu_s" value="10.56" />
+    <metric name="router_cpu_s" value="9.84" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.28" />
+    <metric name="out_tok_per_s" value="840.2" />
+    <metric name="in_tok_per_s" value="26885.8" />
+    <metric name="ttft_p50_ms" value="7503.0" />
+    <metric name="ttft_p99_ms" value="14348.6" />
+    <metric name="tpot_p50_ms" value="46.89" />
+    <metric name="tpot_p99_ms" value="74.76" />
+    <metric name="e2e_p50_ms" value="19476.1" />
+    <metric name="e2e_p99_ms" value="19533.7" />
+    <metric name="worker_cpu_s" value="2.03" />
+    <metric name="router_cpu_s" value="7.34" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.74" />
+    <metric name="out_tok_per_s" value="1119.3" />
+    <metric name="in_tok_per_s" value="2238.6" />
+    <metric name="ttft_p50_ms" value="126.8" />
+    <metric name="ttft_p99_ms" value="148.7" />
+    <metric name="tpot_p50_ms" value="6.19" />
+    <metric name="tpot_p99_ms" value="6.23" />
+    <metric name="e2e_p50_ms" value="912.7" />
+    <metric name="e2e_p99_ms" value="934.7" />
+    <metric name="worker_cpu_s" value="1.23" />
+    <metric name="router_cpu_s" value="1.16" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.25" />
+    <metric name="out_tok_per_s" value="159.5" />
+    <metric name="in_tok_per_s" value="637.9" />
+    <metric name="ttft_p50_ms" value="69.1" />
+    <metric name="ttft_p99_ms" value="114.0" />
+    <metric name="tpot_p50_ms" value="5.77" />
+    <metric name="tpot_p99_ms" value="5.77" />
+    <metric name="e2e_p50_ms" value="801.5" />
+    <metric name="e2e_p99_ms" value="845.8" />
+    <metric name="worker_cpu_s" value="1.01" />
+    <metric name="router_cpu_s" value="0.59" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.5" />
+    <metric name="out_tok_per_s" value="4480.2" />
+    <metric name="in_tok_per_s" value="17920.6" />
+    <metric name="ttft_p50_ms" value="1835.2" />
+    <metric name="ttft_p99_ms" value="3319.2" />
+    <metric name="tpot_p50_ms" value="21.07" />
+    <metric name="tpot_p99_ms" value="26.94" />
+    <metric name="e2e_p50_ms" value="7192.1" />
+    <metric name="e2e_p99_ms" value="7644.8" />
+    <metric name="worker_cpu_s" value="15.17" />
+    <metric name="router_cpu_s" value="19.1" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.06" />
+    <metric name="out_tok_per_s" value="2173.0" />
+    <metric name="in_tok_per_s" value="543.2" />
+    <metric name="ttft_p50_ms" value="240.6" />
+    <metric name="ttft_p99_ms" value="280.0" />
+    <metric name="tpot_p50_ms" value="7.24" />
+    <metric name="tpot_p99_ms" value="7.31" />
+    <metric name="e2e_p50_ms" value="15074.5" />
+    <metric name="e2e_p99_ms" value="15100.8" />
+    <metric name="worker_cpu_s" value="7.26" />
+    <metric name="router_cpu_s" value="6.52" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.73" />
+    <metric name="out_tok_per_s" value="4794.9" />
+    <metric name="in_tok_per_s" value="19179.3" />
+    <metric name="ttft_p50_ms" value="8193.9" />
+    <metric name="ttft_p99_ms" value="10930.9" />
+    <metric name="tpot_p50_ms" value="22.02" />
+    <metric name="tpot_p99_ms" value="26.97" />
+    <metric name="e2e_p50_ms" value="14162.0" />
+    <metric name="e2e_p99_ms" value="16267.2" />
+    <metric name="worker_cpu_s" value="27.94" />
+    <metric name="router_cpu_s" value="41.2" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.87" />
+    <metric name="out_tok_per_s" value="2783.8" />
+    <metric name="in_tok_per_s" value="11134.8" />
+    <metric name="ttft_p50_ms" value="533.4" />
+    <metric name="ttft_p99_ms" value="779.3" />
+    <metric name="tpot_p50_ms" value="9.45" />
+    <metric name="tpot_p99_ms" value="10.95" />
+    <metric name="e2e_p50_ms" value="2936.7" />
+    <metric name="e2e_p99_ms" value="2951.0" />
+    <metric name="worker_cpu_s" value="4.68" />
+    <metric name="router_cpu_s" value="8.18" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.57" />
+    <metric name="out_tok_per_s" value="1426.2" />
+    <metric name="in_tok_per_s" value="22818.6" />
+    <metric name="ttft_p50_ms" value="1774.1" />
+    <metric name="ttft_p99_ms" value="3159.8" />
+    <metric name="tpot_p50_ms" value="15.55" />
+    <metric name="tpot_p99_ms" value="21.72" />
+    <metric name="e2e_p50_ms" value="5737.6" />
+    <metric name="e2e_p99_ms" value="5759.8" />
+    <metric name="worker_cpu_s" value="4.38" />
+    <metric name="router_cpu_s" value="9.45" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.1" />
+    <metric name="out_tok_per_s" value="4193.4" />
+    <metric name="in_tok_per_s" value="8386.7" />
+    <metric name="ttft_p50_ms" value="1653.8" />
+    <metric name="ttft_p99_ms" value="2990.7" />
+    <metric name="tpot_p50_ms" value="13.63" />
+    <metric name="tpot_p99_ms" value="15.07" />
+    <metric name="e2e_p50_ms" value="15592.8" />
+    <metric name="e2e_p99_ms" value="15697.4" />
+    <metric name="worker_cpu_s" value="9.63" />
+    <metric name="router_cpu_s" value="11.97" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.27" />
+    <metric name="out_tok_per_s" value="837.3" />
+    <metric name="in_tok_per_s" value="26793.1" />
+    <metric name="ttft_p50_ms" value="7566.9" />
+    <metric name="ttft_p99_ms" value="14409.1" />
+    <metric name="tpot_p50_ms" value="46.99" />
+    <metric name="tpot_p99_ms" value="74.89" />
+    <metric name="e2e_p50_ms" value="19550.6" />
+    <metric name="e2e_p99_ms" value="19609.0" />
+    <metric name="worker_cpu_s" value="2.01" />
+    <metric name="router_cpu_s" value="7.44" />
+  </run>
+  <run topo="1" engine="sglang" kind="python-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-python-grpc-smg-grpc-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.75" />
+    <metric name="out_tok_per_s" value="1119.6" />
+    <metric name="in_tok_per_s" value="2239.1" />
+    <metric name="ttft_p50_ms" value="126.3" />
+    <metric name="ttft_p99_ms" value="149.7" />
+    <metric name="tpot_p50_ms" value="6.19" />
+    <metric name="tpot_p99_ms" value="6.24" />
+    <metric name="e2e_p50_ms" value="912.0" />
+    <metric name="e2e_p99_ms" value="939.5" />
+    <metric name="worker_cpu_s" value="1.17" />
+    <metric name="router_cpu_s" value="1.42" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.28" />
+    <metric name="out_tok_per_s" value="163.8" />
+    <metric name="in_tok_per_s" value="655.2" />
+    <metric name="ttft_p50_ms" value="65.2" />
+    <metric name="ttft_p99_ms" value="107.4" />
+    <metric name="tpot_p50_ms" value="5.63" />
+    <metric name="tpot_p99_ms" value="5.65" />
+    <metric name="e2e_p50_ms" value="780.4" />
+    <metric name="e2e_p99_ms" value="822.9" />
+    <metric name="worker_cpu_s" value="0.4" />
+    <metric name="router_cpu_s" value="0.58" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.16" />
+    <metric name="out_tok_per_s" value="4393.5" />
+    <metric name="in_tok_per_s" value="17573.7" />
+    <metric name="ttft_p50_ms" value="1870.6" />
+    <metric name="ttft_p99_ms" value="3369.8" />
+    <metric name="tpot_p50_ms" value="21.36" />
+    <metric name="tpot_p99_ms" value="27.39" />
+    <metric name="e2e_p50_ms" value="7396.6" />
+    <metric name="e2e_p99_ms" value="7814.1" />
+    <metric name="worker_cpu_s" value="9.12" />
+    <metric name="router_cpu_s" value="19.98" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.06" />
+    <metric name="out_tok_per_s" value="2179.4" />
+    <metric name="in_tok_per_s" value="544.8" />
+    <metric name="ttft_p50_ms" value="236.6" />
+    <metric name="ttft_p99_ms" value="244.1" />
+    <metric name="tpot_p50_ms" value="7.23" />
+    <metric name="tpot_p99_ms" value="7.3" />
+    <metric name="e2e_p50_ms" value="15029.5" />
+    <metric name="e2e_p99_ms" value="15058.1" />
+    <metric name="worker_cpu_s" value="3.77" />
+    <metric name="router_cpu_s" value="6.65" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.74" />
+    <metric name="out_tok_per_s" value="4798.1" />
+    <metric name="in_tok_per_s" value="19192.3" />
+    <metric name="ttft_p50_ms" value="8275.3" />
+    <metric name="ttft_p99_ms" value="10180.6" />
+    <metric name="tpot_p50_ms" value="22.01" />
+    <metric name="tpot_p99_ms" value="27.18" />
+    <metric name="e2e_p50_ms" value="14283.4" />
+    <metric name="e2e_p99_ms" value="15492.4" />
+    <metric name="worker_cpu_s" value="17.51" />
+    <metric name="router_cpu_s" value="49.25" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.93" />
+    <metric name="out_tok_per_s" value="2796.9" />
+    <metric name="in_tok_per_s" value="11187.2" />
+    <metric name="ttft_p50_ms" value="524.7" />
+    <metric name="ttft_p99_ms" value="770.3" />
+    <metric name="tpot_p50_ms" value="9.43" />
+    <metric name="tpot_p99_ms" value="10.92" />
+    <metric name="e2e_p50_ms" value="2923.6" />
+    <metric name="e2e_p99_ms" value="2937.8" />
+    <metric name="worker_cpu_s" value="1.79" />
+    <metric name="router_cpu_s" value="6.43" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.58" />
+    <metric name="out_tok_per_s" value="1429.2" />
+    <metric name="in_tok_per_s" value="22867.9" />
+    <metric name="ttft_p50_ms" value="1733.4" />
+    <metric name="ttft_p99_ms" value="3136.4" />
+    <metric name="tpot_p50_ms" value="15.65" />
+    <metric name="tpot_p99_ms" value="21.71" />
+    <metric name="e2e_p50_ms" value="5724.6" />
+    <metric name="e2e_p99_ms" value="5744.9" />
+    <metric name="worker_cpu_s" value="2.41" />
+    <metric name="router_cpu_s" value="8.82" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.1" />
+    <metric name="out_tok_per_s" value="4194.5" />
+    <metric name="in_tok_per_s" value="8388.9" />
+    <metric name="ttft_p50_ms" value="1808.1" />
+    <metric name="ttft_p99_ms" value="2968.3" />
+    <metric name="tpot_p50_ms" value="13.41" />
+    <metric name="tpot_p99_ms" value="15.05" />
+    <metric name="e2e_p50_ms" value="15610.7" />
+    <metric name="e2e_p99_ms" value="15676.5" />
+    <metric name="worker_cpu_s" value="4.24" />
+    <metric name="router_cpu_s" value="9.89" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.28" />
+    <metric name="out_tok_per_s" value="840.2" />
+    <metric name="in_tok_per_s" value="26885.8" />
+    <metric name="ttft_p50_ms" value="7436.7" />
+    <metric name="ttft_p99_ms" value="14304.1" />
+    <metric name="tpot_p50_ms" value="47.61" />
+    <metric name="tpot_p99_ms" value="75.02" />
+    <metric name="e2e_p50_ms" value="19459.7" />
+    <metric name="e2e_p99_ms" value="19602.2" />
+    <metric name="worker_cpu_s" value="1.18" />
+    <metric name="router_cpu_s" value="7.66" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.78" />
+    <metric name="out_tok_per_s" value="1123.9" />
+    <metric name="in_tok_per_s" value="2247.8" />
+    <metric name="ttft_p50_ms" value="120.4" />
+    <metric name="ttft_p99_ms" value="143.5" />
+    <metric name="tpot_p50_ms" value="6.2" />
+    <metric name="tpot_p99_ms" value="6.26" />
+    <metric name="e2e_p50_ms" value="908.4" />
+    <metric name="e2e_p99_ms" value="932.5" />
+    <metric name="worker_cpu_s" value="0.49" />
+    <metric name="router_cpu_s" value="1.42" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.28" />
+    <metric name="out_tok_per_s" value="163.9" />
+    <metric name="in_tok_per_s" value="655.6" />
+    <metric name="ttft_p50_ms" value="64.9" />
+    <metric name="ttft_p99_ms" value="104.5" />
+    <metric name="tpot_p50_ms" value="5.63" />
+    <metric name="tpot_p99_ms" value="5.65" />
+    <metric name="e2e_p50_ms" value="779.9" />
+    <metric name="e2e_p99_ms" value="820.1" />
+    <metric name="worker_cpu_s" value="0.5" />
+    <metric name="router_cpu_s" value="0.51" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.15" />
+    <metric name="out_tok_per_s" value="4389.9" />
+    <metric name="in_tok_per_s" value="17559.6" />
+    <metric name="ttft_p50_ms" value="1775.0" />
+    <metric name="ttft_p99_ms" value="3273.9" />
+    <metric name="tpot_p50_ms" value="21.72" />
+    <metric name="tpot_p99_ms" value="27.68" />
+    <metric name="e2e_p50_ms" value="7332.4" />
+    <metric name="e2e_p99_ms" value="7803.2" />
+    <metric name="worker_cpu_s" value="8.89" />
+    <metric name="router_cpu_s" value="24.87" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.06" />
+    <metric name="out_tok_per_s" value="2176.2" />
+    <metric name="in_tok_per_s" value="544.0" />
+    <metric name="ttft_p50_ms" value="235.7" />
+    <metric name="ttft_p99_ms" value="246.1" />
+    <metric name="tpot_p50_ms" value="7.23" />
+    <metric name="tpot_p99_ms" value="7.31" />
+    <metric name="e2e_p50_ms" value="15043.9" />
+    <metric name="e2e_p99_ms" value="15107.5" />
+    <metric name="worker_cpu_s" value="5.49" />
+    <metric name="router_cpu_s" value="7.11" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.72" />
+    <metric name="out_tok_per_s" value="4793.3" />
+    <metric name="in_tok_per_s" value="19172.6" />
+    <metric name="ttft_p50_ms" value="8278.9" />
+    <metric name="ttft_p99_ms" value="10155.4" />
+    <metric name="tpot_p50_ms" value="22.21" />
+    <metric name="tpot_p99_ms" value="27.17" />
+    <metric name="e2e_p50_ms" value="14215.3" />
+    <metric name="e2e_p99_ms" value="15265.4" />
+    <metric name="worker_cpu_s" value="17.66" />
+    <metric name="router_cpu_s" value="49.9" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.91" />
+    <metric name="out_tok_per_s" value="2793.4" />
+    <metric name="in_tok_per_s" value="11173.4" />
+    <metric name="ttft_p50_ms" value="528.3" />
+    <metric name="ttft_p99_ms" value="773.2" />
+    <metric name="tpot_p50_ms" value="9.46" />
+    <metric name="tpot_p99_ms" value="10.96" />
+    <metric name="e2e_p50_ms" value="2925.4" />
+    <metric name="e2e_p99_ms" value="2952.6" />
+    <metric name="worker_cpu_s" value="3.88" />
+    <metric name="router_cpu_s" value="7.36" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="5.58" />
+    <metric name="out_tok_per_s" value="1427.2" />
+    <metric name="in_tok_per_s" value="22835.9" />
+    <metric name="ttft_p50_ms" value="1740.6" />
+    <metric name="ttft_p99_ms" value="3149.7" />
+    <metric name="tpot_p50_ms" value="15.66" />
+    <metric name="tpot_p99_ms" value="21.72" />
+    <metric name="e2e_p50_ms" value="5731.0" />
+    <metric name="e2e_p99_ms" value="5748.7" />
+    <metric name="worker_cpu_s" value="2.44" />
+    <metric name="router_cpu_s" value="9.49" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.08" />
+    <metric name="out_tok_per_s" value="4173.8" />
+    <metric name="in_tok_per_s" value="8347.5" />
+    <metric name="ttft_p50_ms" value="1658.7" />
+    <metric name="ttft_p99_ms" value="2983.5" />
+    <metric name="tpot_p50_ms" value="13.63" />
+    <metric name="tpot_p99_ms" value="15.35" />
+    <metric name="e2e_p50_ms" value="15641.2" />
+    <metric name="e2e_p99_ms" value="15907.4" />
+    <metric name="worker_cpu_s" value="4.93" />
+    <metric name="router_cpu_s" value="13.7" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="3.29" />
+    <metric name="out_tok_per_s" value="841.2" />
+    <metric name="in_tok_per_s" value="26917.0" />
+    <metric name="ttft_p50_ms" value="7499.0" />
+    <metric name="ttft_p99_ms" value="14319.8" />
+    <metric name="tpot_p50_ms" value="46.84" />
+    <metric name="tpot_p99_ms" value="74.43" />
+    <metric name="e2e_p50_ms" value="19438.9" />
+    <metric name="e2e_p99_ms" value="19502.3" />
+    <metric name="worker_cpu_s" value="1.18" />
+    <metric name="router_cpu_s" value="7.71" />
+  </run>
+  <run topo="1" engine="sglang" kind="rust-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-sglang-rust-grpc-smg-grpc-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.75" />
+    <metric name="out_tok_per_s" value="1119.6" />
+    <metric name="in_tok_per_s" value="2239.0" />
+    <metric name="ttft_p50_ms" value="124.1" />
+    <metric name="ttft_p99_ms" value="137.8" />
+    <metric name="tpot_p50_ms" value="6.2" />
+    <metric name="tpot_p99_ms" value="6.26" />
+    <metric name="e2e_p50_ms" value="912.7" />
+    <metric name="e2e_p99_ms" value="930.1" />
+    <metric name="worker_cpu_s" value="0.94" />
+    <metric name="router_cpu_s" value="1.37" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.16" />
+    <metric name="out_tok_per_s" value="147.9" />
+    <metric name="in_tok_per_s" value="591.4" />
+    <metric name="ttft_p50_ms" value="50.8" />
+    <metric name="ttft_p99_ms" value="80.5" />
+    <metric name="tpot_p50_ms" value="6.4" />
+    <metric name="tpot_p99_ms" value="6.42" />
+    <metric name="e2e_p50_ms" value="864.3" />
+    <metric name="e2e_p99_ms" value="892.0" />
+    <metric name="worker_cpu_s" value="0.86" />
+    <metric name="router_cpu_s" value="0.62" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="17.12" />
+    <metric name="out_tok_per_s" value="4383.4" />
+    <metric name="in_tok_per_s" value="17533.4" />
+    <metric name="ttft_p50_ms" value="1664.2" />
+    <metric name="ttft_p99_ms" value="3127.1" />
+    <metric name="tpot_p50_ms" value="22.44" />
+    <metric name="tpot_p99_ms" value="28.15" />
+    <metric name="e2e_p50_ms" value="7462.8" />
+    <metric name="e2e_p99_ms" value="7849.2" />
+    <metric name="worker_cpu_s" value="17.41" />
+    <metric name="router_cpu_s" value="17.04" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="0.96" />
+    <metric name="out_tok_per_s" value="1968.8" />
+    <metric name="in_tok_per_s" value="492.2" />
+    <metric name="ttft_p50_ms" value="209.6" />
+    <metric name="ttft_p99_ms" value="247.2" />
+    <metric name="tpot_p50_ms" value="8.02" />
+    <metric name="tpot_p99_ms" value="8.11" />
+    <metric name="e2e_p50_ms" value="16638.6" />
+    <metric name="e2e_p99_ms" value="16684.5" />
+    <metric name="worker_cpu_s" value="7.01" />
+    <metric name="router_cpu_s" value="6.88" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.71" />
+    <metric name="out_tok_per_s" value="4789.0" />
+    <metric name="in_tok_per_s" value="19155.6" />
+    <metric name="ttft_p50_ms" value="5428.0" />
+    <metric name="ttft_p99_ms" value="10138.2" />
+    <metric name="tpot_p50_ms" value="29.16" />
+    <metric name="tpot_p99_ms" value="34.65" />
+    <metric name="e2e_p50_ms" value="13139.7" />
+    <metric name="e2e_p99_ms" value="17331.0" />
+    <metric name="worker_cpu_s" value="33.49" />
+    <metric name="router_cpu_s" value="39.1" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.26" />
+    <metric name="out_tok_per_s" value="2627.1" />
+    <metric name="in_tok_per_s" value="10508.0" />
+    <metric name="ttft_p50_ms" value="421.6" />
+    <metric name="ttft_p99_ms" value="1692.1" />
+    <metric name="tpot_p50_ms" value="10.28" />
+    <metric name="tpot_p99_ms" value="14.87" />
+    <metric name="e2e_p50_ms" value="3008.5" />
+    <metric name="e2e_p99_ms" value="4027.0" />
+    <metric name="worker_cpu_s" value="5.17" />
+    <metric name="router_cpu_s" value="5.66" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.09" />
+    <metric name="out_tok_per_s" value="1558.0" />
+    <metric name="in_tok_per_s" value="24928.0" />
+    <metric name="ttft_p50_ms" value="1428.2" />
+    <metric name="ttft_p99_ms" value="2654.0" />
+    <metric name="tpot_p50_ms" value="14.94" />
+    <metric name="tpot_p99_ms" value="19.8" />
+    <metric name="e2e_p50_ms" value="5243.8" />
+    <metric name="e2e_p99_ms" value="5313.1" />
+    <metric name="worker_cpu_s" value="3.87" />
+    <metric name="router_cpu_s" value="9.34" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.27" />
+    <metric name="out_tok_per_s" value="4370.1" />
+    <metric name="in_tok_per_s" value="8740.0" />
+    <metric name="ttft_p50_ms" value="1427.8" />
+    <metric name="ttft_p99_ms" value="2669.1" />
+    <metric name="tpot_p50_ms" value="13.17" />
+    <metric name="tpot_p99_ms" value="14.53" />
+    <metric name="e2e_p50_ms" value="14990.8" />
+    <metric name="e2e_p99_ms" value="15054.3" />
+    <metric name="worker_cpu_s" value="9.7" />
+    <metric name="router_cpu_s" value="10.88" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.2" />
+    <metric name="out_tok_per_s" value="1076.0" />
+    <metric name="in_tok_per_s" value="34431.8" />
+    <metric name="ttft_p50_ms" value="5576.8" />
+    <metric name="ttft_p99_ms" value="10926.8" />
+    <metric name="tpot_p50_ms" value="37.66" />
+    <metric name="tpot_p99_ms" value="58.72" />
+    <metric name="e2e_p50_ms" value="15212.6" />
+    <metric name="e2e_p99_ms" value="15388.8" />
+    <metric name="worker_cpu_s" value="2.03" />
+    <metric name="router_cpu_s" value="7.43" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.79" />
+    <metric name="out_tok_per_s" value="996.7" />
+    <metric name="in_tok_per_s" value="1993.3" />
+    <metric name="ttft_p50_ms" value="130.3" />
+    <metric name="ttft_p99_ms" value="145.9" />
+    <metric name="tpot_p50_ms" value="7.06" />
+    <metric name="tpot_p99_ms" value="7.74" />
+    <metric name="e2e_p50_ms" value="1027.2" />
+    <metric name="e2e_p99_ms" value="1055.2" />
+    <metric name="worker_cpu_s" value="1.2" />
+    <metric name="router_cpu_s" value="1.11" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.15" />
+    <metric name="out_tok_per_s" value="147.4" />
+    <metric name="in_tok_per_s" value="589.7" />
+    <metric name="ttft_p50_ms" value="52.6" />
+    <metric name="ttft_p99_ms" value="97.2" />
+    <metric name="tpot_p50_ms" value="6.41" />
+    <metric name="tpot_p99_ms" value="6.93" />
+    <metric name="e2e_p50_ms" value="866.2" />
+    <metric name="e2e_p99_ms" value="914.9" />
+    <metric name="worker_cpu_s" value="0.87" />
+    <metric name="router_cpu_s" value="0.6" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="16.98" />
+    <metric name="out_tok_per_s" value="4346.2" />
+    <metric name="in_tok_per_s" value="17384.7" />
+    <metric name="ttft_p50_ms" value="1765.9" />
+    <metric name="ttft_p99_ms" value="3187.1" />
+    <metric name="tpot_p50_ms" value="22.16" />
+    <metric name="tpot_p99_ms" value="28.06" />
+    <metric name="e2e_p50_ms" value="7476.7" />
+    <metric name="e2e_p99_ms" value="8062.5" />
+    <metric name="worker_cpu_s" value="13.99" />
+    <metric name="router_cpu_s" value="19.53" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="0.96" />
+    <metric name="out_tok_per_s" value="1970.2" />
+    <metric name="in_tok_per_s" value="492.6" />
+    <metric name="ttft_p50_ms" value="210.4" />
+    <metric name="ttft_p99_ms" value="248.3" />
+    <metric name="tpot_p50_ms" value="8.01" />
+    <metric name="tpot_p99_ms" value="8.1" />
+    <metric name="e2e_p50_ms" value="16626.3" />
+    <metric name="e2e_p99_ms" value="16670.9" />
+    <metric name="worker_cpu_s" value="8.49" />
+    <metric name="router_cpu_s" value="5.97" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.99" />
+    <metric name="out_tok_per_s" value="4861.2" />
+    <metric name="in_tok_per_s" value="19444.6" />
+    <metric name="ttft_p50_ms" value="5309.3" />
+    <metric name="ttft_p99_ms" value="10222.2" />
+    <metric name="tpot_p50_ms" value="28.58" />
+    <metric name="tpot_p99_ms" value="34.55" />
+    <metric name="e2e_p50_ms" value="12878.4" />
+    <metric name="e2e_p99_ms" value="17203.1" />
+    <metric name="worker_cpu_s" value="31.73" />
+    <metric name="router_cpu_s" value="37.59" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.58" />
+    <metric name="out_tok_per_s" value="2708.0" />
+    <metric name="in_tok_per_s" value="10831.7" />
+    <metric name="ttft_p50_ms" value="377.8" />
+    <metric name="ttft_p99_ms" value="713.1" />
+    <metric name="tpot_p50_ms" value="10.32" />
+    <metric name="tpot_p99_ms" value="11.53" />
+    <metric name="e2e_p50_ms" value="3009.7" />
+    <metric name="e2e_p99_ms" value="3082.5" />
+    <metric name="worker_cpu_s" value="6.37" />
+    <metric name="router_cpu_s" value="7.42" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.07" />
+    <metric name="out_tok_per_s" value="1553.6" />
+    <metric name="in_tok_per_s" value="24856.7" />
+    <metric name="ttft_p50_ms" value="1443.8" />
+    <metric name="ttft_p99_ms" value="2689.1" />
+    <metric name="tpot_p50_ms" value="14.94" />
+    <metric name="tpot_p99_ms" value="19.92" />
+    <metric name="e2e_p50_ms" value="5265.8" />
+    <metric name="e2e_p99_ms" value="5314.4" />
+    <metric name="worker_cpu_s" value="3.82" />
+    <metric name="router_cpu_s" value="9.09" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.27" />
+    <metric name="out_tok_per_s" value="4374.7" />
+    <metric name="in_tok_per_s" value="8749.3" />
+    <metric name="ttft_p50_ms" value="1386.8" />
+    <metric name="ttft_p99_ms" value="2663.9" />
+    <metric name="tpot_p50_ms" value="13.26" />
+    <metric name="tpot_p99_ms" value="14.49" />
+    <metric name="e2e_p50_ms" value="14965.8" />
+    <metric name="e2e_p99_ms" value="15015.6" />
+    <metric name="worker_cpu_s" value="11.94" />
+    <metric name="router_cpu_s" value="10.59" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.23" />
+    <metric name="out_tok_per_s" value="1083.9" />
+    <metric name="in_tok_per_s" value="34685.9" />
+    <metric name="ttft_p50_ms" value="5556.4" />
+    <metric name="ttft_p99_ms" value="10880.9" />
+    <metric name="tpot_p50_ms" value="37.3" />
+    <metric name="tpot_p99_ms" value="57.86" />
+    <metric name="e2e_p50_ms" value="15087.3" />
+    <metric name="e2e_p99_ms" value="15120.9" />
+    <metric name="worker_cpu_s" value="2.03" />
+    <metric name="router_cpu_s" value="7.28" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="python-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-tokenspeed-python-grpc-smg-grpc-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.99" />
+    <metric name="out_tok_per_s" value="1022.9" />
+    <metric name="in_tok_per_s" value="2045.4" />
+    <metric name="ttft_p50_ms" value="94.9" />
+    <metric name="ttft_p99_ms" value="139.8" />
+    <metric name="tpot_p50_ms" value="7.04" />
+    <metric name="tpot_p99_ms" value="7.71" />
+    <metric name="e2e_p50_ms" value="990.0" />
+    <metric name="e2e_p99_ms" value="1050.0" />
+    <metric name="worker_cpu_s" value="1.19" />
+    <metric name="router_cpu_s" value="1.48" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.15" />
+    <metric name="out_tok_per_s" value="147.8" />
+    <metric name="in_tok_per_s" value="591.3" />
+    <metric name="ttft_p50_ms" value="52.1" />
+    <metric name="ttft_p99_ms" value="90.1" />
+    <metric name="tpot_p50_ms" value="6.41" />
+    <metric name="tpot_p99_ms" value="6.42" />
+    <metric name="e2e_p50_ms" value="865.6" />
+    <metric name="e2e_p99_ms" value="901.6" />
+    <metric name="worker_cpu_s" value="0.87" />
+    <metric name="router_cpu_s" value="0.55" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="16.97" />
+    <metric name="out_tok_per_s" value="4344.7" />
+    <metric name="in_tok_per_s" value="17378.6" />
+    <metric name="ttft_p50_ms" value="1793.0" />
+    <metric name="ttft_p99_ms" value="3241.0" />
+    <metric name="tpot_p50_ms" value="22.15" />
+    <metric name="tpot_p99_ms" value="28.28" />
+    <metric name="e2e_p50_ms" value="7513.9" />
+    <metric name="e2e_p99_ms" value="7885.5" />
+    <metric name="worker_cpu_s" value="13.53" />
+    <metric name="router_cpu_s" value="19.94" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="0.96" />
+    <metric name="out_tok_per_s" value="1967.3" />
+    <metric name="in_tok_per_s" value="491.8" />
+    <metric name="ttft_p50_ms" value="218.3" />
+    <metric name="ttft_p99_ms" value="248.4" />
+    <metric name="tpot_p50_ms" value="8.02" />
+    <metric name="tpot_p99_ms" value="8.14" />
+    <metric name="e2e_p50_ms" value="16642.8" />
+    <metric name="e2e_p99_ms" value="16706.8" />
+    <metric name="worker_cpu_s" value="7.77" />
+    <metric name="router_cpu_s" value="7.22" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.97" />
+    <metric name="out_tok_per_s" value="4855.1" />
+    <metric name="in_tok_per_s" value="19420.0" />
+    <metric name="ttft_p50_ms" value="5365.6" />
+    <metric name="ttft_p99_ms" value="10117.7" />
+    <metric name="tpot_p50_ms" value="28.98" />
+    <metric name="tpot_p99_ms" value="33.45" />
+    <metric name="e2e_p50_ms" value="12810.4" />
+    <metric name="e2e_p99_ms" value="17044.6" />
+    <metric name="worker_cpu_s" value="35.55" />
+    <metric name="router_cpu_s" value="35.51" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.61" />
+    <metric name="out_tok_per_s" value="2715.8" />
+    <metric name="in_tok_per_s" value="10863.1" />
+    <metric name="ttft_p50_ms" value="376.6" />
+    <metric name="ttft_p99_ms" value="724.0" />
+    <metric name="tpot_p50_ms" value="10.31" />
+    <metric name="tpot_p99_ms" value="11.47" />
+    <metric name="e2e_p50_ms" value="3002.5" />
+    <metric name="e2e_p99_ms" value="3086.1" />
+    <metric name="worker_cpu_s" value="6.57" />
+    <metric name="router_cpu_s" value="6.39" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.07" />
+    <metric name="out_tok_per_s" value="1554.9" />
+    <metric name="in_tok_per_s" value="24878.0" />
+    <metric name="ttft_p50_ms" value="1440.7" />
+    <metric name="ttft_p99_ms" value="2676.6" />
+    <metric name="tpot_p50_ms" value="14.95" />
+    <metric name="tpot_p99_ms" value="19.92" />
+    <metric name="e2e_p50_ms" value="5252.8" />
+    <metric name="e2e_p99_ms" value="5324.3" />
+    <metric name="worker_cpu_s" value="4.56" />
+    <metric name="router_cpu_s" value="8.76" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.26" />
+    <metric name="out_tok_per_s" value="4366.1" />
+    <metric name="in_tok_per_s" value="8732.0" />
+    <metric name="ttft_p50_ms" value="1416.9" />
+    <metric name="ttft_p99_ms" value="2684.7" />
+    <metric name="tpot_p50_ms" value="13.22" />
+    <metric name="tpot_p99_ms" value="14.52" />
+    <metric name="e2e_p50_ms" value="14987.4" />
+    <metric name="e2e_p99_ms" value="15080.6" />
+    <metric name="worker_cpu_s" value="9.04" />
+    <metric name="router_cpu_s" value="11.4" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.21" />
+    <metric name="out_tok_per_s" value="1077.4" />
+    <metric name="in_tok_per_s" value="34477.4" />
+    <metric name="ttft_p50_ms" value="5568.5" />
+    <metric name="ttft_p99_ms" value="10895.7" />
+    <metric name="tpot_p50_ms" value="37.64" />
+    <metric name="tpot_p99_ms" value="58.73" />
+    <metric name="e2e_p50_ms" value="15192.8" />
+    <metric name="e2e_p99_ms" value="15380.2" />
+    <metric name="worker_cpu_s" value="2.42" />
+    <metric name="router_cpu_s" value="6.95" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.01" />
+    <metric name="out_tok_per_s" value="1025.5" />
+    <metric name="in_tok_per_s" value="2050.7" />
+    <metric name="ttft_p50_ms" value="92.5" />
+    <metric name="ttft_p99_ms" value="149.7" />
+    <metric name="tpot_p50_ms" value="7.04" />
+    <metric name="tpot_p99_ms" value="7.79" />
+    <metric name="e2e_p50_ms" value="988.8" />
+    <metric name="e2e_p99_ms" value="1059.1" />
+    <metric name="worker_cpu_s" value="1.41" />
+    <metric name="router_cpu_s" value="1.46" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.15" />
+    <metric name="out_tok_per_s" value="147.7" />
+    <metric name="in_tok_per_s" value="590.8" />
+    <metric name="ttft_p50_ms" value="51.3" />
+    <metric name="ttft_p99_ms" value="95.1" />
+    <metric name="tpot_p50_ms" value="6.41" />
+    <metric name="tpot_p99_ms" value="6.9" />
+    <metric name="e2e_p50_ms" value="864.8" />
+    <metric name="e2e_p99_ms" value="917.5" />
+    <metric name="worker_cpu_s" value="0.86" />
+    <metric name="router_cpu_s" value="0.64" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="16.71" />
+    <metric name="out_tok_per_s" value="4277.4" />
+    <metric name="in_tok_per_s" value="17109.2" />
+    <metric name="ttft_p50_ms" value="1851.2" />
+    <metric name="ttft_p99_ms" value="3316.6" />
+    <metric name="tpot_p50_ms" value="22.25" />
+    <metric name="tpot_p99_ms" value="29.51" />
+    <metric name="e2e_p50_ms" value="7555.3" />
+    <metric name="e2e_p99_ms" value="8270.9" />
+    <metric name="worker_cpu_s" value="13.07" />
+    <metric name="router_cpu_s" value="20.27" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="0.96" />
+    <metric name="out_tok_per_s" value="1967.1" />
+    <metric name="in_tok_per_s" value="491.8" />
+    <metric name="ttft_p50_ms" value="215.1" />
+    <metric name="ttft_p99_ms" value="250.8" />
+    <metric name="tpot_p50_ms" value="8.02" />
+    <metric name="tpot_p99_ms" value="8.12" />
+    <metric name="e2e_p50_ms" value="16651.1" />
+    <metric name="e2e_p99_ms" value="16690.9" />
+    <metric name="worker_cpu_s" value="8.33" />
+    <metric name="router_cpu_s" value="6.57" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="18.94" />
+    <metric name="out_tok_per_s" value="4849.7" />
+    <metric name="in_tok_per_s" value="19398.7" />
+    <metric name="ttft_p50_ms" value="5315.8" />
+    <metric name="ttft_p99_ms" value="10198.4" />
+    <metric name="tpot_p50_ms" value="28.71" />
+    <metric name="tpot_p99_ms" value="34.94" />
+    <metric name="e2e_p50_ms" value="12920.0" />
+    <metric name="e2e_p99_ms" value="17236.4" />
+    <metric name="worker_cpu_s" value="34.85" />
+    <metric name="router_cpu_s" value="34.52" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.6" />
+    <metric name="out_tok_per_s" value="2713.2" />
+    <metric name="in_tok_per_s" value="10852.7" />
+    <metric name="ttft_p50_ms" value="388.4" />
+    <metric name="ttft_p99_ms" value="720.3" />
+    <metric name="tpot_p50_ms" value="10.29" />
+    <metric name="tpot_p99_ms" value="11.54" />
+    <metric name="e2e_p50_ms" value="3004.6" />
+    <metric name="e2e_p99_ms" value="3085.0" />
+    <metric name="worker_cpu_s" value="4.96" />
+    <metric name="router_cpu_s" value="8.03" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.02" />
+    <metric name="out_tok_per_s" value="1542.0" />
+    <metric name="in_tok_per_s" value="24671.7" />
+    <metric name="ttft_p50_ms" value="1439.7" />
+    <metric name="ttft_p99_ms" value="2679.3" />
+    <metric name="tpot_p50_ms" value="15.04" />
+    <metric name="tpot_p99_ms" value="20.2" />
+    <metric name="e2e_p50_ms" value="5286.0" />
+    <metric name="e2e_p99_ms" value="5435.0" />
+    <metric name="worker_cpu_s" value="4.73" />
+    <metric name="router_cpu_s" value="9.4" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.24" />
+    <metric name="out_tok_per_s" value="4346.0" />
+    <metric name="in_tok_per_s" value="8691.9" />
+    <metric name="ttft_p50_ms" value="1421.1" />
+    <metric name="ttft_p99_ms" value="2668.9" />
+    <metric name="tpot_p50_ms" value="13.3" />
+    <metric name="tpot_p99_ms" value="14.61" />
+    <metric name="e2e_p50_ms" value="15083.1" />
+    <metric name="e2e_p99_ms" value="15186.6" />
+    <metric name="worker_cpu_s" value="12.21" />
+    <metric name="router_cpu_s" value="11.12" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.23" />
+    <metric name="out_tok_per_s" value="1084.1" />
+    <metric name="in_tok_per_s" value="34689.7" />
+    <metric name="ttft_p50_ms" value="5574.3" />
+    <metric name="ttft_p99_ms" value="10881.0" />
+    <metric name="tpot_p50_ms" value="37.35" />
+    <metric name="tpot_p99_ms" value="57.59" />
+    <metric name="e2e_p50_ms" value="15088.1" />
+    <metric name="e2e_p99_ms" value="15125.6" />
+    <metric name="worker_cpu_s" value="2.79" />
+    <metric name="router_cpu_s" value="6.97" />
+  </run>
+  <run topo="1" engine="tokenspeed" kind="rust-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-tokenspeed-rust-grpc-smg-grpc-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="8.05" />
+    <metric name="out_tok_per_s" value="1030.9" />
+    <metric name="in_tok_per_s" value="2061.7" />
+    <metric name="ttft_p50_ms" value="90.8" />
+    <metric name="ttft_p99_ms" value="144.0" />
+    <metric name="tpot_p50_ms" value="7.03" />
+    <metric name="tpot_p99_ms" value="7.83" />
+    <metric name="e2e_p50_ms" value="984.0" />
+    <metric name="e2e_p99_ms" value="1074.4" />
+    <metric name="worker_cpu_s" value="1.19" />
+    <metric name="router_cpu_s" value="1.57" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-vllm-native-http-direct-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.21" />
+    <metric name="out_tok_per_s" value="154.7" />
+    <metric name="in_tok_per_s" value="619.0" />
+    <metric name="ttft_p50_ms" value="58.4" />
+    <metric name="ttft_p99_ms" value="109.7" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.05" />
+    <metric name="e2e_p50_ms" value="826.3" />
+    <metric name="e2e_p99_ms" value="876.3" />
+    <metric name="worker_cpu_s" value="1.2" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-vllm-native-http-direct-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.71" />
+    <metric name="out_tok_per_s" value="5046.6" />
+    <metric name="in_tok_per_s" value="20186.1" />
+    <metric name="ttft_p50_ms" value="1389.8" />
+    <metric name="ttft_p99_ms" value="2879.3" />
+    <metric name="tpot_p50_ms" value="19.96" />
+    <metric name="tpot_p99_ms" value="22.6" />
+    <metric name="e2e_p50_ms" value="6472.1" />
+    <metric name="e2e_p99_ms" value="7974.1" />
+    <metric name="worker_cpu_s" value="16.6" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-vllm-native-http-direct-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2134.3" />
+    <metric name="in_tok_per_s" value="533.6" />
+    <metric name="ttft_p50_ms" value="235.7" />
+    <metric name="ttft_p99_ms" value="280.4" />
+    <metric name="tpot_p50_ms" value="7.38" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15339.8" />
+    <metric name="e2e_p99_ms" value="15397.9" />
+    <metric name="worker_cpu_s" value="5.96" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-vllm-native-http-direct-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="23.03" />
+    <metric name="out_tok_per_s" value="5896.7" />
+    <metric name="in_tok_per_s" value="23586.3" />
+    <metric name="ttft_p50_ms" value="1238.8" />
+    <metric name="ttft_p99_ms" value="5702.9" />
+    <metric name="tpot_p50_ms" value="37.62" />
+    <metric name="tpot_p99_ms" value="39.88" />
+    <metric name="e2e_p50_ms" value="10826.0" />
+    <metric name="e2e_p99_ms" value="15177.8" />
+    <metric name="worker_cpu_s" value="30.28" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-vllm-native-http-direct-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.56" />
+    <metric name="out_tok_per_s" value="2703.9" />
+    <metric name="in_tok_per_s" value="10815.5" />
+    <metric name="ttft_p50_ms" value="883.7" />
+    <metric name="ttft_p99_ms" value="1108.8" />
+    <metric name="tpot_p50_ms" value="8.39" />
+    <metric name="tpot_p99_ms" value="9.73" />
+    <metric name="e2e_p50_ms" value="3052.7" />
+    <metric name="e2e_p99_ms" value="3237.1" />
+    <metric name="worker_cpu_s" value="6.17" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-vllm-native-http-direct-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.43" />
+    <metric name="out_tok_per_s" value="1646.8" />
+    <metric name="in_tok_per_s" value="26349.1" />
+    <metric name="ttft_p50_ms" value="1530.4" />
+    <metric name="ttft_p99_ms" value="2780.0" />
+    <metric name="tpot_p50_ms" value="13.48" />
+    <metric name="tpot_p99_ms" value="16.74" />
+    <metric name="e2e_p50_ms" value="4936.3" />
+    <metric name="e2e_p99_ms" value="6341.9" />
+    <metric name="worker_cpu_s" value="7.06" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-vllm-native-http-direct-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.44" />
+    <metric name="out_tok_per_s" value="4551.3" />
+    <metric name="in_tok_per_s" value="9102.6" />
+    <metric name="ttft_p50_ms" value="1389.5" />
+    <metric name="ttft_p99_ms" value="2866.6" />
+    <metric name="tpot_p50_ms" value="12.61" />
+    <metric name="tpot_p99_ms" value="13.27" />
+    <metric name="e2e_p50_ms" value="14280.0" />
+    <metric name="e2e_p99_ms" value="16174.2" />
+    <metric name="worker_cpu_s" value="8.84" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-native-http-direct-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.7" />
+    <metric name="out_tok_per_s" value="1203.1" />
+    <metric name="in_tok_per_s" value="38497.8" />
+    <metric name="ttft_p50_ms" value="2071.8" />
+    <metric name="ttft_p99_ms" value="10141.4" />
+    <metric name="tpot_p50_ms" value="44.43" />
+    <metric name="tpot_p99_ms" value="49.5" />
+    <metric name="e2e_p50_ms" value="13426.4" />
+    <metric name="e2e_p99_ms" value="21872.2" />
+    <metric name="worker_cpu_s" value="6.05" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-native-http-direct-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.46" />
+    <metric name="out_tok_per_s" value="954.7" />
+    <metric name="in_tok_per_s" value="1909.1" />
+    <metric name="ttft_p50_ms" value="230.3" />
+    <metric name="ttft_p99_ms" value="269.7" />
+    <metric name="tpot_p50_ms" value="6.57" />
+    <metric name="tpot_p99_ms" value="6.59" />
+    <metric name="e2e_p50_ms" value="1064.5" />
+    <metric name="e2e_p99_ms" value="1104.3" />
+    <metric name="worker_cpu_s" value="1.39" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-vllm-native-http-direct-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.21" />
+    <metric name="out_tok_per_s" value="155.0" />
+    <metric name="in_tok_per_s" value="620.0" />
+    <metric name="ttft_p50_ms" value="56.6" />
+    <metric name="ttft_p99_ms" value="92.3" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.06" />
+    <metric name="e2e_p50_ms" value="825.1" />
+    <metric name="e2e_p99_ms" value="859.9" />
+    <metric name="worker_cpu_s" value="1.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-vllm-native-http-direct-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.32" />
+    <metric name="out_tok_per_s" value="4946.9" />
+    <metric name="in_tok_per_s" value="19787.4" />
+    <metric name="ttft_p50_ms" value="1172.7" />
+    <metric name="ttft_p99_ms" value="3488.9" />
+    <metric name="tpot_p50_ms" value="20.6" />
+    <metric name="tpot_p99_ms" value="24.47" />
+    <metric name="e2e_p50_ms" value="6446.3" />
+    <metric name="e2e_p99_ms" value="9362.7" />
+    <metric name="worker_cpu_s" value="16.84" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-vllm-native-http-direct-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2133.4" />
+    <metric name="in_tok_per_s" value="533.4" />
+    <metric name="ttft_p50_ms" value="237.1" />
+    <metric name="ttft_p99_ms" value="268.0" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15358.0" />
+    <metric name="e2e_p99_ms" value="15373.7" />
+    <metric name="worker_cpu_s" value="6.17" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-vllm-native-http-direct-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="23.14" />
+    <metric name="out_tok_per_s" value="5924.1" />
+    <metric name="in_tok_per_s" value="23695.9" />
+    <metric name="ttft_p50_ms" value="1233.2" />
+    <metric name="ttft_p99_ms" value="5467.1" />
+    <metric name="tpot_p50_ms" value="37.95" />
+    <metric name="tpot_p99_ms" value="39.52" />
+    <metric name="e2e_p50_ms" value="10935.1" />
+    <metric name="e2e_p99_ms" value="14786.8" />
+    <metric name="worker_cpu_s" value="29.81" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-vllm-native-http-direct-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.97" />
+    <metric name="out_tok_per_s" value="2808.1" />
+    <metric name="in_tok_per_s" value="11232.2" />
+    <metric name="ttft_p50_ms" value="670.6" />
+    <metric name="ttft_p99_ms" value="1045.1" />
+    <metric name="tpot_p50_ms" value="8.45" />
+    <metric name="tpot_p99_ms" value="9.84" />
+    <metric name="e2e_p50_ms" value="2875.4" />
+    <metric name="e2e_p99_ms" value="3180.8" />
+    <metric name="worker_cpu_s" value="5.7" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-vllm-native-http-direct-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.4" />
+    <metric name="out_tok_per_s" value="1637.6" />
+    <metric name="in_tok_per_s" value="26201.6" />
+    <metric name="ttft_p50_ms" value="1684.3" />
+    <metric name="ttft_p99_ms" value="2590.7" />
+    <metric name="tpot_p50_ms" value="12.98" />
+    <metric name="tpot_p99_ms" value="17.05" />
+    <metric name="e2e_p50_ms" value="4994.7" />
+    <metric name="e2e_p99_ms" value="5915.8" />
+    <metric name="worker_cpu_s" value="8.36" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-vllm-native-http-direct-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.44" />
+    <metric name="out_tok_per_s" value="4545.5" />
+    <metric name="in_tok_per_s" value="9090.8" />
+    <metric name="ttft_p50_ms" value="1374.5" />
+    <metric name="ttft_p99_ms" value="2787.2" />
+    <metric name="tpot_p50_ms" value="12.73" />
+    <metric name="tpot_p99_ms" value="13.36" />
+    <metric name="e2e_p50_ms" value="14403.5" />
+    <metric name="e2e_p99_ms" value="15999.2" />
+    <metric name="worker_cpu_s" value="9.32" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-native-http-direct-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.73" />
+    <metric name="out_tok_per_s" value="1210.0" />
+    <metric name="in_tok_per_s" value="38720.7" />
+    <metric name="ttft_p50_ms" value="1794.0" />
+    <metric name="ttft_p99_ms" value="9943.7" />
+    <metric name="tpot_p50_ms" value="45.61" />
+    <metric name="tpot_p99_ms" value="49.28" />
+    <metric name="e2e_p50_ms" value="13367.9" />
+    <metric name="e2e_p99_ms" value="22013.2" />
+    <metric name="worker_cpu_s" value="5.89" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="direct" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-native-http-direct-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.52" />
+    <metric name="out_tok_per_s" value="962.3" />
+    <metric name="in_tok_per_s" value="1924.5" />
+    <metric name="ttft_p50_ms" value="224.7" />
+    <metric name="ttft_p99_ms" value="256.1" />
+    <metric name="tpot_p50_ms" value="6.58" />
+    <metric name="tpot_p99_ms" value="6.6" />
+    <metric name="e2e_p50_ms" value="1059.9" />
+    <metric name="e2e_p99_ms" value="1089.7" />
+    <metric name="worker_cpu_s" value="1.27" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.21" />
+    <metric name="out_tok_per_s" value="154.4" />
+    <metric name="in_tok_per_s" value="617.4" />
+    <metric name="ttft_p50_ms" value="60.1" />
+    <metric name="ttft_p99_ms" value="101.7" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.05" />
+    <metric name="e2e_p50_ms" value="828.3" />
+    <metric name="e2e_p99_ms" value="870.0" />
+    <metric name="worker_cpu_s" value="1.04" />
+    <metric name="router_cpu_s" value="0.45" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.56" />
+    <metric name="out_tok_per_s" value="5006.8" />
+    <metric name="in_tok_per_s" value="20026.9" />
+    <metric name="ttft_p50_ms" value="1409.7" />
+    <metric name="ttft_p99_ms" value="2799.0" />
+    <metric name="tpot_p50_ms" value="19.86" />
+    <metric name="tpot_p99_ms" value="21.98" />
+    <metric name="e2e_p50_ms" value="6480.9" />
+    <metric name="e2e_p99_ms" value="7961.6" />
+    <metric name="worker_cpu_s" value="17.36" />
+    <metric name="router_cpu_s" value="12.78" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2132.9" />
+    <metric name="in_tok_per_s" value="533.1" />
+    <metric name="ttft_p50_ms" value="237.1" />
+    <metric name="ttft_p99_ms" value="263.7" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15354.4" />
+    <metric name="e2e_p99_ms" value="15396.6" />
+    <metric name="worker_cpu_s" value="5.71" />
+    <metric name="router_cpu_s" value="6.29" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.92" />
+    <metric name="out_tok_per_s" value="5866.6" />
+    <metric name="in_tok_per_s" value="23466.0" />
+    <metric name="ttft_p50_ms" value="1472.4" />
+    <metric name="ttft_p99_ms" value="5498.6" />
+    <metric name="tpot_p50_ms" value="37.64" />
+    <metric name="tpot_p99_ms" value="40.4" />
+    <metric name="e2e_p50_ms" value="11042.3" />
+    <metric name="e2e_p99_ms" value="15039.6" />
+    <metric name="worker_cpu_s" value="29.77" />
+    <metric name="router_cpu_s" value="21.72" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.84" />
+    <metric name="out_tok_per_s" value="2776.2" />
+    <metric name="in_tok_per_s" value="11104.4" />
+    <metric name="ttft_p50_ms" value="782.2" />
+    <metric name="ttft_p99_ms" value="975.2" />
+    <metric name="tpot_p50_ms" value="8.41" />
+    <metric name="tpot_p99_ms" value="9.47" />
+    <metric name="e2e_p50_ms" value="2974.7" />
+    <metric name="e2e_p99_ms" value="3105.4" />
+    <metric name="worker_cpu_s" value="6.39" />
+    <metric name="router_cpu_s" value="3.98" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.44" />
+    <metric name="out_tok_per_s" value="1649.1" />
+    <metric name="in_tok_per_s" value="26385.2" />
+    <metric name="ttft_p50_ms" value="1531.4" />
+    <metric name="ttft_p99_ms" value="2616.7" />
+    <metric name="tpot_p50_ms" value="13.56" />
+    <metric name="tpot_p99_ms" value="16.8" />
+    <metric name="e2e_p50_ms" value="4939.1" />
+    <metric name="e2e_p99_ms" value="6167.3" />
+    <metric name="worker_cpu_s" value="7.17" />
+    <metric name="router_cpu_s" value="3.63" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.49" />
+    <metric name="out_tok_per_s" value="4596.9" />
+    <metric name="in_tok_per_s" value="9193.6" />
+    <metric name="ttft_p50_ms" value="1349.1" />
+    <metric name="ttft_p99_ms" value="2554.3" />
+    <metric name="tpot_p50_ms" value="12.58" />
+    <metric name="tpot_p99_ms" value="13.31" />
+    <metric name="e2e_p50_ms" value="14221.4" />
+    <metric name="e2e_p99_ms" value="15688.8" />
+    <metric name="worker_cpu_s" value="8.07" />
+    <metric name="router_cpu_s" value="6.64" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.72" />
+    <metric name="out_tok_per_s" value="1209.2" />
+    <metric name="in_tok_per_s" value="38693.3" />
+    <metric name="ttft_p50_ms" value="2074.4" />
+    <metric name="ttft_p99_ms" value="9985.4" />
+    <metric name="tpot_p50_ms" value="44.41" />
+    <metric name="tpot_p99_ms" value="49.03" />
+    <metric name="e2e_p50_ms" value="13390.0" />
+    <metric name="e2e_p99_ms" value="21735.1" />
+    <metric name="worker_cpu_s" value="5.68" />
+    <metric name="router_cpu_s" value="2.02" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-native-http-smg-http-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.39" />
+    <metric name="out_tok_per_s" value="945.8" />
+    <metric name="in_tok_per_s" value="1891.5" />
+    <metric name="ttft_p50_ms" value="245.3" />
+    <metric name="ttft_p99_ms" value="275.6" />
+    <metric name="tpot_p50_ms" value="6.57" />
+    <metric name="tpot_p99_ms" value="6.62" />
+    <metric name="e2e_p50_ms" value="1079.5" />
+    <metric name="e2e_p99_ms" value="1110.1" />
+    <metric name="worker_cpu_s" value="1.34" />
+    <metric name="router_cpu_s" value="0.87" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.21" />
+    <metric name="out_tok_per_s" value="154.4" />
+    <metric name="in_tok_per_s" value="617.6" />
+    <metric name="ttft_p50_ms" value="59.8" />
+    <metric name="ttft_p99_ms" value="97.9" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.1" />
+    <metric name="e2e_p50_ms" value="828.1" />
+    <metric name="e2e_p99_ms" value="865.3" />
+    <metric name="worker_cpu_s" value="1.03" />
+    <metric name="router_cpu_s" value="0.47" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="20.04" />
+    <metric name="out_tok_per_s" value="5129.6" />
+    <metric name="in_tok_per_s" value="20518.2" />
+    <metric name="ttft_p50_ms" value="1352.1" />
+    <metric name="ttft_p99_ms" value="2778.4" />
+    <metric name="tpot_p50_ms" value="19.65" />
+    <metric name="tpot_p99_ms" value="22.3" />
+    <metric name="e2e_p50_ms" value="6357.0" />
+    <metric name="e2e_p99_ms" value="7691.9" />
+    <metric name="worker_cpu_s" value="16.36" />
+    <metric name="router_cpu_s" value="13.24" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2130.7" />
+    <metric name="in_tok_per_s" value="532.7" />
+    <metric name="ttft_p50_ms" value="246.3" />
+    <metric name="ttft_p99_ms" value="292.2" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15366.1" />
+    <metric name="e2e_p99_ms" value="15409.5" />
+    <metric name="worker_cpu_s" value="6.31" />
+    <metric name="router_cpu_s" value="7.6" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.89" />
+    <metric name="out_tok_per_s" value="5859.6" />
+    <metric name="in_tok_per_s" value="23438.1" />
+    <metric name="ttft_p50_ms" value="1324.2" />
+    <metric name="ttft_p99_ms" value="5593.1" />
+    <metric name="tpot_p50_ms" value="37.74" />
+    <metric name="tpot_p99_ms" value="39.87" />
+    <metric name="e2e_p50_ms" value="11024.5" />
+    <metric name="e2e_p99_ms" value="15459.2" />
+    <metric name="worker_cpu_s" value="30.65" />
+    <metric name="router_cpu_s" value="30.69" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.77" />
+    <metric name="out_tok_per_s" value="2757.1" />
+    <metric name="in_tok_per_s" value="11027.9" />
+    <metric name="ttft_p50_ms" value="804.9" />
+    <metric name="ttft_p99_ms" value="1006.1" />
+    <metric name="tpot_p50_ms" value="8.36" />
+    <metric name="tpot_p99_ms" value="9.66" />
+    <metric name="e2e_p50_ms" value="2968.2" />
+    <metric name="e2e_p99_ms" value="3135.5" />
+    <metric name="worker_cpu_s" value="6.34" />
+    <metric name="router_cpu_s" value="4.68" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.45" />
+    <metric name="out_tok_per_s" value="1651.6" />
+    <metric name="in_tok_per_s" value="26425.9" />
+    <metric name="ttft_p50_ms" value="1556.8" />
+    <metric name="ttft_p99_ms" value="2565.4" />
+    <metric name="tpot_p50_ms" value="13.36" />
+    <metric name="tpot_p99_ms" value="16.75" />
+    <metric name="e2e_p50_ms" value="4969.5" />
+    <metric name="e2e_p99_ms" value="5895.9" />
+    <metric name="worker_cpu_s" value="7.21" />
+    <metric name="router_cpu_s" value="4.29" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.46" />
+    <metric name="out_tok_per_s" value="4565.3" />
+    <metric name="in_tok_per_s" value="9130.3" />
+    <metric name="ttft_p50_ms" value="1338.0" />
+    <metric name="ttft_p99_ms" value="2684.8" />
+    <metric name="tpot_p50_ms" value="12.67" />
+    <metric name="tpot_p99_ms" value="13.3" />
+    <metric name="e2e_p50_ms" value="14300.6" />
+    <metric name="e2e_p99_ms" value="15910.9" />
+    <metric name="worker_cpu_s" value="9.26" />
+    <metric name="router_cpu_s" value="8.79" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.73" />
+    <metric name="out_tok_per_s" value="1211.8" />
+    <metric name="in_tok_per_s" value="38778.6" />
+    <metric name="ttft_p50_ms" value="2075.5" />
+    <metric name="ttft_p99_ms" value="9997.0" />
+    <metric name="tpot_p50_ms" value="44.16" />
+    <metric name="tpot_p99_ms" value="49.39" />
+    <metric name="e2e_p50_ms" value="13340.2" />
+    <metric name="e2e_p99_ms" value="21673.0" />
+    <metric name="worker_cpu_s" value="6.38" />
+    <metric name="router_cpu_s" value="2.35" />
+  </run>
+  <run topo="1" engine="vllm" kind="native-http" endpoint="smg-http" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-native-http-smg-http-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.38" />
+    <metric name="out_tok_per_s" value="945.2" />
+    <metric name="in_tok_per_s" value="1890.3" />
+    <metric name="ttft_p50_ms" value="239.3" />
+    <metric name="ttft_p99_ms" value="314.6" />
+    <metric name="tpot_p50_ms" value="6.57" />
+    <metric name="tpot_p99_ms" value="6.59" />
+    <metric name="e2e_p50_ms" value="1074.1" />
+    <metric name="e2e_p99_ms" value="1148.2" />
+    <metric name="worker_cpu_s" value="1.31" />
+    <metric name="router_cpu_s" value="1.1" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.21" />
+    <metric name="out_tok_per_s" value="154.9" />
+    <metric name="in_tok_per_s" value="619.4" />
+    <metric name="ttft_p50_ms" value="56.9" />
+    <metric name="ttft_p99_ms" value="93.4" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.06" />
+    <metric name="e2e_p50_ms" value="825.6" />
+    <metric name="e2e_p99_ms" value="860.3" />
+    <metric name="worker_cpu_s" value="0.82" />
+    <metric name="router_cpu_s" value="0.61" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.58" />
+    <metric name="out_tok_per_s" value="5012.5" />
+    <metric name="in_tok_per_s" value="20049.9" />
+    <metric name="ttft_p50_ms" value="1385.3" />
+    <metric name="ttft_p99_ms" value="2891.4" />
+    <metric name="tpot_p50_ms" value="19.61" />
+    <metric name="tpot_p99_ms" value="22.83" />
+    <metric name="e2e_p50_ms" value="6399.7" />
+    <metric name="e2e_p99_ms" value="8314.0" />
+    <metric name="worker_cpu_s" value="15.02" />
+    <metric name="router_cpu_s" value="14.61" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2134.7" />
+    <metric name="in_tok_per_s" value="533.6" />
+    <metric name="ttft_p50_ms" value="222.7" />
+    <metric name="ttft_p99_ms" value="258.3" />
+    <metric name="tpot_p50_ms" value="7.38" />
+    <metric name="tpot_p99_ms" value="7.4" />
+    <metric name="e2e_p50_ms" value="15334.6" />
+    <metric name="e2e_p99_ms" value="15388.6" />
+    <metric name="worker_cpu_s" value="6.12" />
+    <metric name="router_cpu_s" value="5.46" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="16.59" />
+    <metric name="out_tok_per_s" value="4247.4" />
+    <metric name="in_tok_per_s" value="16989.4" />
+    <metric name="ttft_p50_ms" value="1180.0" />
+    <metric name="ttft_p99_ms" value="9979.4" />
+    <metric name="tpot_p50_ms" value="56.65" />
+    <metric name="tpot_p99_ms" value="62.85" />
+    <metric name="e2e_p50_ms" value="15475.0" />
+    <metric name="e2e_p99_ms" value="25717.7" />
+    <metric name="worker_cpu_s" value="32.17" />
+    <metric name="router_cpu_s" value="35.61" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.74" />
+    <metric name="out_tok_per_s" value="2750.0" />
+    <metric name="in_tok_per_s" value="10999.9" />
+    <metric name="ttft_p50_ms" value="786.4" />
+    <metric name="ttft_p99_ms" value="1062.8" />
+    <metric name="tpot_p50_ms" value="8.41" />
+    <metric name="tpot_p99_ms" value="9.53" />
+    <metric name="e2e_p50_ms" value="2929.3" />
+    <metric name="e2e_p99_ms" value="3209.7" />
+    <metric name="worker_cpu_s" value="5.12" />
+    <metric name="router_cpu_s" value="5.53" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.4" />
+    <metric name="out_tok_per_s" value="1638.4" />
+    <metric name="in_tok_per_s" value="26214.4" />
+    <metric name="ttft_p50_ms" value="1718.6" />
+    <metric name="ttft_p99_ms" value="2824.1" />
+    <metric name="tpot_p50_ms" value="12.61" />
+    <metric name="tpot_p99_ms" value="16.87" />
+    <metric name="e2e_p50_ms" value="4949.9" />
+    <metric name="e2e_p99_ms" value="6301.2" />
+    <metric name="worker_cpu_s" value="3.1" />
+    <metric name="router_cpu_s" value="9.28" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.46" />
+    <metric name="out_tok_per_s" value="4571.7" />
+    <metric name="in_tok_per_s" value="9143.3" />
+    <metric name="ttft_p50_ms" value="1329.2" />
+    <metric name="ttft_p99_ms" value="2616.3" />
+    <metric name="tpot_p50_ms" value="12.67" />
+    <metric name="tpot_p99_ms" value="13.24" />
+    <metric name="e2e_p50_ms" value="14309.2" />
+    <metric name="e2e_p99_ms" value="15950.6" />
+    <metric name="worker_cpu_s" value="9.12" />
+    <metric name="router_cpu_s" value="9.61" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.68" />
+    <metric name="out_tok_per_s" value="1198.3" />
+    <metric name="in_tok_per_s" value="38344.0" />
+    <metric name="ttft_p50_ms" value="2072.0" />
+    <metric name="ttft_p99_ms" value="10276.8" />
+    <metric name="tpot_p50_ms" value="44.25" />
+    <metric name="tpot_p99_ms" value="50.09" />
+    <metric name="e2e_p50_ms" value="13483.8" />
+    <metric name="e2e_p99_ms" value="21972.5" />
+    <metric name="worker_cpu_s" value="1.61" />
+    <metric name="router_cpu_s" value="7.08" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.5" />
+    <metric name="out_tok_per_s" value="960.3" />
+    <metric name="in_tok_per_s" value="1920.3" />
+    <metric name="ttft_p50_ms" value="223.1" />
+    <metric name="ttft_p99_ms" value="319.5" />
+    <metric name="tpot_p50_ms" value="6.58" />
+    <metric name="tpot_p99_ms" value="6.6" />
+    <metric name="e2e_p50_ms" value="1058.9" />
+    <metric name="e2e_p99_ms" value="1154.4" />
+    <metric name="worker_cpu_s" value="0.99" />
+    <metric name="router_cpu_s" value="1.18" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.2" />
+    <metric name="out_tok_per_s" value="153.8" />
+    <metric name="in_tok_per_s" value="615.1" />
+    <metric name="ttft_p50_ms" value="63.6" />
+    <metric name="ttft_p99_ms" value="91.2" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.05" />
+    <metric name="e2e_p50_ms" value="831.6" />
+    <metric name="e2e_p99_ms" value="859.5" />
+    <metric name="worker_cpu_s" value="0.83" />
+    <metric name="router_cpu_s" value="0.66" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.98" />
+    <metric name="out_tok_per_s" value="5113.8" />
+    <metric name="in_tok_per_s" value="20454.9" />
+    <metric name="ttft_p50_ms" value="1356.2" />
+    <metric name="ttft_p99_ms" value="2637.0" />
+    <metric name="tpot_p50_ms" value="19.81" />
+    <metric name="tpot_p99_ms" value="22.31" />
+    <metric name="e2e_p50_ms" value="6374.3" />
+    <metric name="e2e_p99_ms" value="7548.6" />
+    <metric name="worker_cpu_s" value="14.63" />
+    <metric name="router_cpu_s" value="18.25" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2134.1" />
+    <metric name="in_tok_per_s" value="533.5" />
+    <metric name="ttft_p50_ms" value="225.5" />
+    <metric name="ttft_p99_ms" value="252.4" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15346.5" />
+    <metric name="e2e_p99_ms" value="15374.8" />
+    <metric name="worker_cpu_s" value="6.62" />
+    <metric name="router_cpu_s" value="5.66" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.79" />
+    <metric name="out_tok_per_s" value="5835.1" />
+    <metric name="in_tok_per_s" value="23339.9" />
+    <metric name="ttft_p50_ms" value="1507.5" />
+    <metric name="ttft_p99_ms" value="5473.8" />
+    <metric name="tpot_p50_ms" value="37.74" />
+    <metric name="tpot_p99_ms" value="40.52" />
+    <metric name="e2e_p50_ms" value="11196.0" />
+    <metric name="e2e_p99_ms" value="14839.8" />
+    <metric name="worker_cpu_s" value="30.93" />
+    <metric name="router_cpu_s" value="34.5" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.98" />
+    <metric name="out_tok_per_s" value="2810.6" />
+    <metric name="in_tok_per_s" value="11242.3" />
+    <metric name="ttft_p50_ms" value="717.9" />
+    <metric name="ttft_p99_ms" value="997.8" />
+    <metric name="tpot_p50_ms" value="8.41" />
+    <metric name="tpot_p99_ms" value="9.49" />
+    <metric name="e2e_p50_ms" value="2883.2" />
+    <metric name="e2e_p99_ms" value="3143.3" />
+    <metric name="worker_cpu_s" value="4.39" />
+    <metric name="router_cpu_s" value="7.35" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.36" />
+    <metric name="out_tok_per_s" value="1629.2" />
+    <metric name="in_tok_per_s" value="26066.6" />
+    <metric name="ttft_p50_ms" value="1761.9" />
+    <metric name="ttft_p99_ms" value="2654.2" />
+    <metric name="tpot_p50_ms" value="12.7" />
+    <metric name="tpot_p99_ms" value="16.99" />
+    <metric name="e2e_p50_ms" value="5002.7" />
+    <metric name="e2e_p99_ms" value="5881.2" />
+    <metric name="worker_cpu_s" value="4.1" />
+    <metric name="router_cpu_s" value="8.87" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.46" />
+    <metric name="out_tok_per_s" value="4563.9" />
+    <metric name="in_tok_per_s" value="9127.9" />
+    <metric name="ttft_p50_ms" value="1598.5" />
+    <metric name="ttft_p99_ms" value="2679.6" />
+    <metric name="tpot_p50_ms" value="12.51" />
+    <metric name="tpot_p99_ms" value="13.32" />
+    <metric name="e2e_p50_ms" value="14306.7" />
+    <metric name="e2e_p99_ms" value="15657.8" />
+    <metric name="worker_cpu_s" value="8.56" />
+    <metric name="router_cpu_s" value="10.61" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.73" />
+    <metric name="out_tok_per_s" value="1210.8" />
+    <metric name="in_tok_per_s" value="38744.7" />
+    <metric name="ttft_p50_ms" value="2356.4" />
+    <metric name="ttft_p99_ms" value="9970.3" />
+    <metric name="tpot_p50_ms" value="43.08" />
+    <metric name="tpot_p99_ms" value="49.26" />
+    <metric name="e2e_p50_ms" value="13378.1" />
+    <metric name="e2e_p99_ms" value="21490.5" />
+    <metric name="worker_cpu_s" value="1.8" />
+    <metric name="router_cpu_s" value="7.51" />
+  </run>
+  <run topo="1" engine="vllm" kind="python-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-python-grpc-smg-grpc-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.45" />
+    <metric name="out_tok_per_s" value="954.0" />
+    <metric name="in_tok_per_s" value="1907.8" />
+    <metric name="ttft_p50_ms" value="232.3" />
+    <metric name="ttft_p99_ms" value="271.0" />
+    <metric name="tpot_p50_ms" value="6.59" />
+    <metric name="tpot_p99_ms" value="6.63" />
+    <metric name="e2e_p50_ms" value="1068.5" />
+    <metric name="e2e_p99_ms" value="1105.9" />
+    <metric name="worker_cpu_s" value="1.07" />
+    <metric name="router_cpu_s" value="1.57" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.2" />
+    <metric name="out_tok_per_s" value="153.8" />
+    <metric name="in_tok_per_s" value="615.1" />
+    <metric name="ttft_p50_ms" value="55.0" />
+    <metric name="ttft_p99_ms" value="104.4" />
+    <metric name="tpot_p50_ms" value="6.06" />
+    <metric name="tpot_p99_ms" value="6.93" />
+    <metric name="e2e_p50_ms" value="824.6" />
+    <metric name="e2e_p99_ms" value="933.9" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="20.24" />
+    <metric name="out_tok_per_s" value="5181.7" />
+    <metric name="in_tok_per_s" value="20726.4" />
+    <metric name="ttft_p50_ms" value="1104.8" />
+    <metric name="ttft_p99_ms" value="2846.8" />
+    <metric name="tpot_p50_ms" value="20.25" />
+    <metric name="tpot_p99_ms" value="21.98" />
+    <metric name="e2e_p50_ms" value="6239.0" />
+    <metric name="e2e_p99_ms" value="8445.4" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2135.8" />
+    <metric name="in_tok_per_s" value="533.9" />
+    <metric name="ttft_p50_ms" value="231.5" />
+    <metric name="ttft_p99_ms" value="242.4" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15342.2" />
+    <metric name="e2e_p99_ms" value="15370.8" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.96" />
+    <metric name="out_tok_per_s" value="5877.0" />
+    <metric name="in_tok_per_s" value="23507.7" />
+    <metric name="ttft_p50_ms" value="1199.8" />
+    <metric name="ttft_p99_ms" value="5560.9" />
+    <metric name="tpot_p50_ms" value="38.2" />
+    <metric name="tpot_p99_ms" value="40.08" />
+    <metric name="e2e_p50_ms" value="10915.1" />
+    <metric name="e2e_p99_ms" value="15509.4" />
+    <metric name="worker_cpu_s" value="0.02" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.53" />
+    <metric name="out_tok_per_s" value="2695.6" />
+    <metric name="in_tok_per_s" value="10782.3" />
+    <metric name="ttft_p50_ms" value="820.1" />
+    <metric name="ttft_p99_ms" value="1184.6" />
+    <metric name="tpot_p50_ms" value="8.42" />
+    <metric name="tpot_p99_ms" value="9.55" />
+    <metric name="e2e_p50_ms" value="2998.8" />
+    <metric name="e2e_p99_ms" value="3489.9" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.26" />
+    <metric name="out_tok_per_s" value="1602.3" />
+    <metric name="in_tok_per_s" value="25637.3" />
+    <metric name="ttft_p50_ms" value="1052.7" />
+    <metric name="ttft_p99_ms" value="2876.2" />
+    <metric name="tpot_p50_ms" value="15.88" />
+    <metric name="tpot_p99_ms" value="17.66" />
+    <metric name="e2e_p50_ms" value="5089.1" />
+    <metric name="e2e_p99_ms" value="7075.2" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.35" />
+    <metric name="out_tok_per_s" value="4456.9" />
+    <metric name="in_tok_per_s" value="8913.8" />
+    <metric name="ttft_p50_ms" value="1228.9" />
+    <metric name="ttft_p99_ms" value="2886.2" />
+    <metric name="tpot_p50_ms" value="13.09" />
+    <metric name="tpot_p99_ms" value="13.68" />
+    <metric name="e2e_p50_ms" value="14725.7" />
+    <metric name="e2e_p99_ms" value="16485.8" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.62" />
+    <metric name="out_tok_per_s" value="1183.4" />
+    <metric name="in_tok_per_s" value="37869.1" />
+    <metric name="ttft_p50_ms" value="1518.6" />
+    <metric name="ttft_p99_ms" value="10448.4" />
+    <metric name="tpot_p50_ms" value="47.19" />
+    <metric name="tpot_p99_ms" value="50.03" />
+    <metric name="e2e_p50_ms" value="13664.2" />
+    <metric name="e2e_p99_ms" value="22939.5" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-rust-frontend-direct-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.3" />
+    <metric name="out_tok_per_s" value="934.9" />
+    <metric name="in_tok_per_s" value="1869.5" />
+    <metric name="ttft_p50_ms" value="240.6" />
+    <metric name="ttft_p99_ms" value="364.4" />
+    <metric name="tpot_p50_ms" value="6.6" />
+    <metric name="tpot_p99_ms" value="6.88" />
+    <metric name="e2e_p50_ms" value="1089.1" />
+    <metric name="e2e_p99_ms" value="1200.2" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.22" />
+    <metric name="out_tok_per_s" value="156.1" />
+    <metric name="in_tok_per_s" value="624.5" />
+    <metric name="ttft_p50_ms" value="50.1" />
+    <metric name="ttft_p99_ms" value="84.5" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.06" />
+    <metric name="e2e_p50_ms" value="819.1" />
+    <metric name="e2e_p99_ms" value="853.7" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="20.49" />
+    <metric name="out_tok_per_s" value="5245.3" />
+    <metric name="in_tok_per_s" value="20980.6" />
+    <metric name="ttft_p50_ms" value="1102.4" />
+    <metric name="ttft_p99_ms" value="2557.2" />
+    <metric name="tpot_p50_ms" value="20.23" />
+    <metric name="tpot_p99_ms" value="21.71" />
+    <metric name="e2e_p50_ms" value="6206.3" />
+    <metric name="e2e_p99_ms" value="7966.8" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.03" />
+    <metric name="out_tok_per_s" value="2110.9" />
+    <metric name="in_tok_per_s" value="527.7" />
+    <metric name="ttft_p50_ms" value="369.0" />
+    <metric name="ttft_p99_ms" value="528.2" />
+    <metric name="tpot_p50_ms" value="7.38" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15482.7" />
+    <metric name="e2e_p99_ms" value="15642.2" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.48" />
+    <metric name="out_tok_per_s" value="5755.6" />
+    <metric name="in_tok_per_s" value="23022.1" />
+    <metric name="ttft_p50_ms" value="1227.9" />
+    <metric name="ttft_p99_ms" value="5247.6" />
+    <metric name="tpot_p50_ms" value="39.12" />
+    <metric name="tpot_p99_ms" value="41.27" />
+    <metric name="e2e_p50_ms" value="11225.2" />
+    <metric name="e2e_p99_ms" value="14969.7" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.78" />
+    <metric name="out_tok_per_s" value="2758.6" />
+    <metric name="in_tok_per_s" value="11034.4" />
+    <metric name="ttft_p50_ms" value="766.7" />
+    <metric name="ttft_p99_ms" value="974.5" />
+    <metric name="tpot_p50_ms" value="8.42" />
+    <metric name="tpot_p99_ms" value="9.56" />
+    <metric name="e2e_p50_ms" value="2979.5" />
+    <metric name="e2e_p99_ms" value="3120.5" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.66" />
+    <metric name="out_tok_per_s" value="1705.2" />
+    <metric name="in_tok_per_s" value="27283.3" />
+    <metric name="ttft_p50_ms" value="1047.8" />
+    <metric name="ttft_p99_ms" value="2434.0" />
+    <metric name="tpot_p50_ms" value="14.67" />
+    <metric name="tpot_p99_ms" value="16.67" />
+    <metric name="e2e_p50_ms" value="4794.4" />
+    <metric name="e2e_p99_ms" value="6338.7" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.44" />
+    <metric name="out_tok_per_s" value="4547.8" />
+    <metric name="in_tok_per_s" value="9095.6" />
+    <metric name="ttft_p50_ms" value="1084.2" />
+    <metric name="ttft_p99_ms" value="2653.0" />
+    <metric name="tpot_p50_ms" value="12.94" />
+    <metric name="tpot_p99_ms" value="13.41" />
+    <metric name="e2e_p50_ms" value="14294.2" />
+    <metric name="e2e_p99_ms" value="16166.5" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.74" />
+    <metric name="out_tok_per_s" value="1213.8" />
+    <metric name="in_tok_per_s" value="38841.7" />
+    <metric name="ttft_p50_ms" value="1509.0" />
+    <metric name="ttft_p99_ms" value="9912.0" />
+    <metric name="tpot_p50_ms" value="47.19" />
+    <metric name="tpot_p99_ms" value="49.46" />
+    <metric name="e2e_p50_ms" value="13309.7" />
+    <metric name="e2e_p99_ms" value="22417.8" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="direct" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-rust-frontend-direct-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.31" />
+    <metric name="out_tok_per_s" value="935.5" />
+    <metric name="in_tok_per_s" value="1870.9" />
+    <metric name="ttft_p50_ms" value="237.0" />
+    <metric name="ttft_p99_ms" value="365.6" />
+    <metric name="tpot_p50_ms" value="6.59" />
+    <metric name="tpot_p99_ms" value="6.64" />
+    <metric name="e2e_p50_ms" value="1076.9" />
+    <metric name="e2e_p99_ms" value="1202.4" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.22" />
+    <metric name="out_tok_per_s" value="156.1" />
+    <metric name="in_tok_per_s" value="624.3" />
+    <metric name="ttft_p50_ms" value="49.7" />
+    <metric name="ttft_p99_ms" value="76.3" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.08" />
+    <metric name="e2e_p50_ms" value="818.6" />
+    <metric name="e2e_p99_ms" value="845.4" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="0.32" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="20.47" />
+    <metric name="out_tok_per_s" value="5241.6" />
+    <metric name="in_tok_per_s" value="20965.9" />
+    <metric name="ttft_p50_ms" value="1074.8" />
+    <metric name="ttft_p99_ms" value="2609.8" />
+    <metric name="tpot_p50_ms" value="20.16" />
+    <metric name="tpot_p99_ms" value="21.41" />
+    <metric name="e2e_p50_ms" value="6194.0" />
+    <metric name="e2e_p99_ms" value="7980.9" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="9.09" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2131.0" />
+    <metric name="in_tok_per_s" value="532.7" />
+    <metric name="ttft_p50_ms" value="232.0" />
+    <metric name="ttft_p99_ms" value="263.5" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.4" />
+    <metric name="e2e_p50_ms" value="15369.1" />
+    <metric name="e2e_p99_ms" value="15408.7" />
+    <metric name="worker_cpu_s" value="0.02" />
+    <metric name="router_cpu_s" value="5.82" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="23.05" />
+    <metric name="out_tok_per_s" value="5899.8" />
+    <metric name="in_tok_per_s" value="23598.7" />
+    <metric name="ttft_p50_ms" value="1496.1" />
+    <metric name="ttft_p99_ms" value="5596.1" />
+    <metric name="tpot_p50_ms" value="37.02" />
+    <metric name="tpot_p99_ms" value="39.8" />
+    <metric name="e2e_p50_ms" value="10883.2" />
+    <metric name="e2e_p99_ms" value="15283.9" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="21.79" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.32" />
+    <metric name="out_tok_per_s" value="2642.0" />
+    <metric name="in_tok_per_s" value="10567.7" />
+    <metric name="ttft_p50_ms" value="867.0" />
+    <metric name="ttft_p99_ms" value="1167.8" />
+    <metric name="tpot_p50_ms" value="8.42" />
+    <metric name="tpot_p99_ms" value="9.72" />
+    <metric name="e2e_p50_ms" value="3137.9" />
+    <metric name="e2e_p99_ms" value="3369.1" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="3.48" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.52" />
+    <metric name="out_tok_per_s" value="1669.7" />
+    <metric name="in_tok_per_s" value="26715.4" />
+    <metric name="ttft_p50_ms" value="1008.8" />
+    <metric name="ttft_p99_ms" value="2598.2" />
+    <metric name="tpot_p50_ms" value="15.31" />
+    <metric name="tpot_p99_ms" value="16.96" />
+    <metric name="e2e_p50_ms" value="4895.0" />
+    <metric name="e2e_p99_ms" value="6668.7" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="2.39" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.43" />
+    <metric name="out_tok_per_s" value="4537.8" />
+    <metric name="in_tok_per_s" value="9075.6" />
+    <metric name="ttft_p50_ms" value="1137.6" />
+    <metric name="ttft_p99_ms" value="2576.2" />
+    <metric name="tpot_p50_ms" value="13.02" />
+    <metric name="tpot_p99_ms" value="13.5" />
+    <metric name="e2e_p50_ms" value="14459.7" />
+    <metric name="e2e_p99_ms" value="16199.2" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="8.08" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.71" />
+    <metric name="out_tok_per_s" value="1206.1" />
+    <metric name="in_tok_per_s" value="38595.1" />
+    <metric name="ttft_p50_ms" value="1505.1" />
+    <metric name="ttft_p99_ms" value="10017.0" />
+    <metric name="tpot_p50_ms" value="47.13" />
+    <metric name="tpot_p99_ms" value="49.64" />
+    <metric name="e2e_p50_ms" value="13394.0" />
+    <metric name="e2e_p99_ms" value="22490.3" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="1.7" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.44" />
+    <metric name="out_tok_per_s" value="952.7" />
+    <metric name="in_tok_per_s" value="1905.3" />
+    <metric name="ttft_p50_ms" value="232.7" />
+    <metric name="ttft_p99_ms" value="278.7" />
+    <metric name="tpot_p50_ms" value="6.59" />
+    <metric name="tpot_p99_ms" value="6.71" />
+    <metric name="e2e_p50_ms" value="1074.3" />
+    <metric name="e2e_p99_ms" value="1113.7" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0.95" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.22" />
+    <metric name="out_tok_per_s" value="155.7" />
+    <metric name="in_tok_per_s" value="622.8" />
+    <metric name="ttft_p50_ms" value="52.4" />
+    <metric name="ttft_p99_ms" value="95.9" />
+    <metric name="tpot_p50_ms" value="6.05" />
+    <metric name="tpot_p99_ms" value="6.08" />
+    <metric name="e2e_p50_ms" value="821.2" />
+    <metric name="e2e_p99_ms" value="865.0" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="0.42" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.98" />
+    <metric name="out_tok_per_s" value="5114.3" />
+    <metric name="in_tok_per_s" value="20456.6" />
+    <metric name="ttft_p50_ms" value="1081.1" />
+    <metric name="ttft_p99_ms" value="2580.6" />
+    <metric name="tpot_p50_ms" value="20.66" />
+    <metric name="tpot_p99_ms" value="22.87" />
+    <metric name="e2e_p50_ms" value="6336.0" />
+    <metric name="e2e_p99_ms" value="8106.1" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="10.92" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2132.2" />
+    <metric name="in_tok_per_s" value="533.1" />
+    <metric name="ttft_p50_ms" value="234.9" />
+    <metric name="ttft_p99_ms" value="265.1" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.4" />
+    <metric name="e2e_p50_ms" value="15359.8" />
+    <metric name="e2e_p99_ms" value="15393.8" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="4.9" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.98" />
+    <metric name="out_tok_per_s" value="5883.0" />
+    <metric name="in_tok_per_s" value="23531.6" />
+    <metric name="ttft_p50_ms" value="1388.8" />
+    <metric name="ttft_p99_ms" value="5247.9" />
+    <metric name="tpot_p50_ms" value="38.01" />
+    <metric name="tpot_p99_ms" value="39.82" />
+    <metric name="e2e_p50_ms" value="11004.9" />
+    <metric name="e2e_p99_ms" value="14666.4" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="23.17" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.41" />
+    <metric name="out_tok_per_s" value="2664.3" />
+    <metric name="in_tok_per_s" value="10656.8" />
+    <metric name="ttft_p50_ms" value="885.9" />
+    <metric name="ttft_p99_ms" value="1139.0" />
+    <metric name="tpot_p50_ms" value="8.43" />
+    <metric name="tpot_p99_ms" value="9.55" />
+    <metric name="e2e_p50_ms" value="3075.1" />
+    <metric name="e2e_p99_ms" value="3289.8" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="4.66" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.58" />
+    <metric name="out_tok_per_s" value="1683.6" />
+    <metric name="in_tok_per_s" value="26936.8" />
+    <metric name="ttft_p50_ms" value="1028.5" />
+    <metric name="ttft_p99_ms" value="2454.4" />
+    <metric name="tpot_p50_ms" value="15.08" />
+    <metric name="tpot_p99_ms" value="17.18" />
+    <metric name="e2e_p50_ms" value="4844.8" />
+    <metric name="e2e_p99_ms" value="6621.6" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="3.05" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.48" />
+    <metric name="out_tok_per_s" value="4583.3" />
+    <metric name="in_tok_per_s" value="9166.6" />
+    <metric name="ttft_p50_ms" value="1088.7" />
+    <metric name="ttft_p99_ms" value="2555.3" />
+    <metric name="tpot_p50_ms" value="12.86" />
+    <metric name="tpot_p99_ms" value="13.36" />
+    <metric name="e2e_p50_ms" value="14262.0" />
+    <metric name="e2e_p99_ms" value="15964.8" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="7.42" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.74" />
+    <metric name="out_tok_per_s" value="1214.0" />
+    <metric name="in_tok_per_s" value="38847.9" />
+    <metric name="ttft_p50_ms" value="1508.1" />
+    <metric name="ttft_p99_ms" value="9946.1" />
+    <metric name="tpot_p50_ms" value="46.97" />
+    <metric name="tpot_p99_ms" value="49.45" />
+    <metric name="e2e_p50_ms" value="13309.0" />
+    <metric name="e2e_p99_ms" value="22407.0" />
+    <metric name="worker_cpu_s" value="0.01" />
+    <metric name="router_cpu_s" value="1.62" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-frontend" endpoint="smg-http" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-rust-frontend-smg-http-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.21" />
+    <metric name="out_tok_per_s" value="922.8" />
+    <metric name="in_tok_per_s" value="1845.5" />
+    <metric name="ttft_p50_ms" value="241.5" />
+    <metric name="ttft_p99_ms" value="442.1" />
+    <metric name="tpot_p50_ms" value="6.67" />
+    <metric name="tpot_p99_ms" value="6.95" />
+    <metric name="e2e_p50_ms" value="1090.6" />
+    <metric name="e2e_p99_ms" value="1280.7" />
+    <metric name="worker_cpu_s" value="0.0" />
+    <metric name="router_cpu_s" value="1.11" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="1" requests="32" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.22" />
+    <metric name="out_tok_per_s" value="155.6" />
+    <metric name="in_tok_per_s" value="622.2" />
+    <metric name="ttft_p50_ms" value="52.8" />
+    <metric name="ttft_p99_ms" value="94.9" />
+    <metric name="tpot_p50_ms" value="6.06" />
+    <metric name="tpot_p99_ms" value="6.06" />
+    <metric name="e2e_p50_ms" value="822.0" />
+    <metric name="e2e_p99_ms" value="863.8" />
+    <metric name="worker_cpu_s" value="0.54" />
+    <metric name="router_cpu_s" value="0.57" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="1024" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c128-i1024-o256.json">
+    <metric name="req_per_s" value="20.03" />
+    <metric name="out_tok_per_s" value="5126.4" />
+    <metric name="in_tok_per_s" value="20505.4" />
+    <metric name="ttft_p50_ms" value="1334.9" />
+    <metric name="ttft_p99_ms" value="2951.2" />
+    <metric name="tpot_p50_ms" value="19.63" />
+    <metric name="tpot_p99_ms" value="22.0" />
+    <metric name="e2e_p50_ms" value="6314.3" />
+    <metric name="e2e_p99_ms" value="8291.9" />
+    <metric name="worker_cpu_s" value="3.74" />
+    <metric name="router_cpu_s" value="24.96" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="1" requests="64" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2131.6" />
+    <metric name="in_tok_per_s" value="532.9" />
+    <metric name="ttft_p50_ms" value="237.1" />
+    <metric name="ttft_p99_ms" value="273.4" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.4" />
+    <metric name="e2e_p50_ms" value="15363.8" />
+    <metric name="e2e_p99_ms" value="15406.3" />
+    <metric name="worker_cpu_s" value="5.31" />
+    <metric name="router_cpu_s" value="7.01" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="2048" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c256-i1024-o256.json">
+    <metric name="req_per_s" value="22.51" />
+    <metric name="out_tok_per_s" value="5762.1" />
+    <metric name="in_tok_per_s" value="23047.8" />
+    <metric name="ttft_p50_ms" value="1477.2" />
+    <metric name="ttft_p99_ms" value="5601.2" />
+    <metric name="tpot_p50_ms" value="37.79" />
+    <metric name="tpot_p99_ms" value="40.01" />
+    <metric name="e2e_p50_ms" value="11200.8" />
+    <metric name="e2e_p99_ms" value="15302.3" />
+    <metric name="worker_cpu_s" value="10.63" />
+    <metric name="router_cpu_s" value="47.9" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="1" requests="384" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c32-i1024-o256.json">
+    <metric name="req_per_s" value="10.57" />
+    <metric name="out_tok_per_s" value="2706.1" />
+    <metric name="in_tok_per_s" value="10824.3" />
+    <metric name="ttft_p50_ms" value="850.6" />
+    <metric name="ttft_p99_ms" value="1040.3" />
+    <metric name="tpot_p50_ms" value="8.42" />
+    <metric name="tpot_p99_ms" value="9.46" />
+    <metric name="e2e_p50_ms" value="3024.8" />
+    <metric name="e2e_p99_ms" value="3190.5" />
+    <metric name="worker_cpu_s" value="4.07" />
+    <metric name="router_cpu_s" value="6.23" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="1" requests="256" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.43" />
+    <metric name="out_tok_per_s" value="1645.7" />
+    <metric name="in_tok_per_s" value="26331.3" />
+    <metric name="ttft_p50_ms" value="1720.5" />
+    <metric name="ttft_p99_ms" value="2762.3" />
+    <metric name="tpot_p50_ms" value="12.65" />
+    <metric name="tpot_p99_ms" value="16.89" />
+    <metric name="e2e_p50_ms" value="4945.0" />
+    <metric name="e2e_p99_ms" value="6129.1" />
+    <metric name="worker_cpu_s" value="2.88" />
+    <metric name="router_cpu_s" value="9.74" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="1" requests="192" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.47" />
+    <metric name="out_tok_per_s" value="4575.3" />
+    <metric name="in_tok_per_s" value="9150.5" />
+    <metric name="ttft_p50_ms" value="1592.0" />
+    <metric name="ttft_p99_ms" value="2570.4" />
+    <metric name="tpot_p50_ms" value="12.46" />
+    <metric name="tpot_p99_ms" value="13.28" />
+    <metric name="e2e_p50_ms" value="14277.9" />
+    <metric name="e2e_p99_ms" value="15639.4" />
+    <metric name="worker_cpu_s" value="5.83" />
+    <metric name="router_cpu_s" value="14.1" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.68" />
+    <metric name="out_tok_per_s" value="1197.9" />
+    <metric name="in_tok_per_s" value="38333.6" />
+    <metric name="ttft_p50_ms" value="2084.0" />
+    <metric name="ttft_p99_ms" value="10245.8" />
+    <metric name="tpot_p50_ms" value="44.35" />
+    <metric name="tpot_p99_ms" value="49.98" />
+    <metric name="e2e_p50_ms" value="13489.9" />
+    <metric name="e2e_p99_ms" value="21976.8" />
+    <metric name="worker_cpu_s" value="1.35" />
+    <metric name="router_cpu_s" value="7.62" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="1" requests="128" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P1-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.34" />
+    <metric name="out_tok_per_s" value="939.7" />
+    <metric name="in_tok_per_s" value="1879.4" />
+    <metric name="ttft_p50_ms" value="246.0" />
+    <metric name="ttft_p99_ms" value="301.6" />
+    <metric name="tpot_p50_ms" value="6.59" />
+    <metric name="tpot_p99_ms" value="6.61" />
+    <metric name="e2e_p50_ms" value="1081.6" />
+    <metric name="e2e_p99_ms" value="1136.9" />
+    <metric name="worker_cpu_s" value="0.85" />
+    <metric name="router_cpu_s" value="1.11" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c1-i512-o128" concurrency="1" input_tokens="512" output_tokens="128" lifetime="1" pass="2" requests="32" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c1-i512-o128.json">
+    <metric name="req_per_s" value="1.21" />
+    <metric name="out_tok_per_s" value="155.1" />
+    <metric name="in_tok_per_s" value="620.4" />
+    <metric name="ttft_p50_ms" value="54.4" />
+    <metric name="ttft_p99_ms" value="79.3" />
+    <metric name="tpot_p50_ms" value="6.06" />
+    <metric name="tpot_p99_ms" value="6.06" />
+    <metric name="e2e_p50_ms" value="823.7" />
+    <metric name="e2e_p99_ms" value="848.9" />
+    <metric name="worker_cpu_s" value="0.63" />
+    <metric name="router_cpu_s" value="0.63" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c128-i1024-o256" concurrency="128" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="1024" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c128-i1024-o256.json">
+    <metric name="req_per_s" value="19.75" />
+    <metric name="out_tok_per_s" value="5054.9" />
+    <metric name="in_tok_per_s" value="20219.0" />
+    <metric name="ttft_p50_ms" value="1380.7" />
+    <metric name="ttft_p99_ms" value="2581.7" />
+    <metric name="tpot_p50_ms" value="20.05" />
+    <metric name="tpot_p99_ms" value="22.41" />
+    <metric name="e2e_p50_ms" value="6474.6" />
+    <metric name="e2e_p99_ms" value="7703.0" />
+    <metric name="worker_cpu_s" value="7.32" />
+    <metric name="router_cpu_s" value="25.02" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c16-i512-o2048" concurrency="16" input_tokens="512" output_tokens="2048" lifetime="1" pass="2" requests="64" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c16-i512-o2048.json">
+    <metric name="req_per_s" value="1.04" />
+    <metric name="out_tok_per_s" value="2133.4" />
+    <metric name="in_tok_per_s" value="533.4" />
+    <metric name="ttft_p50_ms" value="224.3" />
+    <metric name="ttft_p99_ms" value="262.4" />
+    <metric name="tpot_p50_ms" value="7.39" />
+    <metric name="tpot_p99_ms" value="7.39" />
+    <metric name="e2e_p50_ms" value="15349.2" />
+    <metric name="e2e_p99_ms" value="15386.3" />
+    <metric name="worker_cpu_s" value="4.68" />
+    <metric name="router_cpu_s" value="6.96" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c256-i1024-o256" concurrency="256" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="2048" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c256-i1024-o256.json">
+    <metric name="req_per_s" value="17.56" />
+    <metric name="out_tok_per_s" value="4494.9" />
+    <metric name="in_tok_per_s" value="17979.3" />
+    <metric name="ttft_p50_ms" value="1150.2" />
+    <metric name="ttft_p99_ms" value="8231.4" />
+    <metric name="tpot_p50_ms" value="52.94" />
+    <metric name="tpot_p99_ms" value="57.22" />
+    <metric name="e2e_p50_ms" value="14635.1" />
+    <metric name="e2e_p99_ms" value="22752.1" />
+    <metric name="worker_cpu_s" value="17.04" />
+    <metric name="router_cpu_s" value="50.59" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i1024-o256" concurrency="32" input_tokens="1024" output_tokens="256" lifetime="1" pass="2" requests="384" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c32-i1024-o256.json">
+    <metric name="req_per_s" value="11.08" />
+    <metric name="out_tok_per_s" value="2836.6" />
+    <metric name="in_tok_per_s" value="11346.1" />
+    <metric name="ttft_p50_ms" value="725.9" />
+    <metric name="ttft_p99_ms" value="913.9" />
+    <metric name="tpot_p50_ms" value="8.42" />
+    <metric name="tpot_p99_ms" value="9.34" />
+    <metric name="e2e_p50_ms" value="2879.5" />
+    <metric name="e2e_p99_ms" value="3060.5" />
+    <metric name="worker_cpu_s" value="3.38" />
+    <metric name="router_cpu_s" value="8.25" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c32-i4096-o256" concurrency="32" input_tokens="4096" output_tokens="256" lifetime="1" pass="2" requests="256" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c32-i4096-o256.json">
+    <metric name="req_per_s" value="6.47" />
+    <metric name="out_tok_per_s" value="1656.6" />
+    <metric name="in_tok_per_s" value="26505.2" />
+    <metric name="ttft_p50_ms" value="1717.9" />
+    <metric name="ttft_p99_ms" value="2573.0" />
+    <metric name="tpot_p50_ms" value="12.65" />
+    <metric name="tpot_p99_ms" value="16.83" />
+    <metric name="e2e_p50_ms" value="4935.7" />
+    <metric name="e2e_p99_ms" value="5813.5" />
+    <metric name="worker_cpu_s" value="2.32" />
+    <metric name="router_cpu_s" value="9.32" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i2048-o1024" concurrency="64" input_tokens="2048" output_tokens="1024" lifetime="1" pass="2" requests="192" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c64-i2048-o1024.json">
+    <metric name="req_per_s" value="4.48" />
+    <metric name="out_tok_per_s" value="4586.7" />
+    <metric name="in_tok_per_s" value="9173.4" />
+    <metric name="ttft_p50_ms" value="1540.4" />
+    <metric name="ttft_p99_ms" value="2558.0" />
+    <metric name="tpot_p50_ms" value="12.45" />
+    <metric name="tpot_p99_ms" value="13.28" />
+    <metric name="e2e_p50_ms" value="14271.0" />
+    <metric name="e2e_p99_ms" value="15431.1" />
+    <metric name="worker_cpu_s" value="4.49" />
+    <metric name="router_cpu_s" value="13.74" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c64-i8192-o256" concurrency="64" input_tokens="8192" output_tokens="256" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c64-i8192-o256.json">
+    <metric name="req_per_s" value="4.76" />
+    <metric name="out_tok_per_s" value="1217.4" />
+    <metric name="in_tok_per_s" value="38957.9" />
+    <metric name="ttft_p50_ms" value="2054.9" />
+    <metric name="ttft_p99_ms" value="9918.4" />
+    <metric name="tpot_p50_ms" value="44.02" />
+    <metric name="tpot_p99_ms" value="49.28" />
+    <metric name="e2e_p50_ms" value="13279.9" />
+    <metric name="e2e_p99_ms" value="21536.0" />
+    <metric name="worker_cpu_s" value="0.88" />
+    <metric name="router_cpu_s" value="7.92" />
+  </run>
+  <run topo="1" engine="vllm" kind="rust-grpc" endpoint="smg-grpc" shape="c8-i256-o128" concurrency="8" input_tokens="256" output_tokens="128" lifetime="1" pass="2" requests="128" errors="0" file="t1-vllm-rust-grpc-smg-grpc-L1-P2-c8-i256-o128.json">
+    <metric name="req_per_s" value="7.27" />
+    <metric name="out_tok_per_s" value="930.9" />
+    <metric name="in_tok_per_s" value="1861.8" />
+    <metric name="ttft_p50_ms" value="246.6" />
+    <metric name="ttft_p99_ms" value="345.0" />
+    <metric name="tpot_p50_ms" value="6.59" />
+    <metric name="tpot_p99_ms" value="6.61" />
+    <metric name="e2e_p50_ms" value="1082.7" />
+    <metric name="e2e_p99_ms" value="1181.4" />
+    <metric name="worker_cpu_s" value="0.84" />
+    <metric name="router_cpu_s" value="1.41" />
+  </run>
+</benchmark>
