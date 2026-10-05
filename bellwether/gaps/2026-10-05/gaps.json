@@ -1,0 +1,3105 @@
+{
+  "aliases": "src/bellwether/gaps/aliases.toml",
+  "kinds": {
+    "reasoning": {
+      "counts": {
+        "sglang": 34,
+        "smg": 21,
+        "vllm": 37
+      },
+      "engine_only": [
+        "apertus2509",
+        "coherecommand3",
+        "coherecommand4",
+        "deepseekv3",
+        "dots",
+        "ernie45",
+        "gemma4",
+        "gigachat35",
+        "granite",
+        "granitethinkingparser",
+        "holo2",
+        "hunyuana13b",
+        "hyv3",
+        "interns1",
+        "iquestq1",
+        "k2horizon",
+        "ling3",
+        "mimo",
+        "minimaxappendthink",
+        "mistral",
+        "museglimmer",
+        "nanbeige",
+        "olmo3",
+        "plamo3",
+        "poolsidev1",
+        "responsetemplate",
+        "seedoss",
+        "step3p5"
+      ],
+      "engines_differ": [
+        "apertus2509",
+        "coherecommand3",
+        "dots",
+        "ernie45",
+        "gigachat35",
+        "granite",
+        "holo2",
+        "hunyuana13b",
+        "hyv3",
+        "interns1",
+        "iquestq1",
+        "kimi",
+        "nanbeige",
+        "olmo3",
+        "plamo3",
+        "qwen3thinking",
+        "responsetemplate",
+        "seedoss"
+      ],
+      "rows": [
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Apertus2509Detector",
+                "name": "apertus2509"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "apertus2509",
+          "label": "apertus2509"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "BaseReasoningParser",
+                "name": "base"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "base",
+          "label": "base"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "CohereCmdParser",
+                "name": "cohere_cmd"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "coherecmd",
+          "label": "cohere_cmd"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CohereCommand3ReasoningParser",
+                "name": "cohere_command3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "coherecommand3",
+          "label": "cohere_command3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "CohereCommand4Detector",
+                "name": "cohere_command4"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CohereCommand4ReasoningParser",
+                "name": "cohere_command4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "coherecommand4",
+          "label": "cohere_command4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekR1Detector",
+                "name": "deepseek-r1"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeekR1Parser",
+                "name": "deepseek_r1"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekR1ReasoningParser",
+                "name": "deepseek_r1"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekr1",
+          "label": "deepseek_r1"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "_DeepSeekV3Detector",
+                "name": "deepseek-v3"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "DeepSeekV3ReasoningParser",
+                "name": "deepseek_v3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv3",
+          "label": "deepseek_v3"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "BaseReasoningParser",
+                "name": "deepseek_v31"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "deepseekv31",
+          "label": "deepseek_v31"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV4Detector",
+                "name": "deepseek-v4"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "BaseReasoningParser",
+                "name": "deepseek_v4"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV4ParserReasoningAdapter",
+                "name": "deepseek_v4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv4",
+          "label": "deepseek_v4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV41ReasoningDetector",
+                "name": "deepseek-v41"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeekV41Parser",
+                "name": "deepseek_v41"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV41ParserReasoningAdapter",
+                "name": "deepseek_v41"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv41",
+          "label": "deepseek_v41"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3Detector",
+                "name": "dots"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "dots",
+          "label": "dots"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Ernie45ReasoningParser",
+                "name": "ernie45"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "ernie45",
+          "label": "ernie45"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Gemma4Detector",
+                "name": "gemma4"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Gemma4ParserReasoningAdapter",
+                "name": "gemma4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "gemma4",
+          "label": "gemma4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekR1Detector",
+                "name": "gigachat35"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "gigachat35",
+          "label": "gigachat35"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Glm45Detector",
+                "name": "glm45"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Glm45Parser",
+                "name": "glm45"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Glm47MoeParserReasoningAdapter",
+                "name": "glm45"
+              },
+              {
+                "impl": "Glm47MoeParserReasoningAdapter",
+                "name": "glm47"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "glm45",
+          "label": "glm45"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "GptOssDetector",
+                "name": "gpt-oss"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "HarmonyDetector",
+                "name": "harmony"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "GptOssReasoningParser",
+                "name": "openai_gptoss"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "gptoss",
+          "label": "openai_gptoss"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "GraniteReasoningParser",
+                "name": "granite"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "granite",
+          "label": "granite"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "GraniteThinkingDetector",
+                "name": "granite_thinking_parser"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "GraniteThinkingParserReasoningAdapter",
+                "name": "granite_thinking_parser"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "granitethinkingparser",
+          "label": "granite_thinking_parser"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "DeepSeekV3ReasoningWithThinkingParser",
+                "name": "holo2"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "holo2",
+          "label": "holo2"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "HunyuanA13BReasoningParser",
+                "name": "hunyuan_a13b"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hunyuana13b",
+          "label": "hunyuan_a13b"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "HYV3ReasoningParser",
+                "name": "hy_v3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hyv3",
+          "label": "hy_v3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "HunyuanDetector",
+                "name": "hunyuan"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "HyV4Parser",
+                "name": "hy_v4"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "HYV4ReasoningParser",
+                "name": "hy_v4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hyv4",
+          "label": "hy_v4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "InklingDetector",
+                "name": "inkling"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "InklingParser",
+                "name": "inkling"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "InklingParserReasoningAdapter",
+                "name": "inkling"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "inkling",
+          "label": "inkling"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3Detector",
+                "name": "interns1"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "interns1",
+          "label": "interns1"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "IQuestQ1ReasoningDetector",
+                "name": "iquest_q1"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "iquestq1",
+          "label": "iquest_q1"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "K2V3Detector",
+                "name": "k2_horizon"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "K2HorizonReasoningParser",
+                "name": "k2_horizon"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "k2horizon",
+          "label": "k2_horizon"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "KimiDetector",
+                "name": "kimi"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "KimiParser",
+                "name": "kimi"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "kimi",
+          "label": "kimi"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "KimiK2Detector",
+                "name": "kimi_k2"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "BaseReasoningParser",
+                "name": "kimi_thinking"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "KimiK2ReasoningParser",
+                "name": "kimi_k2"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimik2",
+          "label": "kimi_k2"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "BaseReasoningParser",
+                "name": "kimi_k25"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "kimik25",
+          "label": "kimi_k25"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "KimiK3Detector",
+                "name": "kimi_k3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "KimiK3Parser",
+                "name": "kimi_k3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "KimiK3ReasoningParser",
+                "name": "kimi_k3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimik3",
+          "label": "kimi_k3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Ling3Detector",
+                "name": "ling3"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Ling3ParserReasoningAdapter",
+                "name": "ling3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "ling3",
+          "label": "ling3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "_MimoDetector",
+                "name": "mimo"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MiMoParserReasoningAdapter",
+                "name": "mimo"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "mimo",
+          "label": "mimo"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MiniMaxAppendThinkDetector",
+                "name": "minimax-append-think"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MiniMaxM2AppendThinkReasoningParser",
+                "name": "minimax_m2_append_think"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "minimaxappendthink",
+          "label": "minimax_m2_append_think"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3Detector",
+                "name": "minimax"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "MiniMaxParser",
+                "name": "minimax"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "MiniMaxM2ReasoningParser",
+                "name": "minimax_m2"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "minimaxm2",
+          "label": "minimax_m2"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MiniMaxM3Detector",
+                "name": "minimax-m3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "MinimaxM3Parser",
+                "name": "minimax_m3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "MiniMaxM3ReasoningParser",
+                "name": "minimax_m3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "minimaxm3",
+          "label": "minimax_m3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MistralDetector",
+                "name": "mistral"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MistralParserReasoningAdapter",
+                "name": "mistral"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "mistral",
+          "label": "mistral"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MuseGlimmerDetector",
+                "name": "muse"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MuseGlimmerReasoningParser",
+                "name": "muse_glimmer"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "museglimmer",
+          "label": "muse_glimmer"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3Detector",
+                "name": "nanbeige"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "nanbeige",
+          "label": "nanbeige"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Nemotron3Detector",
+                "name": "nemotron_3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "NanoV3Parser",
+                "name": "nano_v3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "NemotronV3ParserReasoningAdapter",
+                "name": "nemotron_v3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "nemotronv3",
+          "label": "nemotron_v3"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Olmo3ReasoningParser",
+                "name": "olmo3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "olmo3",
+          "label": "olmo3"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "PassthroughParser",
+                "name": "passthrough"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "passthrough",
+          "label": "passthrough"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Plamo3ParserReasoningAdapter",
+                "name": "plamo3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "plamo3",
+          "label": "plamo3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "_PoolsideV1Detector",
+                "name": "poolside_v1"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "PoolsideV1ReasoningParser",
+                "name": "poolside_v1"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "poolsidev1",
+          "label": "poolside_v1"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3Detector",
+                "name": "qwen3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Qwen3Parser",
+                "name": "qwen3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Qwen3ParserReasoningAdapter",
+                "name": "qwen3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "qwen3",
+          "label": "qwen3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3Detector",
+                "name": "qwen3-thinking"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "QwenThinkingParser",
+                "name": "qwen3_thinking"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "qwen3thinking",
+          "label": "qwen3-thinking"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "ResponseTemplateReasoningParser",
+                "name": "hf"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "responsetemplate",
+          "label": "hf"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "SeedOssParserReasoningAdapter",
+                "name": "seed_oss"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "seedoss",
+          "label": "seed_oss"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekR1Detector",
+                "name": "step3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Step3Parser",
+                "name": "step3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Step3ReasoningParser",
+                "name": "step3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "step3",
+          "label": "step3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekR1Detector",
+                "name": "step3p5"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Step3p5ParserReasoningAdapter",
+                "name": "step3p5"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "step3p5",
+          "label": "step3p5"
+        }
+      ],
+      "shared_impl": [
+        {
+          "impl": "DeepSeekR1Detector",
+          "rows": [
+            "deepseekr1",
+            "gigachat35",
+            "step3",
+            "step3p5"
+          ],
+          "system": "sglang"
+        },
+        {
+          "impl": "Qwen3Detector",
+          "rows": [
+            "dots",
+            "interns1",
+            "minimaxm2",
+            "nanbeige",
+            "qwen3",
+            "qwen3thinking"
+          ],
+          "system": "sglang"
+        },
+        {
+          "impl": "BaseReasoningParser",
+          "rows": [
+            "base",
+            "deepseekv31",
+            "deepseekv4",
+            "kimik2",
+            "kimik25"
+          ],
+          "system": "smg"
+        }
+      ],
+      "smg_only": [
+        "base",
+        "coherecmd",
+        "deepseekv31",
+        "kimik25",
+        "passthrough"
+      ]
+    },
+    "renderer": {
+      "counts": {
+        "sglang": 2,
+        "smg": 6,
+        "vllm": 10
+      },
+      "engine_only": [
+        "cohere",
+        "inkling",
+        "kimiaudio",
+        "mistral",
+        "terratorch"
+      ],
+      "engines_differ": [
+        "cohere",
+        "deepseekv32",
+        "deepseekv4",
+        "deepseekv41",
+        "kimiaudio",
+        "kimik3",
+        "mistral",
+        "terratorch"
+      ],
+      "rows": [
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CohereRenderer",
+                "name": "cohere"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "cohere",
+          "label": "cohere"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "Renderer::DeepseekV32",
+                "name": "deepseek_v32"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepseekV32Renderer",
+                "name": "deepseek_v32"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv32",
+          "label": "deepseek_v32"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "Renderer::DeepseekV4",
+                "name": "deepseek_v4"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepseekV4Renderer",
+                "name": "deepseek_v4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv4",
+          "label": "deepseek_v4"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "Renderer::DeepseekV41",
+                "name": "deepseek_v41"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepseekV4Renderer",
+                "name": "deepseek_v41"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv41",
+          "label": "deepseek_v41"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "jinja chat template",
+                "name": "hf"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Renderer::Jinja",
+                "name": "jinja"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "HfRenderer",
+                "name": "hf"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hf",
+          "label": "hf"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "InklingTextTokenizer",
+                "name": "inkling"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "InklingRenderer",
+                "name": "inkling"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "inkling",
+          "label": "inkling"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "HfRenderer",
+                "name": "kimi_audio"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimiaudio",
+          "label": "kimi_audio"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "encoders::kimi_k25_tools",
+                "name": "kimi_k25_tools"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "kimik25tools",
+          "label": "kimi_k25_tools"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "encoders::kimi_k3_xtml",
+                "name": "kimi_k3_xtml"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "KimiK3Renderer",
+                "name": "kimi_k3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimik3",
+          "label": "kimi_k3"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MistralRenderer",
+                "name": "mistral"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "mistral",
+          "label": "mistral"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "TerratorchRenderer",
+                "name": "terratorch"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "terratorch",
+          "label": "terratorch"
+        }
+      ],
+      "shared_impl": [
+        {
+          "impl": "DeepseekV4Renderer",
+          "rows": [
+            "deepseekv4",
+            "deepseekv41"
+          ],
+          "system": "vllm"
+        },
+        {
+          "impl": "HfRenderer",
+          "rows": [
+            "hf",
+            "kimiaudio"
+          ],
+          "system": "vllm"
+        }
+      ],
+      "smg_only": [
+        "kimik25tools"
+      ]
+    },
+    "tokenizer": {
+      "counts": {
+        "sglang": 3,
+        "smg": 2,
+        "vllm": 9
+      },
+      "engine_only": [
+        "cohere",
+        "deepseekv32",
+        "deepseekv4",
+        "deepseekv41",
+        "inkling",
+        "kimiaudio",
+        "kimik3",
+        "mistral"
+      ],
+      "engines_differ": [
+        "cohere",
+        "deepseekv32",
+        "deepseekv4",
+        "deepseekv41",
+        "kimiaudio",
+        "kimik3",
+        "mistral",
+        "tiktoken"
+      ],
+      "rows": [
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CachedHfTokenizer",
+                "name": "cohere"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "cohere",
+          "label": "cohere"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "DeepseekV32Tokenizer",
+                "name": "deepseek_v32"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv32",
+          "label": "deepseek_v32"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "DeepseekV4Tokenizer",
+                "name": "deepseek_v4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv4",
+          "label": "deepseek_v4"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "DeepseekV41Tokenizer",
+                "name": "deepseek_v41"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv41",
+          "label": "deepseek_v41"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "transformers tokenizer",
+                "name": "hf"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "TokenizerType::HuggingFace",
+                "name": "huggingface"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "CachedHfTokenizer",
+                "name": "hf"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hf",
+          "label": "hf"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "InklingTokenizer",
+                "name": "inkling"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CachedHfTokenizer",
+                "name": "inkling"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "inkling",
+          "label": "inkling"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "KimiAudioTokenizer",
+                "name": "kimi_audio"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimiaudio",
+          "label": "kimi_audio"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CachedHfTokenizer",
+                "name": "kimi_k3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimik3",
+          "label": "kimi_k3"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MistralTokenizer",
+                "name": "mistral"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "mistral",
+          "label": "mistral"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "TiktokenProcessor",
+                "name": "tiktoken"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "TokenizerType::Tiktoken",
+                "name": "tiktoken"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "tiktoken",
+          "label": "tiktoken"
+        }
+      ],
+      "shared_impl": [
+        {
+          "impl": "CachedHfTokenizer",
+          "rows": [
+            "cohere",
+            "hf",
+            "inkling",
+            "kimik3"
+          ],
+          "system": "vllm"
+        }
+      ],
+      "smg_only": []
+    },
+    "tool": {
+      "counts": {
+        "sglang": 42,
+        "smg": 26,
+        "vllm": 53
+      },
+      "engine_only": [
+        "apertus",
+        "apertus2509",
+        "coherecommand3",
+        "coherecommand4",
+        "dots",
+        "ernie45",
+        "functiongemma",
+        "gemma4",
+        "gigachat3",
+        "gigachat35",
+        "granite",
+        "granite20bfc",
+        "granite4",
+        "hunyuana13b",
+        "hyv3",
+        "internlm",
+        "interns1",
+        "iquestq1",
+        "jamba",
+        "k2horizon",
+        "lfm2",
+        "ling3",
+        "llama4json",
+        "llama4pythonic",
+        "longcat",
+        "mimo",
+        "minicpm5",
+        "museglimmer",
+        "nanbeige",
+        "olmo3",
+        "phi4minijson",
+        "plamo3",
+        "poolsidev1",
+        "responsetemplate",
+        "seedoss",
+        "spark25",
+        "step3p5",
+        "trinity",
+        "xlam"
+      ],
+      "engines_differ": [
+        "apertus",
+        "apertus2509",
+        "coherecommand3",
+        "ernie45",
+        "functiongemma",
+        "gigachat35",
+        "granite",
+        "granite20bfc",
+        "granite4",
+        "hunyuana13b",
+        "hyv3",
+        "internlm",
+        "interns1",
+        "iquestq1",
+        "jamba",
+        "llama4json",
+        "llama4pythonic",
+        "longcat",
+        "nanbeige",
+        "olmo3",
+        "phi4minijson",
+        "plamo3",
+        "responsetemplate",
+        "seedoss",
+        "spark25",
+        "trinity",
+        "xlam"
+      ],
+      "rows": [
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "ApertusToolParser",
+                "name": "apertus"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "apertus",
+          "label": "apertus"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Apertus2509Detector",
+                "name": "apertus2509"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "apertus2509",
+          "label": "apertus2509"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "CohereParser",
+                "name": "cohere"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "cohere",
+          "label": "cohere"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CohereCommand3ToolParser",
+                "name": "cohere_command3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "coherecommand3",
+          "label": "cohere_command3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "CohereCommand4Detector",
+                "name": "cohere_command4"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "CohereCommand4ToolParser",
+                "name": "cohere_command4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "coherecommand4",
+          "label": "cohere_command4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV3Detector",
+                "name": "deepseekv3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeekParser",
+                "name": "deepseek"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV3ToolParser",
+                "name": "deepseek_v3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv3",
+          "label": "deepseek_v3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV31Detector",
+                "name": "deepseekv31"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeek31Parser",
+                "name": "deepseek31"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV31ToolParser",
+                "name": "deepseek_v31"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv31",
+          "label": "deepseek_v31"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV32Detector",
+                "name": "deepseekv32"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeekDsmlParser",
+                "name": "deepseek32"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV32EngineToolParser",
+                "name": "deepseek_v32"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv32",
+          "label": "deepseek_v32"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV4Detector",
+                "name": "deepseekv4"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeekDsmlParser",
+                "name": "deepseek_v4"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV4EngineToolParser",
+                "name": "deepseek_v4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv4",
+          "label": "deepseek_v4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DeepSeekV41Detector",
+                "name": "deepseekv41"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "DeepSeekDsmlParser",
+                "name": "deepseek_v41"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "DeepSeekV41EngineToolParser",
+                "name": "deepseek_v41"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "deepseekv41",
+          "label": "deepseek_v41"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "DotsToolDetector",
+                "name": "dots"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "DotsToolParser",
+                "name": "dots"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "dots",
+          "label": "dots"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Ernie45ToolParser",
+                "name": "ernie45"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "ernie45",
+          "label": "ernie45"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "FunctionGemmaToolParser",
+                "name": "functiongemma"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "functiongemma",
+          "label": "functiongemma"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Gemma4Detector",
+                "name": "gemma4"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Gemma4EngineToolParser",
+                "name": "gemma4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "gemma4",
+          "label": "gemma4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "GigaChat3Detector",
+                "name": "gigachat3"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "GigaChat3ToolParser",
+                "name": "gigachat3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "gigachat3",
+          "label": "gigachat3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "GigaChat35Detector",
+                "name": "gigachat35"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "gigachat35",
+          "label": "gigachat35"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Glm4MoeDetector",
+                "name": "glm"
+              },
+              {
+                "impl": "Glm4MoeDetector",
+                "name": "glm45"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Glm4MoeParser",
+                "name": "glm45_moe"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Glm47MoeModelToolParser",
+                "name": "glm45"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "glm45",
+          "label": "glm45"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Glm47MoeDetector",
+                "name": "glm47"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Glm4MoeParser",
+                "name": "glm47_moe"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Glm47MoeModelToolParser",
+                "name": "glm47"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "glm47",
+          "label": "glm47"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "GptOssDetector",
+                "name": "gpt-oss"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "HarmonyDetector",
+                "name": "harmony"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "GptOssToolParser",
+                "name": "openai"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "gptoss",
+          "label": "openai"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "GraniteEngineToolParser",
+                "name": "granite"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "granite",
+          "label": "granite"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Granite20bFCToolParser",
+                "name": "granite-20b-fc"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "granite20bfc",
+          "label": "granite-20b-fc"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Granite4ToolParser",
+                "name": "granite4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "granite4",
+          "label": "granite4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "HermesDetector",
+                "name": "hermes"
+              },
+              {
+                "impl": "Qwen25Detector",
+                "name": "qwen"
+              },
+              {
+                "impl": "Qwen25Detector",
+                "name": "qwen25"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "QwenParser",
+                "name": "qwen"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Hermes2ProToolParser",
+                "name": "hermes"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hermes",
+          "label": "hermes"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "HunyuanA13BToolParser",
+                "name": "hunyuan_a13b"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hunyuana13b",
+          "label": "hunyuan_a13b"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "HYV3ToolParser",
+                "name": "hy_v3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hyv3",
+          "label": "hy_v3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "HunyuanDetector",
+                "name": "hunyuan"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "HyV4Parser",
+                "name": "hy_v4"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "HYV4ToolParser",
+                "name": "hy_v4"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "hyv4",
+          "label": "hy_v4"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "InklingDetector",
+                "name": "inkling"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "InklingParser",
+                "name": "inkling"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "InklingEngineToolParser",
+                "name": "inkling"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "inkling",
+          "label": "inkling"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Internlm2ToolParser",
+                "name": "internlm"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "internlm",
+          "label": "internlm"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "InternlmDetector",
+                "name": "interns1"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "interns1",
+          "label": "interns1"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "IQuestQ1Detector",
+                "name": "iquest_q1"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "iquestq1",
+          "label": "iquest_q1"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "JambaToolParser",
+                "name": "jamba"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "jamba",
+          "label": "jamba"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "JsonParser",
+                "name": "json"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "json",
+          "label": "json"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "K2V3Detector",
+                "name": "k2_horizon"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "K2HorizonToolParser",
+                "name": "k2_horizon"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "k2horizon",
+          "label": "k2_horizon"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "KimiK2Detector",
+                "name": "kimi_k2"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "KimiK2Parser",
+                "name": "kimik2"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "KimiK2ToolParser",
+                "name": "kimi_k2"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimik2",
+          "label": "kimi_k2"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "KimiK3Detector",
+                "name": "kimi_k3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "KimiK3Parser",
+                "name": "kimi_k3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "KimiK3ToolParser",
+                "name": "kimi_k3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "kimik3",
+          "label": "kimi_k3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Lfm2Detector",
+                "name": "lfm2"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Lfm2ToolParser",
+                "name": "lfm2"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "lfm2",
+          "label": "lfm2"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Ling3Detector",
+                "name": "ling3"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Ling3ToolParser",
+                "name": "ling3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "ling3",
+          "label": "ling3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Llama32Detector",
+                "name": "llama3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "LlamaParser",
+                "name": "llama"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Llama3JsonToolParser",
+                "name": "llama3_json"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "llama3json",
+          "label": "llama3_json"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Llama3JsonToolParser",
+                "name": "llama4_json"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "llama4json",
+          "label": "llama4_json"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Llama4PythonicToolParser",
+                "name": "llama4_pythonic"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "llama4pythonic",
+          "label": "llama4_pythonic"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "LongcatFlashToolParser",
+                "name": "longcat"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "longcat",
+          "label": "longcat"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MiMoDetector",
+                "name": "mimo"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MiMoToolParser",
+                "name": "mimo"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "mimo",
+          "label": "mimo"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MiniCPM5Detector",
+                "name": "minicpm5"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MiniCPM5XMLToolParser",
+                "name": "minicpm5"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "minicpm5",
+          "label": "minicpm5"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MinimaxM2Detector",
+                "name": "minimax-m2"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "MinimaxM2Parser",
+                "name": "minimax_m2"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "MinimaxM2ToolParser",
+                "name": "minimax_m2"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "minimaxm2",
+          "label": "minimax_m2"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MinimaxM3Detector",
+                "name": "minimax-m3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "MinimaxM3Parser",
+                "name": "minimax_m3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "MinimaxM3ToolParser",
+                "name": "minimax_m3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "minimaxm3",
+          "label": "minimax_m3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MistralDetector",
+                "name": "mistral"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "MistralParser",
+                "name": "mistral"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "MistralToolParser",
+                "name": "mistral"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "mistral",
+          "label": "mistral"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "MuseGlimmerDetector",
+                "name": "muse"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "MuseGlimmerToolParser",
+                "name": "muse_glimmer"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "museglimmer",
+          "label": "muse_glimmer"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3CoderDetector",
+                "name": "nanbeige"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "nanbeige",
+          "label": "nanbeige"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Olmo3PythonicToolParser",
+                "name": "olmo3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "olmo3",
+          "label": "olmo3"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "PassthroughParser",
+                "name": "passthrough"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "passthrough",
+          "label": "passthrough"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Phi4MiniJsonToolParser",
+                "name": "phi4_mini_json"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "phi4minijson",
+          "label": "phi4_mini_json"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Plamo3EngineToolParser",
+                "name": "plamo3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "plamo3",
+          "label": "plamo3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "PoolsideV1Detector",
+                "name": "poolside_v1"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "PoolsideV1ToolParser",
+                "name": "poolside_v1"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "poolsidev1",
+          "label": "poolside_v1"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "PythonicDetector",
+                "name": "pythonic"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "PythonicParser",
+                "name": "pythonic"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "PythonicToolParser",
+                "name": "pythonic"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "pythonic",
+          "label": "pythonic"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3CoderDetector",
+                "name": "qwen3_coder"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "QwenXmlParser",
+                "name": "nemotron"
+              },
+              {
+                "impl": "QwenXmlParser",
+                "name": "qwen_coder"
+              },
+              {
+                "impl": "QwenXmlParser",
+                "name": "qwen_xml"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Qwen3EngineToolParser",
+                "name": "qwen3_coder"
+              },
+              {
+                "impl": "Qwen3EngineToolParser",
+                "name": "qwen3_xml"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "qwen3xml",
+          "label": "qwen3_coder"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "ResponseTemplateToolParser",
+                "name": "hf"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "responsetemplate",
+          "label": "hf"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [
+              {
+                "impl": "SarashinaParser",
+                "name": "sarashina"
+              }
+            ],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "sarashina",
+          "label": "sarashina"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "SeedOssEngineToolParser",
+                "name": "seed_oss"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "seedoss",
+          "label": "seed_oss"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Spark25Detector",
+                "name": "spark25"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "spark25",
+          "label": "spark25"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Step3Detector",
+                "name": "step3"
+              }
+            ],
+            "smg": [
+              {
+                "impl": "Step3Parser",
+                "name": "step3"
+              }
+            ],
+            "vllm": [
+              {
+                "impl": "Step3ToolParser",
+                "name": "step3"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "step3",
+          "label": "step3"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "Qwen3CoderDetector",
+                "name": "step3p5"
+              }
+            ],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "Step3p5ToolParser",
+                "name": "step3p5"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "step3p5",
+          "label": "step3p5"
+        },
+        {
+          "cells": {
+            "sglang": [
+              {
+                "impl": "TrinityDetector",
+                "name": "trinity"
+              }
+            ],
+            "smg": [],
+            "vllm": []
+          },
+          "fixtures": [],
+          "key": "trinity",
+          "label": "trinity"
+        },
+        {
+          "cells": {
+            "sglang": [],
+            "smg": [],
+            "vllm": [
+              {
+                "impl": "xLAMToolParser",
+                "name": "xlam"
+              }
+            ]
+          },
+          "fixtures": [],
+          "key": "xlam",
+          "label": "xlam"
+        }
+      ],
+      "shared_impl": [
+        {
+          "impl": "Qwen3CoderDetector",
+          "rows": [
+            "nanbeige",
+            "qwen3xml",
+            "step3p5"
+          ],
+          "system": "sglang"
+        },
+        {
+          "impl": "DeepSeekDsmlParser",
+          "rows": [
+            "deepseekv32",
+            "deepseekv4",
+            "deepseekv41"
+          ],
+          "system": "smg"
+        },
+        {
+          "impl": "Glm4MoeParser",
+          "rows": [
+            "glm45",
+            "glm47"
+          ],
+          "system": "smg"
+        },
+        {
+          "impl": "Glm47MoeModelToolParser",
+          "rows": [
+            "glm45",
+            "glm47"
+          ],
+          "system": "vllm"
+        },
+        {
+          "impl": "Llama3JsonToolParser",
+          "rows": [
+            "llama3json",
+            "llama4json"
+          ],
+          "system": "vllm"
+        }
+      ],
+      "smg_only": [
+        "cohere",
+        "json",
+        "passthrough",
+        "sarashina"
+      ]
+    }
+  },
+  "schema_version": 1,
+  "sources": {
+    "sglang": {
+      "commit": "734cf3cf3b9201a5beb104649acd29f05edcd1e5",
+      "model_patterns": {},
+      "notes": [],
+      "roots": [
+        "/private/tmp/claude-501/-Users-simolin-alexmcc-smg/9e36591f-e9cf-4a4c-b1d7-669a16c35057/scratchpad/bw-cache/sglang/734cf3cf3b9201a5beb104649acd29f05edcd1e5"
+      ]
+    },
+    "smg": {
+      "commit": "8298368e31d3dfb1cc3a35eae5f7c95ba67593b3",
+      "model_patterns": {
+        "reasoning": {
+          "cohere_cmd": [
+            "command-r",
+            "command-a",
+            "c4ai-command",
+            "cohere"
+          ],
+          "deepseek_r1": [
+            "deepseek-r1"
+          ],
+          "deepseek_v31": [
+            "deepseek-v3.1",
+            "deepseek-v3-1"
+          ],
+          "deepseek_v4": [
+            "deepseek-v4",
+            "deepseek_v4"
+          ],
+          "deepseek_v41": [
+            "deepseek-v4.1",
+            "deepseek_v41",
+            "deepseek-v41"
+          ],
+          "glm45": [
+            "glm45",
+            "glm47",
+            "glm-5"
+          ],
+          "hy_v4": [
+            "hy4",
+            "hy_v4"
+          ],
+          "inkling": [
+            "inkling"
+          ],
+          "kimi": [
+            "kimi"
+          ],
+          "kimi_k25": [
+            "kimi-k2.5"
+          ],
+          "kimi_k3": [
+            "kimi-k3",
+            "kimi_k3"
+          ],
+          "kimi_thinking": [
+            "kimi-k2-thinking"
+          ],
+          "minimax": [
+            "minimax",
+            "minimax-m2",
+            "mm-m2"
+          ],
+          "minimax_m3": [
+            "minimax-m3",
+            "mm-m3"
+          ],
+          "nano_v3": [
+            "nemotron-nano",
+            "nemotron-super",
+            "nano-v3",
+            "nemotron-3"
+          ],
+          "qwen3": [
+            "qwen3",
+            "qwen"
+          ],
+          "qwen3_thinking": [
+            "qwen3-thinking",
+            "qwen-thinking"
+          ],
+          "step3": [
+            "step3"
+          ]
+        },
+        "tool": {
+          "cohere": [
+            "command-r*",
+            "command-r-plus*",
+            "command-a*",
+            "c4ai-command*",
+            "cohere*",
+            "CohereForAI*"
+          ],
+          "deepseek": [
+            "deepseek-v3*",
+            "deepseek-ai/DeepSeek-V3*"
+          ],
+          "deepseek31": [
+            "deepseek-v3.1*",
+            "deepseek-ai/DeepSeek-V3.1*",
+            "deepseek-v3.2-exp*",
+            "deepseek-ai/DeepSeek-V3.2-Exp*"
+          ],
+          "deepseek32": [
+            "deepseek-v3.2*",
+            "deepseek-ai/DeepSeek-V3.2*"
+          ],
+          "deepseek_v4": [
+            "deepseek-v4*",
+            "deepseek-ai/DeepSeek-V4*"
+          ],
+          "deepseek_v41": [
+            "deepseek-v4.1*",
+            "deepseek_v41*",
+            "deepseek-v41*",
+            "deepseek-ai/DeepSeek-V4.1*",
+            "deepseek-ai/DeepSeek-V41*"
+          ],
+          "glm45_moe": [
+            "glm-4.5*",
+            "glm-4.6*"
+          ],
+          "glm47_moe": [
+            "glm-4.7*",
+            "glm-5*"
+          ],
+          "hy_v4": [
+            "hy4*",
+            "hy_v4"
+          ],
+          "inkling": [
+            "inkling*",
+            "Inkling*"
+          ],
+          "json": [
+            "gpt-4*",
+            "gpt-3.5*",
+            "gpt-4o*",
+            "claude-*",
+            "llama-*",
+            "meta-llama-*",
+            "glm-*",
+            "gemini-*",
+            "palm-*",
+            "gemma-*"
+          ],
+          "kimi_k3": [
+            "kimi-k3*",
+            "Kimi-K3*",
+            "moonshot*/Kimi-K3*",
+            "kimi_k3*",
+            "Kimi_K3*",
+            "moonshot*/Kimi_K3*"
+          ],
+          "kimik2": [
+            "kimi-k2*",
+            "Kimi-K2*",
+            "moonshot*/Kimi-K2*"
+          ],
+          "llama": [
+            "llama-3.2*",
+            "meta-llama-3.2*"
+          ],
+          "minimax_m2": [
+            "minimax*",
+            "MiniMax*"
+          ],
+          "minimax_m3": [
+            "minimax-m3*",
+            "MiniMax-M3*",
+            "MiniMaxAI/MiniMax-M3*",
+            "mm-m3*"
+          ],
+          "mistral": [
+            "mistral-*",
+            "mixtral-*"
+          ],
+          "pythonic": [
+            "llama-4*",
+            "meta-llama-4*",
+            "deepseek-*"
+          ],
+          "qwen": [
+            "qwen*",
+            "Qwen*"
+          ],
+          "qwen_xml": [
+            "Qwen/Qwen3.5*",
+            "Qwen3.5*",
+            "qwen3.5*",
+            "qwen/qwen3.5*",
+            "Qwen/Qwen3.6*",
+            "Qwen3.6*",
+            "qwen3.6*",
+            "qwen/qwen3.6*",
+            "Qwen/Qwen3.8*",
+            "Qwen3.8*",
+            "qwen3.8*",
+            "qwen/qwen3.8*",
+            "Qwen/Qwen3-Coder*",
+            "Qwen3-Coder*",
+            "qwen3-coder*",
+            "qwen/qwen3-coder*",
+            "nemotron-3*"
+          ],
+          "sarashina": [
+            "sarashina*",
+            "Sarashina*"
+          ],
+          "step3": [
+            "step3*",
+            "Step-3*"
+          ]
+        }
+      },
+      "notes": [],
+      "roots": [
+        "../wt-smg-main"
+      ]
+    },
+    "vllm": {
+      "commit": "138810056093301f4881050fcf2b1786939da387",
+      "model_patterns": {},
+      "notes": [],
+      "roots": [
+        "/private/tmp/claude-501/-Users-simolin-alexmcc-smg/9e36591f-e9cf-4a4c-b1d7-669a16c35057/scratchpad/bw-cache/vllm/138810056093301f4881050fcf2b1786939da387"
+      ]
+    }
+  }
+}
