@@ -106,10 +106,10 @@
 | c32-i4096-o512 | 4.3 |
 | c128-i1024-o256 | 13.3 |
 
-![Requests / s](https://raw.githubusercontent.com/smg-project/artifacts/bench4-live/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/req_per_s.png)
+![Requests / s](https://raw.githubusercontent.com/smg-project/artifacts/glm-5.3-flash/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/req_per_s.png)
 
-![Output tokens / s](https://raw.githubusercontent.com/smg-project/artifacts/bench4-live/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/out_tok_per_s.png)
+![Output tokens / s](https://raw.githubusercontent.com/smg-project/artifacts/glm-5.3-flash/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/out_tok_per_s.png)
 
-![TTFT p99 (ms)](https://raw.githubusercontent.com/smg-project/artifacts/bench4-live/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/ttft_p99_ms.png)
+![TTFT p99 (ms)](https://raw.githubusercontent.com/smg-project/artifacts/glm-5.3-flash/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/ttft_p99_ms.png)
 
-![TPOT p50 (ms)](https://raw.githubusercontent.com/smg-project/artifacts/bench4-live/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/tpot_p50_ms.png)
+![TPOT p50 (ms)](https://raw.githubusercontent.com/smg-project/artifacts/glm-5.3-flash/benchmarks/2026-10-04-glm-5.3-flash-serving-study/charts/tpot_p50_ms.png)

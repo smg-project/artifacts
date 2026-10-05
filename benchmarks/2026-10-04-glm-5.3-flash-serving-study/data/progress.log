@@ -49,3 +49,4 @@
 18:26:15 vllm-tp4: stopped
 18:26:15 start sglang-tp4: 16 runs pending; args []
 18:47:23 sglang-tp4: worker healthy after 1267s
+18:49:17 sglang-tp4: ready after 1381s
